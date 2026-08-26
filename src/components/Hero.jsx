@@ -26,9 +26,11 @@ export default function Hero() {
     <section id="top" className="px-3 lg:px-4 pt-3">
       <div className="relative rounded-[24px] overflow-hidden shadow-[0_12px_40px_rgba(10,10,9,0.08),0_4px_12px_rgba(10,10,9,0.05)] border border-black/[0.04]">
         <img src="/hero-bg/hero-v1.jpg" alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover" />
+        {/* subtle warm overlay for text contrast, especially mobile */}
+        <div className="absolute inset-0 bg-[#F2E7DE]/28 md:bg-[#F2E7DE]/18" aria-hidden="true" />
         <HeroGrain className="" />
 
-        <div className="relative z-10 max-w-[1180px] mx-auto px-7 pt-[120px] pb-[140px] md:pt-[140px] md:pb-[160px] text-center">
+        <div className="relative z-10 max-w-[1180px] mx-auto px-5 md:px-7 pt-[96px] pb-[84px] md:pt-[140px] md:pb-[160px] text-center">
           <motion.div
             variants={reduced ? undefined : heroVariants}
             initial={reduced ? undefined : 'hidden'}

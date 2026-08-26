@@ -18,7 +18,8 @@ export default function Nav() {
         className="flex items-center justify-between gap-4 lg:gap-6 bg-white/55 backdrop-blur-2xl rounded-full shadow-[0_8px_32px_rgba(44,28,18,0.08),0_2px_12px_rgba(44,28,18,0.06)] border border-white/40 px-4 lg:px-6 py-3 supports-[backdrop-filter]:bg-white/40"
         aria-label="Hauptnavigation"
       >
-        <a href={isHome ? "#top" : "/"} className="font-[family-name:var(--font-serif)] text-[17px] md:text-[19px] font-bold tracking-[-0.04em] whitespace-nowrap">
+        <a href={isHome ? "#top" : "/"} className="flex items-center gap-2.5 font-[family-name:var(--font-serif)] text-[17px] md:text-[19px] font-bold tracking-[-0.04em] whitespace-nowrap">
+          <img src="/logo.svg" alt="" width="28" height="28" className="w-7 h-7 rounded-lg border border-black/[0.06] shadow-sm" />
           Marco Grotemeyer
         </a>
         <div className="hidden md:flex gap-6 lg:gap-7 text-[13px] font-medium text-[var(--color-ink-muted)]">
