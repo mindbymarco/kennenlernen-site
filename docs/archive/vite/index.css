@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #F5F3F0;
+  --color-bg-elev: #FFFFFF;
+  --color-bg-soft: #EDEEEA;
+  --color-ink-strong: #0A0A09;
+  --color-ink: #141413;
+  --color-ink-muted: #4A4A48;
+  --color-ink-subtle: #8A8A86;
+  --color-accent: #7BA7D1;
+  --color-accent-soft: #9BBFE0;
+  --color-accent-bg: #E6EEF6;
+  --color-sky: #B8E0F5;
+  --color-line: #D8DDD6;
+  --color-line-soft: #E6E8E3;
+  --font-serif: 'Montserrat', system-ui, sans-serif;
+  --font-sans: 'Karla', system-ui, sans-serif;
+  --font-mono: 'Karla', system-ui, sans-serif;
+  --radius-card: 24px;
+  --radius-sm: 16px;
+}
+
+@layer base {
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  body {
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--color-ink);
+    background: var(--color-bg);
+    min-height: 100vh;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  button { font-family: inherit; cursor: pointer; }
+  h1 em, h2 em { font-style: italic; color: var(--color-accent); font-weight: inherit; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hero Dithering Drafts</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Instrument+Sans:wght@400;500&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Instrument Sans',system-ui,sans-serif;background:#FAF8F5;color:#141413;padding:40px 28px}
+h1{font-family:'Fraunces',serif;font-size:36px;letter-spacing:-0.02em;margin-bottom:8px}
+.sub{color:#4A4A48;margin-bottom:32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{border:1px solid #E8E4DD;border-radius:16px;overflow:hidden;background:#fff}
+.card a{display:block;text-decoration:none;color:inherit}
+.card .thumb{height:180px;background:#FAF8F5;position:relative;overflow:hidden}
+.card .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.card .body{padding:16px}
+.card h3{font-family:'Fraunces',serif;font-size:20px;margin-bottom:4px}
+.card p{font-size:13px;color:#4A4A48;line-height:1.5}
+.badge{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#CC785C}
+</style>
+</head>
+<body>
+<h1>Hero Dithering Drafts</h1>
+<p class="sub">4 isolierte Varianten — aktuelle Farben, horizontal Welle, subtiler Cursor. Main-Hero bleibt live auf <a href="/">/</a>.</p>
+<div class="grid">
+  <div class="card">
+    <a href="./draft-a-wave.html"><div class="thumb" style="background:linear-gradient(90deg,#FAF8F5 20%,#A8B89A 45%,#C0AED4 65%,#CC785C 85%)"></div></a>
+    <div class="body"><div class="badge">A — Welle</div><h3><a href="./draft-a-wave.html">Leichte horizontale Welle</a></h3><p>Sinus läuft horizontal, sehr subtil. Scroll glättet Welle → Cream.</p></div>
+  </div>
+  <div class="card">
+    <a href="./draft-b-cursor.html"><div class="thumb" style="background:radial-gradient(ellipse at 70% 40%,#C0AED4 0%,#FAF8F5 65%)"></div></a>
+    <div class="body"><div class="badge">B — Cursor</div><h3><a href="./draft-b-cursor.html">Subtiler Cursor-Magnet</a></h3><p>Farbdichte folgt Maus leicht, keine Delle. Desktop Hover, Mobile Touch.</p></div>
+  </div>
+  <div class="card">
+    <a href="./draft-c-wave-scroll.html"><div class="thumb" style="background:linear-gradient(120deg,#FAF8F5,#C0AED4,#CC785C)"></div></a>
+    <div class="body"><div class="badge">C — Welle + Scroll</div><h3><a href="./draft-c-wave-scroll.html">Welle + Auflösungs-Story</a></h3><p>Kombi aus A + heutiger Scroll-Auflösung (84→160 Spalten) + Cream-Fade.</p></div>
+  </div>
+  <div class="card">
+    <a href="./draft-d-flow.html"><div class="thumb" style="background:radial-gradient(ellipse at 60% 50%,#A8B89A 0%,#CC785C 70%,#FAF8F5 100%)"></div></a>
+    <div class="body"><div class="badge">D — Flow</div><h3><a href="./draft-d-flow.html">Flow-Feld</a></h3><p>Zwei überlagerte Sinus → langsam treibendes Feld, organischste Variante.</p></div>
+  </div>
+</div>
+<p style="margin-top:28px;font-family:'Geist Mono',monospace;font-size:12px;color:#8A8A86">Aktuelle Farben: #FAF8F5 / Sage / Lilac / Coral #CC785C · Bayer 18 · 84 cols base</p>
+</body>
+</html>

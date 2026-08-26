@@ -1,0 +1,139 @@
+<!doctype html>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Flow — AI-Inbox-Triage</title>
+<style>
+  :root {
+    color-scheme: light;
+    --bg: #F2E7DE;
+    --fg: #1C1512;
+    --muted: #6B5A52;
+    --line: #EADCD1;
+    --neutral: #F4E8DD;
+    --input: #F8ECE2;
+    --process: #DBB1A4;
+    --storage: #BCC9A9;
+    --external: #9A6B5C;
+    --risk: #EADCD1;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 14px/1.4 Inter, ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+  main { max-width: 980px; margin: 32px auto; padding: 0 20px; }
+  svg { width: 100%; height: auto; display: block; }
+  .title { font-size: 20px; font-weight: 700; fill: var(--fg); }
+  .label { font-size: 12px; font-weight: 600; fill: var(--fg); }
+  .small { font-size: 10px; fill: var(--muted); }
+  .node { stroke: #EADCD1; stroke-width: 1.2; rx: 12; }
+  .input { fill: #F8ECE2; }
+  .process { fill: #FFFFFF; stroke: #DBB1A4; }
+  .storage { fill: #E8F0E0; }
+  .external { fill: #D6A090; stroke: #9A6B5C; }
+  .edge { stroke: #9A8A82; stroke-width: 1.4; fill: none; }
+  .legend { font-size: 11px; fill: var(--muted); }
+</style>
+<main>
+<svg viewBox="0 0 920 275" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t d">
+  <title id="t">AI-Inbox-Triage + Reply-Drafts — Flow</title>
+  <desc id="d">Links nach rechts: Eingang → Klassifikation → Priorisierung → Draft → Review → Versand</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L8,4 L0,8 z" fill="#9A8A82"/>
+    </marker>
+  </defs>
+  <text x="0" y="22" class="title">AI-Inbox-Triage — 30 Min Fokus am Morgen</text>
+  <text x="0" y="40" class="small">Klassifiziert · priorisiert · Drafts · Human Review — Beispiel-Flow für Demonstrated Builds</text>
+
+  <!-- connectors behind — centered on new 84px cards (y 114) -->
+  <path d="M132 114 H 166" class="edge" marker-end="url(#arrow)"/>
+  <path d="M290 114 H 324" class="edge" marker-end="url(#arrow)"/>
+  <path d="M448 114 H 482" class="edge" marker-end="url(#arrow)"/>
+  <path d="M606 114 H 640" class="edge" marker-end="url(#arrow)"/>
+  <path d="M764 114 H 798" class="edge" marker-end="url(#arrow)"/>
+
+  <!-- nodes with icons — larger cards -->
+  <g>
+    <rect x="8" y="72" width="124" height="84" rx="14" class="node input"/>
+    <g transform="translate(70,90)" stroke="#9A6B5C" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="-10" y="-7" width="20" height="14" rx="2"/>
+      <path d="M-10 -7 L0 2 L10 -7"/>
+    </g>
+    <text x="70" y="112" text-anchor="middle" class="label">E-Mail</text>
+    <text x="70" y="127" text-anchor="middle" class="small">Eingang</text>
+    <text x="70" y="142" text-anchor="middle" class="small">IMAP / Gmail</text>
+  </g>
+  <g>
+    <rect x="166" y="72" width="124" height="84" rx="14" class="node process"/>
+    <g transform="translate(228,90)" stroke="#DBB1A4" stroke-width="1.4" fill="none" stroke-linecap="round">
+      <rect x="-9" y="-7" width="18" height="14" rx="2"/>
+      <line x1="-5" y1="-1" x2="5" y2="-1"/>
+      <line x1="-5" y1="3" x2="5" y2="3"/>
+    </g>
+    <text x="228" y="112" text-anchor="middle" class="label">Klassifikation</text>
+    <text x="228" y="127" text-anchor="middle" class="small">Topic · Intent</text>
+    <text x="228" y="142" text-anchor="middle" class="small">LLM + Regeln</text>
+  </g>
+  <g>
+    <rect x="324" y="72" width="124" height="84" rx="14" class="node process"/>
+    <g transform="translate(386,90)" stroke="#DBB1A4" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-8 6 L-3 -6 L3 -6 L8 6"/>
+      <circle cx="0" cy="3" r="1.8" fill="#DBB1A4" stroke="none"/>
+    </g>
+    <text x="386" y="112" text-anchor="middle" class="label">Priorisierung</text>
+    <text x="386" y="127" text-anchor="middle" class="small">Dringlich / Wichtig</text>
+    <text x="386" y="142" text-anchor="middle" class="small">Score 1-4</text>
+  </g>
+  <g>
+    <rect x="482" y="72" width="124" height="84" rx="14" class="node process"/>
+    <g transform="translate(544,90)" stroke="#DBB1A4" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-7 -6 L7 -6 L7 6 L-3 6 L-7 2 Z"/>
+      <line x1="-3" y1="6" x2="-3" y2="2"/>
+    </g>
+    <text x="544" y="112" text-anchor="middle" class="label">Reply-Draft</text>
+    <text x="544" y="127" text-anchor="middle" class="small">RAG Kontext</text>
+    <text x="544" y="142" text-anchor="middle" class="small">Ton + Vorlage</text>
+  </g>
+  <g>
+    <rect x="640" y="72" width="124" height="84" rx="14" class="node external"/>
+    <g transform="translate(702,90)" stroke="#fff" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="0" cy="-2" r="5"/>
+      <path d="M-7 7 A7 7 0 0 1 7 7"/>
+      <path d="M2 0 L5 3 L9  -1" stroke-width="1.6"/>
+    </g>
+    <text x="702" y="112" text-anchor="middle" class="label" fill="#fff">Human Review</text>
+    <text x="702" y="127" text-anchor="middle" class="small" fill="#fff">30 Sek Check</text>
+    <text x="702" y="142" text-anchor="middle" class="small" fill="#fff">Freigabe</text>
+  </g>
+  <g>
+    <rect x="798" y="72" width="112" height="84" rx="14" class="node storage"/>
+    <g transform="translate(854,90)" stroke="#6B8F71" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-8 -3 L6 -3 L8 0 L6 3 L-8 3 Z"/>
+      <path d="M6 -3 L8 0 L6 3"/>
+      <line x1="8" y1="0" x2="11" y2="0"/>
+      <polyline points="9,-2 11,0 9,2"/>
+    </g>
+    <text x="854" y="112" text-anchor="middle" class="label">Versand</text>
+    <text x="854" y="127" text-anchor="middle" class="small">Gesendet</text>
+    <text x="854" y="142" text-anchor="middle" class="small">30-60 Min/Tag</text>
+  </g>
+
+  <!-- legend -->
+  <g transform="translate(0,175)">
+    <rect x="10" y="0" width="14" height="14" rx="4" fill="#F8ECE2" stroke="#EADCD1"/>
+    <text x="30" y="10" class="legend">Input</text>
+    <rect x="80" y="0" width="14" height="14" rx="4" fill="#FFFFFF" stroke="#DBB1A4"/>
+    <text x="100" y="10" class="legend">Process</text>
+    <rect x="170" y="0" width="14" height="14" rx="4" fill="#D6A090" stroke="#9A6B5C"/>
+    <text x="190" y="10" class="legend">Human</text>
+    <rect x="260" y="0" width="14" height="14" rx="4" fill="#E8F0E0" stroke="#BCC9A9"/>
+    <text x="280" y="10" class="legend">Output</text>
+    <text x="360" y="10" class="legend">→ Zeitgewinn: täglich 30–60 Min, Fokus am Morgen</text>
+  </g>
+
+  <!-- footer note -->
+  <text x="10" y="220" class="small">Architektur übertragbar — gleiches Pattern für Kunden-Mandate. DSGVO: Verarbeitung in EU-Workspace, kein Training auf Ihren Daten.</text>
+</svg>
+</main>

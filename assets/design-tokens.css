@@ -1,0 +1,7 @@
+:root{
+  --color-bg:#F5F3F0; --color-bg-soft:#EDEEEA; --color-bg-elev:#FFFFFF; --color-sky:#B8E0F5;
+  --color-ink-strong:#0A0A09; --color-ink:#141413; --color-ink-muted:#4A4A48; --color-ink-subtle:#8A8A86;
+  --color-accent:#7BA7D1; --color-sage:#8FA69A; --color-dusty:#B8C6D8;
+  --font-serif:'Inter',system-ui,sans-serif; --font-sans:'Krub',system-ui,sans-serif; --font-mono:'Krub',monospace;
+  --radius-card:24px; --radius-sm:16px;
+}

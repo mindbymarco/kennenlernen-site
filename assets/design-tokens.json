@@ -1,0 +1,47 @@
+{
+  "primitive": {
+    "color": {
+      "cream": "#F5F3F0",
+      "creamSoft": "#EDEEEA",
+      "white": "#FFFFFF",
+      "sky": "#B8E0F5",
+      "inkStrong": "#0A0A09",
+      "ink": "#141413",
+      "inkMuted": "#4A4A48",
+      "inkSubtle": "#8A8A86",
+      "accent": "#7BA7D1",
+      "sage": "#8FA69A",
+      "dusty": "#B8C6D8",
+      "line": "#D8DDD6",
+      "lineSoft": "#E6E8E3"
+    },
+    "font": {
+      "serif": "Inter",
+      "sans": "Krub",
+      "mono": "Krub"
+    },
+    "radius": { "card": "24px", "sm": "16px" },
+    "pixel": { "LEVELS": 18, "PIXEL": 4, "cols": "48-320", "rad": "0.55/0.62", "intens": "0.75/0.85" }
+  },
+  "semantic": {
+    "bg": "var(--color-cream)",
+    "bgSoft": "var(--color-creamSoft)",
+    "bgElev": "var(--color-white)",
+    "sky": "var(--color-sky)",
+    "inkStrong": "var(--color-inkStrong)",
+    "inkMuted": "var(--color-inkMuted)",
+    "accent": "var(--color-accent)",
+    "line": "var(--color-line)"
+  },
+  "component": {
+    "card": { "bg": "var(--color-white)", "radius": "var(--radius-card)", "shadow": "0 8px 24px rgba(10,10,9,0.06)" },
+    "nav": { "bg": "rgba(255,255,255,0.85)", "radius": "999px", "blur": "24px" },
+    "hero": { "bg": "var(--color-sky)", "radius": "24px" }
+  },
+  "content": {
+    "og": { "w": 1200, "h": 630, "bg": "var(--color-sky)", "padding": 48 },
+    "linkedin": { "w": 1200, "h": 627, "bg": "var(--color-cream)", "accentBar": "var(--color-accent)" },
+    "newsletter": { "w": 600, "h": 200, "bg": "var(--color-cream)", "border": "var(--color-line)" }
+  },
+  "brand": "B 50/50 Himmel — Inter/Krub"
+}

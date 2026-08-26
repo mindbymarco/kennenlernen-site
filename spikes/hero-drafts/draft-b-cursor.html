@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Draft B — Subtiler Cursor-Magnet</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Instrument+Sans:wght@400;500&family=Geist+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Instrument Sans',system-ui,sans-serif;background:#FAF8F5;color:#141413}
+.bar{position:fixed;top:0;left:0;right:0;z-index:20;display:flex;justify-content:space-between;align-items:center;padding:10px 20px;background:rgba(250,248,245,0.9);backdrop-filter:blur(8px);border-bottom:1px solid #E8E4DD;font-family:'Geist Mono',monospace;font-size:12px}
+.bar a{color:#CC785C;text-decoration:none}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden;padding:120px 0 80px}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;display:block;image-rendering:pixelated}
+.hero .content{position:relative;max-width:1180px;margin:0 auto;padding:0 28px;width:100%}
+.eyebrow{font-family:'Geist Mono',monospace;font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:#CC785C;margin-bottom:20px}
+h1{font-family:'Fraunces',serif;font-weight:500;line-height:1.06;letter-spacing:-0.02em;color:#0A0A09;font-size:clamp(40px,6.4vw,76px);max-width:18ch;margin-bottom:20px}
+h1 em{font-style:italic;color:#CC785C}
+.lede{font-size:18px;line-height:1.6;color:#4A4A48;max-width:52ch}
+.hint{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);font-family:'Geist Mono',monospace;font-size:11px;color:#8A8A86;background:rgba(250,248,245,0.9);padding:6px 12px;border-radius:999px;border:1px solid #E8E4DD}
+.fade{position:absolute;inset:auto 0 0 0;height:120px;background:linear-gradient(to bottom,transparent,#FAF8F5);pointer-events:none}
+</style>
+</head>
+<body>
+<div class="bar"><span>DRAFT B — subtiler Cursor (Magnet)</span><a href="./index.html">← Übersicht</a></div>
+<section class="hero" id="hero">
+<canvas id="c" aria-hidden="true"></canvas>
+<div class="fade"></div>
+<div class="content">
+  <div class="eyebrow">Partner für unternehmensweite KI-Transformation</div>
+  <h1>KI-Erfolg entsteht nicht beim Tool, sondern bei der <em>Befähigung</em> der Menschen.</h1>
+  <p class="lede">Bewege die Maus — Farbdichte folgt sehr dezent. Touch: Fingerpunkt.</p>
+</div>
+<div class="hint">Maus bewegen</div>
+</section>
+<script type="module">
+const BG=[250,248,245]
+const BLOBS=[
+  {c:[168,184,150],x:0.78,y:0.18,r:0.55,ax:0.04,ay:0.05,s:0.00021,p:0},
+  {c:[188,168,214],x:0.62,y:0.55,r:0.50,ax:0.06,ay:0.04,s:0.00017,p:2.1},
+  {c:[226,142,110],x:0.88,y:0.82,r:0.42,ax:0.04,ay:0.06,s:0.00026,p:4.2},
+]
+const BAYER=[[0,8,2,10],[12,4,14,6],[3,11,1,9],[15,7,13,5]]
+const LEVELS=18
+const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches
+const canvas=document.getElementById('c'), wrap=document.getElementById('hero')
+const ctx=canvas.getContext('2d')
+const buf=document.createElement('canvas'), bctx=buf.getContext('2d')
+let mx=0.72, my=0.38, tmx=0.72, tmy=0.38
+function resize(){const r=wrap.getBoundingClientRect();const dpr=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(r.width*dpr);canvas.height=Math.round(r.height*dpr)}
+function onMove(e){
+  const r=wrap.getBoundingClientRect()
+  const x=(e.touches?e.touches[0].clientX:e.clientX)-r.left
+  const y=(e.touches?e.touches[0].clientY:e.clientY)-r.top
+  tmx=Math.min(1,Math.max(0,x/r.width)); tmy=Math.min(1,Math.max(0,y/r.height))
+}
+function draw(t){
+  mx+=(tmx-mx)*0.06; my+=(tmy-my)*0.06
+  const cols=84, ar=canvas.width/canvas.height
+  const rScale=ar<0.9?0.85:1
+  const cellW=canvas.width/cols
+  const rows=Math.max(8,Math.round(canvas.height/cellW))
+  if(buf.width!==cols||buf.height!==rows){buf.width=cols;buf.height=rows}
+  const img=bctx.createImageData(cols,rows), d=img.data
+  const px=0.55+mx*0.35, py=0.25+my*0.45
+  let i=0
+  for(let y=0;y<rows;y++){
+    const vy=(y+0.5)/rows
+    for(let x=0;x<cols;x++){
+      const vx=(x+0.5)/cols
+      let r=BG[0],g=BG[1],b=BG[2]
+      for(const bl of BLOBS){
+        const bx=bl.x+Math.sin(t*bl.s+bl.p)*bl.ax
+        const by=bl.y+Math.cos(t*bl.s*1.3+bl.p)*bl.ay
+        const dx=(vx-bx)*ar, dy=vy-by
+        const dist=Math.sqrt(dx*dx+dy*dy)
+        let f=1-dist/(bl.r*rScale)
+        if(f>0){f=f*f*(3-2*f); r+=(bl.c[0]-r)*f; g+=(bl.c[1]-g)*f; b+=(bl.c[2]-b)*f}
+      }
+      // subtle cursor blob — stronger on portrait for touch visibility
+      {
+        const isPortrait = ar < 0.9
+        const rad = isPortrait ? 0.62 : 0.55
+        const intens = isPortrait ? 0.85 : 0.75
+        const dx=(vx-px)*ar, dy=vy-py
+        const dist=Math.sqrt(dx*dx+dy*dy)
+        let f=1-dist/rad
+        if(f>0){f=f*f*(3-2*f)*intens; const mr=(188+226)/2, mg=(168+142)/2, mb=(214+110)/2; r+=(mr-r)*f; g+=(mg-g)*f; b+=(mb-b)*f}
+      }
+      const th=(BAYER[y&3][x&3]/16-0.5)/LEVELS
+      r=Math.min(255,Math.max(0,Math.floor((r/255+th)*LEVELS)/(LEVELS-1)*255))
+      g=Math.min(255,Math.max(0,Math.floor((g/255+th)*LEVELS)/(LEVELS-1)*255))
+      b=Math.min(255,Math.max(0,Math.floor((b/255+th)*LEVELS)/(LEVELS-1)*255))
+      d[i++]=r; d[i++]=g; d[i++]=b; d[i++]=255
+    }
+  }
+  bctx.putImageData(img,0,0)
+  ctx.imageSmoothingEnabled=false
+  ctx.clearRect(0,0,canvas.width,canvas.height)
+  ctx.drawImage(buf,0,0,canvas.width,canvas.height)
+}
+function loop(t){draw(t); requestAnimationFrame(loop)}
+resize()
+if(reduced) draw(4200)
+else {addEventListener('resize',resize); addEventListener('pointermove',onMove,{passive:true}); addEventListener('touchstart',onMove,{passive:true}); addEventListener('touchmove',onMove,{passive:true}); requestAnimationFrame(loop)}
+</script>
+</body>
+</html>
