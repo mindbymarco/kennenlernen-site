@@ -33,18 +33,6 @@ export default function DatenschutzPage() {
                 Datenschutzerklärung
               </h1>
 
-              {/* Warn-Box */}
-              <div className="rounded-[16px] bg-[#FFF8E6] border border-[#FDE68A] px-6 py-5 mb-10">
-                <p className="text-[14px] leading-[1.65] text-[var(--color-ink)] m-0">
-                  <strong className="font-semibold text-[var(--color-ink-strong)]">
-                    Kein Rechtsersatz.
-                  </strong>{" "}
-                  Vor Go-Live mit eRecht24 Premium / Datenschutz-Anwalt finalisieren.{" "}
-                  <span className="font-medium">§ 5 DDG seit 14.05.2024 maßgeblich</span> (nicht TMG). Texte an
-                  tatsächlichen Einsatz (Hosting, Fonts, Cal.com) anpassen.
-                </p>
-              </div>
-
               {/* Kurzfassung */}
               <h2 className="font-[family-name:var(--font-serif)] text-[22px] font-semibold text-[var(--color-ink-strong)] mb-4">
                 Kurzfassung
