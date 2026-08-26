@@ -10,8 +10,8 @@ export const metadata: Metadata = {
   title: "Marco Grotemeyer — KI-Transformation für den Mittelstand",
   description: "Partner für unternehmensweite KI-Transformation. Befähigung und technische Umsetzung aus einer Hand.",
   icons: {
-    icon: [{ url: "/favicon.ico" }, { url: "/favicon.png", type: "image/png" }, { url: "/logo.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/favicon.png" }],
+    icon: [{ url: "/favicon.ico" }, { url: "/favicon.png", type: "image/png" }, { url: "/logo.png", type: "image/png" }],
+    apple: [{ url: "/logo.png" }],
   },
 };
 

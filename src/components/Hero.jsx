@@ -30,47 +30,31 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[#F2E7DE]/28 md:bg-[#F2E7DE]/18" aria-hidden="true" />
         <HeroGrain className="" />
 
-        <div className="relative z-10 max-w-[1180px] mx-auto px-5 md:px-7 pt-[96px] pb-[84px] md:pt-[140px] md:pb-[160px] text-center">
-          <motion.div
-            variants={reduced ? undefined : heroVariants}
-            initial={reduced ? undefined : 'hidden'}
-            animate={reduced ? undefined : 'visible'}
-          >
-            <motion.span
-              variants={childVariants}
-              className="inline-block text-[13px] font-medium tracking-[0.06em] uppercase text-[var(--color-ink-muted)] mb-7"
-            >
+        <div className="relative z-10 max-w-[1180px] mx-auto px-5 md:px-7 pt-[92px] pb-[72px] md:pt-[140px] md:pb-[160px] text-center">
+          <div>
+            <p className="inline-block text-[13px] font-medium tracking-[0.06em] uppercase text-[var(--color-ink-muted)] mb-5 md:mb-7">
               Partner für unternehmensweite KI-Transformation
-            </motion.span>
+            </p>
 
-            <motion.h1
-              variants={childVariants}
-              className="font-[family-name:var(--font-serif)] font-extrabold leading-[1.04] tracking-[-0.04em] text-[var(--color-ink-strong)] max-w-[18ch] mx-auto mb-7 text-[clamp(36px,5vw,64px)]"
-            >
+            <h1 className="font-[family-name:var(--font-serif)] font-extrabold leading-[1.04] tracking-[-0.04em] text-[var(--color-ink-strong)] max-w-[18ch] mx-auto mb-5 md:mb-7 text-[clamp(30px,8vw,64px)]">
               KI-Erfolg entsteht nicht beim Tool, sondern bei der{' '}
               <em className="italic font-medium text-[#9A6B5C]">Befähigung</em> der Menschen.
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              variants={childVariants}
-              className="text-[18px] leading-[1.55] text-[var(--color-ink-muted)] max-w-[52ch] mx-auto mb-10"
-            >
+            <p className="text-[16px] md:text-[18px] leading-[1.55] text-[var(--color-ink-muted)] max-w-[52ch] mx-auto mb-8 md:mb-10">
               Befähigung und technische Umsetzung aus einer Hand. Damit KI nicht in Piloten stecken bleibt, sondern in der täglichen Arbeit ankommt.
-            </motion.p>
+            </p>
 
-            <motion.div variants={childVariants} className="flex gap-3.5 flex-wrap justify-center mb-10">
+            <div className="flex gap-3.5 flex-wrap justify-center mb-8 md:mb-10">
               <a
                 href="#erstgespraech"
                 className="group inline-flex items-center gap-2 px-[22px] py-3.5 text-[15px] font-medium bg-[var(--color-ink)] text-white rounded-full border border-transparent transition-colors duration-150 hover:bg-white hover:text-[var(--color-ink)]"
               >
                 Erstgespräch buchen <span className="inline-block transition-transform duration-200 group-hover:translate-x-[3px]" aria-hidden="true">→</span>
               </a>
-            </motion.div>
+            </div>
 
-            <motion.div
-              variants={childVariants}
-              className="flex items-center justify-center gap-[18px] pt-6"
-            >
+            <div className="flex items-center justify-center gap-[18px] pt-4 md:pt-6">
               <img
                 src="/profile.jpg"
                 alt="Marco Grotemeyer"
@@ -82,8 +66,8 @@ export default function Hero() {
                 <span className="text-[13px] font-semibold text-[var(--color-ink)]">Marco Grotemeyer</span>
                 <span className="text-xs text-[var(--color-ink)]/70">AI Builder · Bielefeld / Remote DACH</span>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

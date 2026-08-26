@@ -19,7 +19,7 @@ export default function Nav() {
         aria-label="Hauptnavigation"
       >
         <a href={isHome ? "#top" : "/"} className="flex items-center gap-2.5 font-[family-name:var(--font-serif)] text-[17px] md:text-[19px] font-bold tracking-[-0.04em] whitespace-nowrap">
-          <img src="/logo.svg" alt="" width="28" height="28" className="w-7 h-7 rounded-lg border border-black/[0.06] shadow-sm" />
+          <img src="/logo.png" alt="" width="28" height="28" className="w-7 h-7 rounded-lg border border-black/[0.06] bg-white object-cover shadow-sm" />
           Marco Grotemeyer
         </a>
         <div className="hidden md:flex gap-6 lg:gap-7 text-[13px] font-medium text-[var(--color-ink-muted)]">
