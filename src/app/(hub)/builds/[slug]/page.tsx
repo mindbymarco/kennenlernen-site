@@ -32,7 +32,7 @@ export default async function BuildPage({ params }: { params: Promise<{ slug: st
         <h2>Das Ergebnis</h2>
         <p>{build.result}</p>
         <div style={{ display: "flex", gap: 24, alignItems: "center", flexWrap: "wrap", marginTop: 48 }}>
-          <Link className="btn" href="/kontakt">So etwas für dich? Erstgespräch buchen <span className="arr" aria-hidden="true">→</span></Link>
+          <Link className="btn" href="/kontakt">Willst du so etwas auch? Erstgespräch buchen <span className="arr" aria-hidden="true">→</span></Link>
           <Link className="mono-link" href={`/builds/${next.slug}`}>Nächster Build: {next.title}</Link>
         </div>
       </div>

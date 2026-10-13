@@ -1,6 +1,6 @@
 import Link from "next/link";
 import LoopVideo from "./LoopVideo";
-import { faq, ladder, promises, type Build, type Stufe } from "@/lib/hub";
+import { faq, honesty, ladder, promises, type Build, type Stufe } from "@/lib/hub";
 
 export function BuildClip({ build }: { build: Build }) {
   const { media } = build;
@@ -37,8 +37,12 @@ export function Ladder({ extra = [] }: { extra?: Stufe[] }) {
 }
 
 export function Promises() {
-  return <div className="cols" data-stagger style={{ marginTop: 64, maxWidth: 920 }}>
-    {promises.map(p => <div key={p.t}><p><b>{p.t}</b>{p.d}</p></div>)}
+  return <div style={{ marginTop: 72 }}>
+    <h3 className="display rv" style={{ fontSize: "clamp(30px, 3.4vw, 40px)", textAlign: "center", marginBottom: 28 }}>Darauf kannst du dich verlassen</h3>
+    <div className="cols" data-stagger style={{ maxWidth: 920 }}>
+      {promises.map(p => <div key={p.t}><p><b>{p.t}</b>{p.d}</p></div>)}
+    </div>
+    <p className="rv honesty">{honesty}</p>
   </div>;
 }
 

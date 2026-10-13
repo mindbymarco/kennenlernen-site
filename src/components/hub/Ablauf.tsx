@@ -37,7 +37,7 @@ export default function Ablauf({ steps }: { steps: { id: string; label: string; 
     window.addEventListener("resize", update);
     return () => { cancelAnimationFrame(frame.current); window.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
   }, [steps]);
-  return <nav className="ablauf" aria-label="Abschnitte dieser Seite">
+  return <nav className="ablauf" aria-label="Abschnitte dieser Seite" style={{ ["--p" as string]: state.progress }}>
     <div className="ab-tc" aria-hidden="true"><span><b>●</b> Build</span><span className="ab-clock">{fmt(state.progress * TOTAL)}</span></div>
     <div className="ab-track" ref={track}>
       {steps.map((step, i) => <a key={step.id} ref={el => { clips.current[i] = el; }} className={i === state.active ? "ab-clip act" : "ab-clip"} href={`#${step.id}`} style={{ ["--g" as string]: step.grow ?? 1 }} aria-current={i === state.active ? "location" : undefined}>{step.label}</a>)}

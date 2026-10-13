@@ -21,10 +21,10 @@ const steps = [
 ];
 
 const flow = [
-  { n: "01", t: "Erstgespräch", d: "20 Minuten per Video. Du erzählst, welche Aufgabe dich Zeit kostet. Ich sage dir ehrlich, ob sich ein Agent lohnt." },
-  { n: "02", t: "Umfang festlegen", d: "Wir schreiben auf, was der Ablauf können soll und woran wir merken, dass er läuft. Der Preis steht fest, bevor du zahlst." },
-  { n: "03", t: "Bauen und testen", d: "Ich baue in deinen Programmen und teste mit echten Fällen. Nach zwei Wochen läuft der Ablauf." },
-  { n: "04", t: "Übergabe", d: "Du bekommst Anleitung und Aufzeichnung, dazu 14 Tage Nachbetreuung. Betreuung danach nur, wenn du sie willst." },
+  { n: "01", t: "Erstgespräch", d: "In 20 Minuten erzählst du mir, welche Aufgabe dich Zeit kostet. Ich sage dir ehrlich, ob sich ein Agent dafür lohnt." },
+  { n: "02", t: "Umfang festlegen", d: "Wir schreiben auf, was der Ablauf können soll und woran wir merken, dass er funktioniert. Der Preis steht fest, bevor du etwas zahlst." },
+  { n: "03", t: "Bauen und testen", d: "Ich baue in deinen Programmen und teste mit echten Fällen aus deinem Alltag. Nach zwei Wochen läuft der Ablauf." },
+  { n: "04", t: "Übergabe", d: "Du bekommst eine Anleitung und die Aufzeichnung, und 14 Tage lang bin ich für Fragen da. Ob du danach Betreuung willst, entscheidest du." },
 ];
 
 export default function Beratung() {
@@ -33,7 +33,7 @@ export default function Beratung() {
       <div className="wrap">
         <p className="label rv">Beratung · KI-Agenten zum Festpreis</p>
         <h1 className="display" data-words><Words>Ein Agent für die Aufgabe, die dich jede Woche</Words> <Accent shimmer>Stunden</Accent> <Words>kostet.</Words></h1>
-        <p className="lede rv" style={{ ["--d" as string]: "500ms" }}>Für Solo-Gründer:innen, die Wissen oder Dienstleistung verkaufen und ChatGPT oder Claude schon nutzen. Ich baue den Ablauf, du bekommst ihn übergeben.</p>
+        <p className="lede rv" style={{ ["--d" as string]: "500ms" }}>Für Solo-Gründer:innen, die Wissen oder eine Dienstleistung verkaufen und ChatGPT oder Claude schon nutzen. Ich baue den Ablauf und übergebe ihn dir so, dass du ihn allein weiter nutzen kannst.</p>
         <div className="acts rv" style={{ ["--d" as string]: "650ms" }}><Link className="btn" href="/kontakt">Erstgespräch buchen <span className="arr" aria-hidden="true">→</span></Link><a className="mono-link" href="#preise">Preise ansehen</a></div>
       </div>
     </section>
@@ -42,15 +42,15 @@ export default function Beratung() {
       <div className="wrap">
         <div className="head rv"><p className="label">01 · Für wen</p><h2 className="display">Du arbeitest <em>allein.</em></h2></div>
         <div className="cols" data-stagger style={{ gridTemplateColumns: "1fr 1fr", maxWidth: 920 }}>
-          <div><b>Passt, wenn …</b><ul className="prose" style={{ paddingLeft: 20, color: "var(--ink-2)", fontSize: 16.5, margin: "8px 0 0" }}><li>du ohne Team arbeitest,</li><li>du Wissen oder Dienstleistung verkaufst, etwa als Coach, Berater:in, Freelancer oder mit eigenem Angebot,</li><li>du ChatGPT oder Claude schon nutzt,</li><li>eine Aufgabe jede Woche wiederkommt und Stunden kostet.</li></ul></div>
-          <div><b>Passt nicht, wenn …</b><ul className="prose" style={{ paddingLeft: 20, color: "var(--ink-2)", fontSize: 16.5, margin: "8px 0 0" }}><li>du ein Team oder ein mittelständisches Unternehmen führst. Dafür gibt es Agenturen.</li><li>du einen lokalen Betrieb führst. Dafür gibt es <Link href="/betriebe">meine Hilfe für Betriebe</Link>.</li><li>du nur ausprobieren willst, ohne konkrete Aufgabe.</li></ul></div>
+          <div><b>Passt, wenn …</b><p>du ohne Team arbeitest und Wissen oder eine Dienstleistung verkaufst, etwa als Coach, Berater:in oder Freelancer. Du nutzt ChatGPT oder Claude schon, und es gibt eine Aufgabe, die jede Woche wiederkommt und dich Stunden kostet.</p></div>
+          <div><b>Passt eher nicht, wenn …</b><p>du ein Team oder ein mittelständisches Unternehmen führst. Dann bist du bei einer Agentur besser aufgehoben. Hast du einen lokalen Betrieb, schau dir <Link href="/betriebe">meine Hilfe für Betriebe</Link> an. Und wenn du erst mal nur ausprobieren willst und noch keine konkrete Aufgabe hast, ist ein Build noch zu früh.</p></div>
         </div>
       </div>
     </section>
 
     <section className="sec" id="ablauf" style={{ background: "var(--paper-2)" }}>
       <div className="wrap">
-        <div className="head rv"><p className="label">02 · So läuft es</p><h2 className="display">Vom Gespräch zum laufenden <em>Ablauf.</em></h2></div>
+        <div className="head rv"><p className="label">02 · So läuft es</p><h2 className="display">Vom ersten Gespräch bis zum laufenden <em>Ablauf</em></h2></div>
         <div className="cols four" data-stagger>
           {flow.map(step => <div key={step.n}><span className="label">{step.n}</span><h3>{step.t}</h3><p>{step.d}</p></div>)}
         </div>
@@ -59,7 +59,7 @@ export default function Beratung() {
 
     <section className="sec" id="preise">
       <div className="wrap">
-        <div className="head rv"><p className="label">03 · Preise</p><h2 className="display">Du siehst jeden Preis, <em>bevor</em> du zahlst.</h2><p>Laufende Kosten für Claude, API, Hosting und Werkzeuge zahlst du direkt beim Anbieter. Du siehst sie, bevor wir anfangen.</p></div>
+        <div className="head rv"><p className="label">03 · Preise</p><h2 className="display">Du kennst den Preis, <em>bevor</em> du zahlst.</h2><p>Laufende Kosten für Claude, eine API, Hosting oder andere Werkzeuge zahlst du direkt beim Anbieter. Wie hoch sie sind, siehst du, bevor wir anfangen.</p></div>
         <Ladder extra={[training]} />
         <Promises />
         <div className="center rv"><Link className="btn" href="/kontakt">Erstgespräch buchen <span className="arr" aria-hidden="true">→</span></Link></div>
@@ -70,9 +70,9 @@ export default function Beratung() {
       <div className="wrap">
         <div className="head rv"><p className="label">04 · Grenzen</p><h2 className="display">Was ich <em>nicht</em> mache</h2></div>
         <div className="cols" data-stagger>
-          <div><h3>Rund um die Uhr</h3><p>Ich bin nicht dauernd erreichbar. Was ich baue, soll ohne mich laufen.</p></div>
-          <div><h3>Große Software</h3><p>Keine Apps, kein SaaS, keine Anbindung an Konzernsysteme.</p></div>
-          <div><h3>Folien ohne Umsetzung</h3><p>Keine Strategie-Papiere. Am Ende läuft etwas, oder ich sage dir vorher ab.</p></div>
+          <div><h3>Rund um die Uhr</h3><p>Ich bin nicht ständig erreichbar. Was ich baue, soll ja gerade ohne mich laufen.</p></div>
+          <div><h3>Große Software</h3><p>Ich baue keine Apps, kein SaaS und keine Anbindung an Konzernsysteme.</p></div>
+          <div><h3>Folien ohne Umsetzung</h3><p>Strategie-Papiere schreibe ich nicht. Entweder läuft am Ende etwas, oder ich sage dir vorher, dass es sich nicht lohnt.</p></div>
         </div>
       </div>
     </section>

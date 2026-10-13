@@ -75,3 +75,8 @@ Chronologisch, mit Begründung. Neue Entscheidungen unten anhängen.
 - Kontakt: Erstgespräch über den bestehenden Cal.com-Link (Datenschutz deckt ihn ab), Build-Session per E-Mail, bis Buchung mit Zahlung steht (G4). Kein Kontaktformular, solange Resend und Datenschutzeintrag fehlen.
 - Builds zeigen echte, stumme Ausschnitte aus fertigen Reels und Karussells (`public/hub/`), Achilleus und Raijin als Terminal-Darstellung.
 **Quelle:** `~/Movies/Content/marcogrotemeyer.de/Brand/DESIGNSYSTEM.md`, `Strategie/SITEMAP.md`, `Strategie/STARTSEITE-TEXTE.md`.
+
+## D16 — Wording vom Alltag her, drei Visualisierungen, Rechtstexte fertig (13.10.2026)
+**Kontext:** Marcos Entscheidungen H25–H27.
+**Entscheidung:** Startseite folgt dem Weg Alltag → „Ich kenne das“ → Ergebnis → Aufwand → Builds → Preise und Vertrauen. Drei Motion-Bausteine in `src/components/hub/viz/` (Woche, Checkliste, Vorher/Nachher-Wisch), ohne Videodateien, bei „Bewegung reduzieren“ nur Endzustand. Impressum und Datenschutz liegen jetzt in `src/app/(hub)/` im Look der Dachmarke, beschreiben den tatsächlichen Stand (keine Cookies, kein lokaler Speicher, Cal.com nur als Link) und nennen die Kleinunternehmerregel. „beyond925“ entfernt.
+**Quelle:** `~/Movies/Content/marcogrotemeyer.de/Strategie/STARTSEITE-TEXTE.md`, `ENTSCHEIDUNGEN.md`.
