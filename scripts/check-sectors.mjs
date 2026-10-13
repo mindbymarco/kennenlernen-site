@@ -51,7 +51,7 @@ console.log('Catalog passed: 25 unique industry pages, five groups, 75 complete 
 if (process.env.CHECK_SITE_ORIGIN) {
   const origin=process.env.CHECK_SITE_ORIGIN;
   const escape = value => value.replaceAll('&','&amp;').replaceAll('"','&quot;').replaceAll("'",'&#x27;').replaceAll('<','&lt;').replaceAll('>','&gt;');
-  const requests=[...sectors.map(sector=>({path:'/branchen/'+sector.slug,title:sector.headline,problems:sector.cases.map(c=>c.problem),results:sector.cases.map(c=>c.result),initialSolution:sector.cases[0].solution,helperName:sector.cases[0].assistant.name,helperRule:sector.cases[0].assistant.rule})),...sectorGroups.map(group=>({path:'/bereiche/'+group.slug,title:group.headline,problems:group.problems,results:group.outcomes,initialSolution:groupCases(group)[0].useCase.solution,helperName:groupCases(group)[0].useCase.assistant.name,helperRule:groupCases(group)[0].useCase.assistant.rule}))];
+  const requests=[...sectors.map(sector=>({path:'/betriebe/branchen/'+sector.slug,title:sector.headline,problems:sector.cases.map(c=>c.problem),results:sector.cases.map(c=>c.result),initialSolution:sector.cases[0].solution,helperName:sector.cases[0].assistant.name,helperRule:sector.cases[0].assistant.rule})),...sectorGroups.map(group=>({path:'/betriebe/bereiche/'+group.slug,title:group.headline,problems:group.problems,results:group.outcomes,initialSolution:groupCases(group)[0].useCase.solution,helperName:groupCases(group)[0].useCase.assistant.name,helperRule:groupCases(group)[0].useCase.assistant.rule}))];
   for(let offset=0;offset<requests.length;offset+=5) {
     await Promise.all(requests.slice(offset,offset+5).map(async page=>{
       const response=await fetch(origin+page.path);
@@ -65,8 +65,8 @@ if (process.env.CHECK_SITE_ORIGIN) {
       assert.ok(html.includes(`https://www.marcogrotemeyer.de${page.path}`),page.path+' canonical');
     }));
   }
-  const index=await fetch(origin+'/branchen');assert.equal(index.status,200);
-  const missing=await fetch(origin+'/branchen/does-not-exist');assert.equal(missing.status,404);
+  const index=await fetch(origin+'/betriebe/branchen');assert.equal(index.status,200);
+  const missing=await fetch(origin+'/betriebe/branchen/does-not-exist');assert.equal(missing.status,404);
   const sitemap=await(await fetch(origin+'/sitemap.xml')).text();
   for(const page of requests)assert.ok(sitemap.includes(page.path),page.path+' sitemap');
   console.log('HTTP audit passed: all 30 detailed pages contain their actual problems, solution, results, calculator, collaboration and canonical; index, sitemap and 404 checked.');

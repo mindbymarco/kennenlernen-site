@@ -1,0 +1,23 @@
+# Marco Grotemeyer
+
+> Ich baue KI-Agenten für Solo-Gründer:innen: einen Ablauf für eine wiederkehrende Aufgabe, zum Festpreis, mit Übergabe. Deutschsprachig, Bad Oeynhausen.
+
+## Angebot (Endpreise, Kleinunternehmer nach § 19 UStG)
+- Erstgespräch: 20 Minuten per Video, 0 €
+- Build-Session: 90 Minuten live, 390 €, wird drei Monate lang auf einen Pilot angerechnet
+- Pilot-Build: ein Ablauf läuft nach zwei Wochen, 1.490 € (die ersten drei 990 €)
+- Build-Sprint: 3–4 Wochen, zwei bis drei Abläufe, ab 2.900 €
+- Betreuung: nur nach einem Pilot, 149 € im Monat, monatlich kündbar
+- Team-Training: auf Anfrage, ab 990 €
+- Garantie: Läuft es 14 Tage nach Übergabe nicht wie vereinbart, bessere ich nach oder das Geld kommt zurück.
+
+## Für wen
+Solo-Gründer:innen ohne Team, die Wissen oder Dienstleistung verkaufen und ChatGPT oder Claude schon nutzen. Nicht: Teams, Mittelstand, Apps oder große Software.
+
+## Seiten
+- [Beratung](https://www.marcogrotemeyer.de/beratung)
+- [Builds](https://www.marcogrotemeyer.de/builds)
+- [Über mich](https://www.marcogrotemeyer.de/ueber-mich)
+- [Kontakt](https://www.marcogrotemeyer.de/kontakt)
+- [Für Betriebe](https://www.marcogrotemeyer.de/betriebe): digitale Assistenten für lokale Betriebe
+- [Handschrift](https://handschrift.studio): Reels mit Claude schneiden

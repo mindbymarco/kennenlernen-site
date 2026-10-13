@@ -16,8 +16,8 @@ export const sectorGroups: SectorGroup[] = [
 export const sectorBySlug = (slug: string) => sectors.find(sector => sector.slug === slug);
 export const groupBySlug = (slug: string) => sectorGroups.find(group => group.slug === slug);
 export const sectorsInGroup = (slug: string) => sectors.filter(sector => sector.group === slug);
-export const sectorHref = (slug: string) => `/branchen/${slug}`;
-export const groupHref = (slug: string) => `/bereiche/${slug}`;
+export const sectorHref = (slug: string) => `/betriebe/branchen/${slug}`;
+export const groupHref = (slug: string) => `/betriebe/bereiche/${slug}`;
 export function visualForCase(sector: Sector, useCase: UseCase): VisualKind {
   if (useCase.module === "documents" || useCase.module === "marketing") return "document";
   if (useCase.module === "notes") return "checklist";
