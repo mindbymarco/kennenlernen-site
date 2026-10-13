@@ -937,3 +937,23 @@ body { background: var(--background); }
  .assistant-next-action { flex-direction:column; align-items:stretch; gap:18px; }
  .assistant-next-action [data-slot=button] { white-space:normal; height:auto; padding-block:12px; }
 }
+
+/* Dachmarke (G3, H18): eine Schriftfamilie Inter statt Inter + Krub, Papier der Dachmarke,
+   Tanne als einzige Akzentfarbe unter /betriebe, keine Aquarellflächen mehr. Fibonacci-Zeichen bleibt (H20). */
+:root {
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-inter), -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, Menlo, monospace;
+  --background: #F7F5F0;
+  --primary: #2F6B4F;
+  --secondary: #E1ECE5;
+  --secondary-foreground: #2F6B4F;
+  --accent-foreground: #2F6B4F;
+  --ring: #2F6B4F;
+  --brand-watercolor: none;
+}
+.sector-page, .group-schoenheit-gesundheit, .group-sport-freizeit, .group-service-vor-ort, .group-handel-selbststaendige { --primary: #2F6B4F; --secondary: #E1ECE5; }
+.hero-copy h1 span { color: #2F6B4F; }
+.contact-section::before { display: none; }
+.about-human-mark { display: none; }
+.nav-hub-link { font-size: 14px; }

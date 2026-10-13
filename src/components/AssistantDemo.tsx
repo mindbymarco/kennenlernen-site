@@ -34,7 +34,7 @@ export default function AssistantDemo({ id = "assistenten", onChoose }: { id?: s
      <p className="assistant-state" role="status" aria-live="polite">{phase==="idle"?"Wählen Sie einen Helfer und starten Sie den Ablauf.":phase==="working"?"Der Helfer bereitet das Ergebnis vor.":phase==="ready"?"Das Ergebnis liegt zur Prüfung bereit.":"Vorschau abgeschlossen. Sie haben das Ergebnis geprüft."}</p>
    </div></TabsContent>)}
    </Tabs>
-   {onChoose && <div className="assistant-next-action"><Button render={<a href="#rechner" />} nativeButton={false} onClick={()=>onChoose(active === "mail" ? "inbox" : active === "calendar" ? "calendar" : "documents")}>Diese Hilfe im Rechner auswählen<ArrowRight data-icon="inline-end" /></Button><a href="/branchen">Beispiele für meinen Betrieb ansehen<ArrowRight aria-hidden="true" /></a></div>}
-   <div className="assistant-marco"><img src="/profile.jpg" alt="Marco Grotemeyer" width="56" height="56"/><p><strong>Ich richte Ihren Helfer ein.</strong><span>Wir legen Regeln fest und üben gemeinsam an einer Aufgabe aus Ihrem Betrieb.</span></p><a href="/#erstgespraech">Mit Marco besprechen <ArrowRight aria-hidden="true"/></a></div>
+   {onChoose && <div className="assistant-next-action"><Button render={<a href="#rechner" />} nativeButton={false} onClick={()=>onChoose(active === "mail" ? "inbox" : active === "calendar" ? "calendar" : "documents")}>Diese Hilfe im Rechner auswählen<ArrowRight data-icon="inline-end" /></Button><a href="/betriebe/branchen">Beispiele für meinen Betrieb ansehen<ArrowRight aria-hidden="true" /></a></div>}
+   <div className="assistant-marco"><img src="/profile.jpg" alt="Marco Grotemeyer" width="56" height="56"/><p><strong>Ich richte Ihren Helfer ein.</strong><span>Wir legen Regeln fest und üben gemeinsam an einer Aufgabe aus Ihrem Betrieb.</span></p><a href="/betriebe#erstgespraech">Mit Marco besprechen <ArrowRight aria-hidden="true"/></a></div>
  </div></section>;
 }

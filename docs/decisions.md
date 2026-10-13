@@ -65,3 +65,13 @@ Chronologisch, mit Begründung. Neue Entscheidungen unten anhängen.
 **Entscheidung:** `--font-serif`/`--font-heading` = Inter (400-800+italic), `--font-sans` = Krub (400-600+italic, 700 optional), `--font-mono` = Krub (400/500 uppercase). Variablen-Namen bleiben, 0 Komponenten-Break. `next/font/google` Inter+Krub, subsets latin, weights wie oben.
 **Begründung:** Inter neutral, hoher x-height, bold 700-800 ideal für clamp Headings; Krub humanistisch schmal, 15-17px/1.6 lesbar, Konsistenz Mono=Body. Alternative JetBrains Mono verworfen (zu technisch, bricht Konsistenz).
 **Quelle:** Bild-Sample (blauer Hintergrund Inter/Krub) + Design-Validierung Task 2.
+
+## D15 — Umbau zum Hub: Dachmarke, neue Startseite, Betriebe unter /betriebe (13.10.2026)
+**Kontext:** marcogrotemeyer.de wird die Hauptseite der Personal Brand (Strategie in `~/Movies/Content/marcogrotemeyer.de/Strategie/`, Entscheidungen H18–H24, G3 im PLAN).
+**Entscheidung:**
+- Startseite `/` und Unterseiten `/beratung`, `/builds`, `/builds/[slug]`, `/ueber-mich`, `/kontakt` in der Route-Gruppe `src/app/(hub)` nach Probe A „Werkstattbuch“. Styles gekapselt in `src/app/hub.css` (`.hub`), Inhalte in `src/lib/hub.ts`.
+- Bisherige Inhalte für Betriebe unter `/betriebe` (Startseite, Branchen, Bereiche, Ressourcen). Alte URLs leiten mit 308 (permanent) weiter, siehe `next.config.ts`. `/design`, `/preview`, `/assistenten-vorschau` entfernt (Stand in `d1d2ff5` erhalten), leiten auf `/betriebe`.
+- Schrift: Inter (Text, UI, Titel unter /betriebe), Instrument Serif (Titel im Hub), Geist Mono (Labels). Krub entfällt (ersetzt D14). Unter /betriebe Tanne `#2F6B4F` als einzige Akzentfarbe, keine Aquarellflächen. Fibonacci-Zeichen bleibt.
+- Kontakt: Erstgespräch über den bestehenden Cal.com-Link (Datenschutz deckt ihn ab), Build-Session per E-Mail, bis Buchung mit Zahlung steht (G4). Kein Kontaktformular, solange Resend und Datenschutzeintrag fehlen.
+- Builds zeigen echte, stumme Ausschnitte aus fertigen Reels und Karussells (`public/hub/`), Achilleus und Raijin als Terminal-Darstellung.
+**Quelle:** `~/Movies/Content/marcogrotemeyer.de/Brand/DESIGNSYSTEM.md`, `Strategie/SITEMAP.md`, `Strategie/STARTSEITE-TEXTE.md`.

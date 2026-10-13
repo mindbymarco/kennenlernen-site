@@ -13,12 +13,12 @@ export default function Nav() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [desktopValue, setDesktopValue] = useState(null);
-  const localPage = pathname === "/" || pathname === "/design" || pathname.startsWith("/branchen/") || pathname.startsWith("/bereiche/");
-  const hrefFor = hash => localPage ? hash : `/${hash}`;
+  const localPage = pathname === "/betriebe";
+  const hrefFor = hash => localPage ? hash : `/betriebe${hash}`;
   const activeGroup = sectorGroups.find(group => pathname === groupHref(group.slug) || sectorsInGroup(group.slug).some(sector => pathname === sectorHref(sector.slug)));
   return <header className="site-header">
     <nav aria-label="Hauptnavigation" className="site-nav">
-      <Link href="/" className="site-wordmark"><span className="site-brand-mark"><img src="/brand/fibonacci-mark.png" alt="" width="385" height="382" /></span><span>Marco Grotemeyer</span></Link>
+      <Link href="/betriebe" className="site-wordmark"><span className="site-brand-mark"><img src="/brand/fibonacci-mark.png" alt="" width="385" height="382" /></span><span>Marco Grotemeyer</span></Link>
       <div className="nav-desktop">
         <NavigationMenu align="center" value={desktopValue} onValueChange={setDesktopValue}>
           <NavigationMenuList>
@@ -30,14 +30,15 @@ export default function Nav() {
                   <NavigationMenuLink render={<Link href={`${groupHref(group.slug)}#top`} />} onClick={() => setDesktopValue(null)} className="mega-group-link" active={pathname === groupHref(group.slug)}>{group.label} <ArrowUpRight aria-hidden="true" /></NavigationMenuLink>
                   <ul>{sectorsInGroup(group.slug).map(sector => <li key={sector.slug}><NavigationMenuLink render={<Link href={`${sectorHref(sector.slug)}#top`} />} active={pathname === sectorHref(sector.slug)} onClick={() => setDesktopValue(null)}>{sector.label}</NavigationMenuLink></li>)}</ul>
                 </div>)}</div>
-                <NavigationMenuLink render={<Link href="/branchen" />} onClick={() => setDesktopValue(null)}>Alle Bereiche und Betriebe ansehen <ArrowUpRight aria-hidden="true" /></NavigationMenuLink>
+                <NavigationMenuLink render={<Link href="/betriebe/branchen" />} onClick={() => setDesktopValue(null)}>Alle Bereiche und Betriebe ansehen <ArrowUpRight aria-hidden="true" /></NavigationMenuLink>
               </NavigationMenuContent>
             </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
-        <Link href="/ressourcen">Kostenlose Hilfen</Link>
+        <Link href="/betriebe/ressourcen">Kostenlose Hilfen</Link>
         <a href={hrefFor("#rechner")}>Preisrahmen</a>
         <a href={hrefFor("#prozess")}>Zusammenarbeit</a>
+        <Link href="/" className="nav-hub-link">Über Marco</Link>
         <Button render={<a href={hrefFor("#erstgespraech")} />} nativeButton={false}>Kontakt</Button>
       </div>
       <div className="nav-mobile"><Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
@@ -50,7 +51,7 @@ export default function Nav() {
               <AccordionContent><Link className="mobile-group-link" href={`${groupHref(group.slug)}#top`} onClick={() => setMobileOpen(false)}>Bereich {group.label} ansehen <ArrowUpRight aria-hidden="true" /></Link><ul>{sectorsInGroup(group.slug).map(sector => <li key={sector.slug}><Link href={`${sectorHref(sector.slug)}#top`} aria-current={pathname === sectorHref(sector.slug) ? "page" : undefined} onClick={() => setMobileOpen(false)}>{sector.label}</Link></li>)}</ul></AccordionContent>
             </AccordionItem>)}
           </Accordion>
-          <div className="mobile-utility-links"><Link href="/branchen" onClick={() => setMobileOpen(false)}>Alle Betriebe</Link><Link href="/ressourcen" onClick={() => setMobileOpen(false)}>Kostenlose Hilfen</Link><a href={hrefFor("#rechner")} onClick={() => setMobileOpen(false)}>Preisrahmen</a><a href={hrefFor("#prozess")} onClick={() => setMobileOpen(false)}>Zusammenarbeit</a><a href={hrefFor("#erstgespraech")} onClick={() => setMobileOpen(false)}>Marco kontaktieren</a></div>
+          <div className="mobile-utility-links"><Link href="/betriebe/branchen" onClick={() => setMobileOpen(false)}>Alle Betriebe</Link><Link href="/betriebe/ressourcen" onClick={() => setMobileOpen(false)}>Kostenlose Hilfen</Link><a href={hrefFor("#rechner")} onClick={() => setMobileOpen(false)}>Preisrahmen</a><a href={hrefFor("#prozess")} onClick={() => setMobileOpen(false)}>Zusammenarbeit</a><a href={hrefFor("#erstgespraech")} onClick={() => setMobileOpen(false)}>Marco kontaktieren</a><Link href="/" onClick={() => setMobileOpen(false)}>Über Marco</Link></div>
           </div>
         </SheetContent>
       </Sheet></div>
