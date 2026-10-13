@@ -229,7 +229,7 @@
 .hub .ab-clip { flex: var(--g, 1); background: #2A2C31; border-radius: 5px; display: flex; align-items: center; padding: 0 10px; color: var(--stage-ink-2); text-decoration: none; white-space: nowrap; overflow: hidden; transition: background 250ms, color 250ms; }
 .hub .ab-clip:hover { color: var(--stage-ink); }
 .hub .ab-clip.act { background: #5A1824; color: #F8DDE1; }
-.hub .ab-head { position: absolute; top: 4px; bottom: 4px; width: 2px; background: var(--accent-beratung-hell); left: 0; margin-left: 10px; box-shadow: 0 0 0 3px rgba(231,154,165,.25); transition: left 150ms linear; pointer-events: none; }
+.hub .ab-head { position: absolute; top: 4px; bottom: 4px; width: 2px; background: var(--accent-beratung-hell); left: 0; margin-left: -1px; box-shadow: 0 0 0 3px rgba(231,154,165,.25); transition: left 150ms linear; pointer-events: none; }
 .hub .ab-head::before { content: ""; position: absolute; top: -2px; left: -4px; width: 10px; height: 8px; background: var(--accent-beratung-hell); clip-path: polygon(0 0, 100% 0, 50% 100%); }
 .hub .ab-now { display: none; }
 @media (max-width: 720px) { .hub .ablauf { grid-template-columns: 120px 1fr; } .hub .ab-clip { display: none; } .hub .ab-now { display: flex; align-items: center; padding-left: 14px; color: var(--stage-ink); } .hub .ab-track { padding: 0; } }
