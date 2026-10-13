@@ -23,14 +23,14 @@ Der Katalog enthält 25 Betriebe mit jeweils drei individuellen Alltagssituation
 
 ## Veröffentlichung
 
-Das bestehende Vercel-Projekt `kennenlernen-site` ist mit `www.marcogrotemeyer.de` und `marcogrotemeyer.de` verbunden. Eine Veröffentlichung kann vor der Domainumschaltung separat gebaut und geprüft werden:
+Das Vercel-Projekt `kennenlernen-site` ist mit diesem GitHub-Repo (`mindbymarco/kennenlernen-site`) verbunden und liefert `marcogrotemeyer.de` und `www.marcogrotemeyer.de` aus.
 
-```sh
-vercel deploy --prod --skip-domain --yes
-vercel promote <Deployment-URL> --yes
-```
+- **Push auf `main` = Deploy.** Jeder Push auf `main` baut und veröffentlicht die Seite live.
+- **PR = Vorschau.** Jeder Pull Request bekommt eine eigene Vorschau-URL. Vercel schreibt den Link als Kommentar in den PR. Vorschauen sind durch den Vercel-Login geschützt.
+- Arbeiten auf einem Branch, PR öffnen, Vorschau prüfen, dann mergen. Nicht mehr per CLI deployen (`vercel deploy --prod`).
+- Zurückrollen: im Vercel-Dashboard unter Deployments ein früheres Deployment wählen und „Instant Rollback“ nutzen.
 
-`.vercelignore` schließt Zugangsdaten, lokale Builds, Tests, interne Dokumentation und Arbeitsdateien aus. Veröffentlichungen werden über das angemeldete Vercel-Konto ausgeführt; Zugangsdaten gehören nicht ins Projekt.
+`.vercelignore` schließt Zugangsdaten, lokale Builds, Tests, interne Dokumentation und Arbeitsdateien aus. Zugangsdaten liegen als Environment Variables in Vercel, nicht im Projekt.
 
 ## Maßgebliche Dateien
 
