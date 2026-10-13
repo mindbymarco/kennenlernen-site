@@ -15,7 +15,7 @@ export default function ImpressumPage() {
     <>
       <Grain />
       <Nav />
-      <main className="bg-[#F2E7DE] pt-[120px] pb-10 px-3 lg:px-4 min-h-[70vh]">
+      <main className="bg-background pt-[120px] pb-10 px-3 lg:px-4 min-h-[70vh]">
         <div className="max-w-[1180px] mx-auto">
           <div className="rounded-[24px] bg-white border border-black/[0.06] shadow-[0_12px_40px_rgba(10,10,9,0.08),0_4px_12px_rgba(10,10,9,0.05)] overflow-hidden">
             <div className="px-7 lg:px-10 py-10 lg:py-12">

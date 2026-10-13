@@ -1,0 +1,302 @@
+[
+  {
+    "id": "handwerk-1",
+    "ok": true
+  },
+  {
+    "id": "handwerk-2",
+    "ok": true
+  },
+  {
+    "id": "handwerk-3",
+    "ok": true
+  },
+  {
+    "id": "heizung-sanitaer-1",
+    "ok": true
+  },
+  {
+    "id": "heizung-sanitaer-2",
+    "ok": true
+  },
+  {
+    "id": "heizung-sanitaer-3",
+    "ok": true
+  },
+  {
+    "id": "elektrobetriebe-1",
+    "ok": true
+  },
+  {
+    "id": "elektrobetriebe-2",
+    "ok": true
+  },
+  {
+    "id": "elektrobetriebe-3",
+    "ok": true
+  },
+  {
+    "id": "malerbetriebe-1",
+    "ok": true
+  },
+  {
+    "id": "malerbetriebe-2",
+    "ok": true
+  },
+  {
+    "id": "malerbetriebe-3",
+    "ok": true
+  },
+  {
+    "id": "tischlereien-1",
+    "ok": true
+  },
+  {
+    "id": "tischlereien-2",
+    "ok": true
+  },
+  {
+    "id": "tischlereien-3",
+    "ok": true
+  },
+  {
+    "id": "friseursalons-1",
+    "ok": true
+  },
+  {
+    "id": "friseursalons-2",
+    "ok": true
+  },
+  {
+    "id": "friseursalons-3",
+    "ok": true
+  },
+  {
+    "id": "kosmetikstudios-1",
+    "ok": true
+  },
+  {
+    "id": "kosmetikstudios-2",
+    "ok": true
+  },
+  {
+    "id": "kosmetikstudios-3",
+    "ok": true
+  },
+  {
+    "id": "nagelstudios-1",
+    "ok": true
+  },
+  {
+    "id": "nagelstudios-2",
+    "ok": true
+  },
+  {
+    "id": "nagelstudios-3",
+    "ok": true
+  },
+  {
+    "id": "massagebetriebe-1",
+    "ok": true
+  },
+  {
+    "id": "massagebetriebe-2",
+    "ok": true
+  },
+  {
+    "id": "massagebetriebe-3",
+    "ok": true
+  },
+  {
+    "id": "physiotherapiepraxen-1",
+    "ok": true
+  },
+  {
+    "id": "physiotherapiepraxen-2",
+    "ok": true
+  },
+  {
+    "id": "physiotherapiepraxen-3",
+    "ok": true
+  },
+  {
+    "id": "fitnessstudios-1",
+    "ok": true
+  },
+  {
+    "id": "fitnessstudios-2",
+    "ok": true
+  },
+  {
+    "id": "fitnessstudios-3",
+    "ok": true
+  },
+  {
+    "id": "yogastudios-1",
+    "ok": true
+  },
+  {
+    "id": "yogastudios-2",
+    "ok": true
+  },
+  {
+    "id": "yogastudios-3",
+    "ok": true
+  },
+  {
+    "id": "pilatesstudios-1",
+    "ok": true
+  },
+  {
+    "id": "pilatesstudios-2",
+    "ok": true
+  },
+  {
+    "id": "pilatesstudios-3",
+    "ok": true
+  },
+  {
+    "id": "tanzschulen-1",
+    "ok": true
+  },
+  {
+    "id": "tanzschulen-2",
+    "ok": true
+  },
+  {
+    "id": "tanzschulen-3",
+    "ok": true
+  },
+  {
+    "id": "kampfsportschulen-1",
+    "ok": true
+  },
+  {
+    "id": "kampfsportschulen-2",
+    "ok": true
+  },
+  {
+    "id": "kampfsportschulen-3",
+    "ok": true
+  },
+  {
+    "id": "reinigungsbetriebe-1",
+    "ok": true
+  },
+  {
+    "id": "reinigungsbetriebe-2",
+    "ok": true
+  },
+  {
+    "id": "reinigungsbetriebe-3",
+    "ok": true
+  },
+  {
+    "id": "gartenpflege-1",
+    "ok": true
+  },
+  {
+    "id": "gartenpflege-2",
+    "ok": true
+  },
+  {
+    "id": "gartenpflege-3",
+    "ok": true
+  },
+  {
+    "id": "autowerkstaetten-1",
+    "ok": true
+  },
+  {
+    "id": "autowerkstaetten-2",
+    "ok": true
+  },
+  {
+    "id": "autowerkstaetten-3",
+    "ok": true
+  },
+  {
+    "id": "tierpflege-1",
+    "ok": true
+  },
+  {
+    "id": "tierpflege-2",
+    "ok": true
+  },
+  {
+    "id": "tierpflege-3",
+    "ok": true
+  },
+  {
+    "id": "ferienwohnungen-1",
+    "ok": true
+  },
+  {
+    "id": "ferienwohnungen-2",
+    "ok": true
+  },
+  {
+    "id": "ferienwohnungen-3",
+    "ok": true
+  },
+  {
+    "id": "einzelhandel-1",
+    "ok": true
+  },
+  {
+    "id": "einzelhandel-2",
+    "ok": true
+  },
+  {
+    "id": "einzelhandel-3",
+    "ok": true
+  },
+  {
+    "id": "floristik-1",
+    "ok": true
+  },
+  {
+    "id": "floristik-2",
+    "ok": true
+  },
+  {
+    "id": "floristik-3",
+    "ok": true
+  },
+  {
+    "id": "fotografie-1",
+    "ok": true
+  },
+  {
+    "id": "fotografie-2",
+    "ok": true
+  },
+  {
+    "id": "fotografie-3",
+    "ok": true
+  },
+  {
+    "id": "veranstaltungsservice-1",
+    "ok": true
+  },
+  {
+    "id": "veranstaltungsservice-2",
+    "ok": true
+  },
+  {
+    "id": "veranstaltungsservice-3",
+    "ok": true
+  },
+  {
+    "id": "beratung-freie-berufe-1",
+    "ok": true
+  },
+  {
+    "id": "beratung-freie-berufe-2",
+    "ok": true
+  },
+  {
+    "id": "beratung-freie-berufe-3",
+    "ok": true
+  }
+]

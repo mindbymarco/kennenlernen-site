@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+export const metadata: Metadata = { robots: { index: false, follow: false } };
 import { OgImage } from "@/components/templates/OgImage";
 import { LinkedinPost } from "@/components/templates/LinkedinPost";
 import { NewsletterHeader } from "@/components/templates/NewsletterHeader";

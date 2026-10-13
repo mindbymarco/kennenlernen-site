@@ -1,0 +1,527 @@
+[
+  {
+    "id": "handwerk-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "handwerk-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "handwerk-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "heizung-sanitaer-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "heizung-sanitaer-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Termine & Erinnerungen"
+  },
+  {
+    "id": "heizung-sanitaer-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "elektrobetriebe-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "elektrobetriebe-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "elektrobetriebe-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "malerbetriebe-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "malerbetriebe-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "malerbetriebe-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "tischlereien-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "tischlereien-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "tischlereien-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "friseursalons-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "friseursalons-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Termine & Erinnerungen"
+  },
+  {
+    "id": "friseursalons-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Werbung & Beiträge"
+  },
+  {
+    "id": "kosmetikstudios-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "kosmetikstudios-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Termine & Erinnerungen"
+  },
+  {
+    "id": "kosmetikstudios-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Werbung & Beiträge"
+  },
+  {
+    "id": "nagelstudios-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "nagelstudios-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Termine & Erinnerungen"
+  },
+  {
+    "id": "nagelstudios-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Werbung & Beiträge"
+  },
+  {
+    "id": "massagebetriebe-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "massagebetriebe-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Termine & Erinnerungen"
+  },
+  {
+    "id": "massagebetriebe-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "physiotherapiepraxen-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "physiotherapiepraxen-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "physiotherapiepraxen-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "fitnessstudios-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "fitnessstudios-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Termine & Erinnerungen"
+  },
+  {
+    "id": "fitnessstudios-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Werbung & Beiträge"
+  },
+  {
+    "id": "yogastudios-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "yogastudios-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Termine & Erinnerungen"
+  },
+  {
+    "id": "yogastudios-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "pilatesstudios-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "pilatesstudios-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Termine & Erinnerungen"
+  },
+  {
+    "id": "pilatesstudios-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Werbung & Beiträge"
+  },
+  {
+    "id": "tanzschulen-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "tanzschulen-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Termine & Erinnerungen"
+  },
+  {
+    "id": "tanzschulen-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Werbung & Beiträge"
+  },
+  {
+    "id": "kampfsportschulen-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "kampfsportschulen-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Termine & Erinnerungen"
+  },
+  {
+    "id": "kampfsportschulen-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "reinigungsbetriebe-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "reinigungsbetriebe-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "reinigungsbetriebe-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "gartenpflege-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "gartenpflege-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "gartenpflege-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Werbung & Beiträge"
+  },
+  {
+    "id": "autowerkstaetten-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "autowerkstaetten-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "autowerkstaetten-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "tierpflege-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "tierpflege-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Termine & Erinnerungen"
+  },
+  {
+    "id": "tierpflege-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "ferienwohnungen-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "ferienwohnungen-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "ferienwohnungen-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "einzelhandel-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "einzelhandel-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "einzelhandel-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Werbung & Beiträge"
+  },
+  {
+    "id": "floristik-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "floristik-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "floristik-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Werbung & Beiträge"
+  },
+  {
+    "id": "fotografie-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "fotografie-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "fotografie-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "veranstaltungsservice-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "veranstaltungsservice-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "veranstaltungsservice-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  },
+  {
+    "id": "beratung-freie-berufe-1",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "E-Mails & Antworten"
+  },
+  {
+    "id": "beratung-freie-berufe-2",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Notizen & Rückrufe"
+  },
+  {
+    "id": "beratung-freie-berufe-3",
+    "outputCorrect": true,
+    "branchCorrect": true,
+    "selectionCount": 1,
+    "selected": "Angebote & Unterlagen"
+  }
+]

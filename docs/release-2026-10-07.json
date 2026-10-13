@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-07",
+  "status": "live",
+  "deploymentId": "dpl_HTajEBXATBx1dCqX6A2HVq9ukDZR",
+  "deploymentUrl": "https://kennenlernen-site-7umsvbnh0-marco-9913s-projects.vercel.app",
+  "domains": [
+    "www.marcogrotemeyer.de",
+    "marcogrotemeyer.de"
+  ],
+  "previousDeploymentId": "dpl_7TP74unsC6pf1QWtLU3sywaZLkJE",
+  "nextVersion": "16.3.6",
+  "runtimeAuditReportedVulnerabilities": 0,
+  "industryCasesVerified": 75,
+  "responsiveChecks": 105,
+  "humanDomainAuthorization": "Ja, auf beiden Domains live schalten",
+  "publicDomainChecks": {
+    "www.marcogrotemeyer.de": "HTTP and browser verified",
+    "marcogrotemeyer.de": "HTTP verified"
+  },
+  "publicDetailedPagesVerified": 30,
+  "publicDownloadVerified": true,
+  "publicBrowserFlowVerified": "Friseursalon: Beispielzeit wählen, vorbereiten, prüfen und passende Rechnerauswahl",
+  "copyRevision": "Removed invented-example and example-price wording. Interactive previews and non-binding cost estimates described professionally; UI, download and email draft updated.",
+  "copyRevisionChecks": "Build, offer checks, 30 detailed public pages, both domains and download verified."
+}

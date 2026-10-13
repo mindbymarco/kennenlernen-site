@@ -10,3 +10,16 @@ yarn-error.log*
 .env
 .env.local
 .env.*.local
+
+.env*
+.vercel
+docs
+scripts
+spikes
+.firecrawl
+AGENTS.md
+CLAUDE.md
+
+*.md
+index-static.html
+app-static.js

@@ -1,0 +1,11 @@
+"use client";
+import Link from "next/link";
+import { ArrowRight, Wrench, Sparkles, Dumbbell, MapPin, Store } from "lucide-react";
+import { sectorGroups, sectorsInGroup, groupHref, sectorHref, type SectorGroup } from "@/lib/sectors";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+const icons = { "handwerk-haus": Wrench, "schoenheit-gesundheit": Sparkles, "sport-freizeit": Dumbbell, "service-vor-ort": MapPin, "handel-selbststaendige": Store };
+export default function SectorDirectory({ group, compact = false }: { group?: SectorGroup; compact?: boolean }) {
+  const groups = group ? [group] : sectorGroups;
+  if (compact) return <Accordion className="compact-directory">{groups.map(item=>{const Icon=icons[item.slug];return <AccordionItem value={item.slug} key={item.slug}><AccordionTrigger><span className="compact-group-title"><Icon aria-hidden="true" /><span><strong>{item.label}</strong><span>{sectorsInGroup(item.slug).slice(0,3).map(sector=>sector.label).join(" · ")} …</span></span></span></AccordionTrigger><AccordionContent><ul className="compact-sector-links">{sectorsInGroup(item.slug).map(sector=><li key={sector.slug}><Link href={`${sectorHref(sector.slug)}#top`}><span>{sector.label}</span><ArrowRight aria-hidden="true" /></Link></li>)}</ul><Link className="directory-overview-link" href={`${groupHref(item.slug)}#top`}>Gesamten Bereich ansehen <ArrowRight aria-hidden="true" /></Link></AccordionContent></AccordionItem>;})}</Accordion>;
+  return <div className="sector-directory-grid">{groups.map(item => {const Icon = icons[item.slug];return <article key={item.slug} className="sector-directory-group"><div className="directory-group-heading"><Icon aria-hidden="true" /><h3><Link href={`${groupHref(item.slug)}#top`}>{item.label}</Link></h3></div><p>{item.headline}</p><ul>{sectorsInGroup(item.slug).map(sector => <li key={sector.slug}><Link href={`${sectorHref(sector.slug)}#top`}><span><strong>{sector.label}</strong><span>{sector.cases[0].title}</span></span><ArrowRight aria-hidden="true" /></Link></li>)}</ul><Link className="directory-overview-link" href={`${groupHref(item.slug)}#top`}>Bereich ansehen <ArrowRight aria-hidden="true" /></Link></article>;})}</div>;
+}

@@ -1,0 +1,2177 @@
+[
+  {
+    "slug": "handwerk",
+    "label": "Handwerk",
+    "singular": "Handwerksbetrieb",
+    "group": "handwerk-haus",
+    "headline": "Mehr Überblick zwischen Baustelle und Büro.",
+    "intro": "Sie sind den Tag über bei Kunden. Abends warten Anfragen, Rückrufe und Angebote. Gemeinsam machen wir diese Aufgaben übersichtlicher.",
+    "slots": [
+      {
+        "time": "Mo · 09:00",
+        "label": "Besichtigung"
+      },
+      {
+        "time": "Di · 14:00",
+        "label": "Kundentermin"
+      },
+      {
+        "time": "Mi · 16:00",
+        "label": "Angebote vorbereiten"
+      }
+    ],
+    "cases": [
+      {
+        "id": "handwerk-1",
+        "tab": "Anfragen",
+        "title": "Kundenanfragen auf einen Blick.",
+        "problem": "Neue Anfragen, Lieferantenmails und Rückfragen landen im selben Postfach.",
+        "solution": "Ich richte eine übersichtliche Ablage ein und bereite Antworten auf häufige Fragen vor.",
+        "result": "Sie sehen, wer ein Angebot oder einen Rückruf braucht, und können gezielt antworten.",
+        "module": "inbox",
+        "request": "Wir möchten die Terrasse erneuern. Können Sie nächste Woche zur Besichtigung kommen?",
+        "facts": [
+          "Terrasse erneuern",
+          "Besichtigung gewünscht",
+          "Termin nächste Woche abstimmen"
+        ],
+        "output": "Danke für Ihre Anfrage. Welche Zeiten passen Ihnen nächste Woche für eine Besichtigung?",
+        "assistant": {
+          "name": "Anfragen-Helfer",
+          "working": "Ich ordne den Terrassenwunsch und bereite die Rückfrage zur Besichtigung vor.",
+          "rule": "Projektwunsch und Terminwunsch festhalten. Eine Besichtigung erst nach Ihrer Kalenderprüfung bestätigen."
+        }
+      },
+      {
+        "id": "handwerk-2",
+        "tab": "Rückrufe",
+        "title": "Aus einer Gesprächsnotiz wird eine Aufgabe.",
+        "problem": "Absprachen stecken in Ihrem Kopf oder auf verschiedenen Zetteln.",
+        "solution": "Wir halten Anliegen, nächsten Schritt und eine Erinnerung gemeinsam fest.",
+        "result": "Beim nächsten Bürotermin wissen Sie, wen Sie zurückrufen und was vereinbart wurde.",
+        "module": "notes",
+        "request": "Kunde Berger wartet auf Rückmeldung zum Material. Mittwoch zurückrufen.",
+        "facts": [
+          "Material prüfen",
+          "Herrn Berger zurückrufen",
+          "Erinnerung für Mittwoch"
+        ],
+        "output": "Rückruf Berger: Materialverfügbarkeit vor dem Gespräch prüfen. Wiedervorlage Mittwoch.",
+        "assistant": {
+          "name": "Rückruf-Helfer",
+          "working": "Ich mache aus der Materialnotiz eine Rückrufaufgabe für Mittwoch.",
+          "rule": "Kunde, offene Frage und Rückrufdatum zusammenhalten. Materialverfügbarkeit wird von Ihnen geprüft."
+        }
+      },
+      {
+        "id": "handwerk-3",
+        "tab": "Angebote",
+        "title": "Angebote mit einer brauchbaren Vorlage starten.",
+        "problem": "Für ähnliche Aufträge schreiben Sie Einleitung, Ablauf und Hinweise immer wieder neu.",
+        "solution": "Ich bereite eine Vorlage mit Feldern für Ihren Leistungsumfang, Preise und Bedingungen vor.",
+        "result": "Sie beginnen mit einer passenden Struktur und ergänzen die fachlichen Angaben selbst.",
+        "module": "documents",
+        "request": "Angebot für eine neue Holzterrasse vorbereiten. Besichtigung ist erfolgt.",
+        "facts": [
+          "Projekt: Holzterrasse",
+          "Umfang: nach Besichtigung",
+          "Preise: vom Betrieb ergänzen"
+        ],
+        "output": "Angebotsentwurf: Projektbeschreibung, Leistungsumfang, Material, Preisfelder und nächster Schritt.",
+        "assistant": {
+          "name": "Angebots-Helfer",
+          "working": "Ich bringe die Angaben zur Holzterrasse in Ihre Angebotsvorlage.",
+          "rule": "Leistungen und Material strukturieren. Maße und Preise ergänzen Sie aus Ihrer eigenen Kalkulation."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "heizung-sanitaer",
+    "label": "Heizung & Sanitär",
+    "singular": "Heizungs- und Sanitärbetrieb",
+    "group": "handwerk-haus",
+    "headline": "Wartungen, Rückrufe und Termine besser im Blick.",
+    "intro": "Zwischen Wartung, Montage und Kundenanrufen bleibt wenig Bürozeit. Ich helfe Ihnen, Anfragen zu ordnen und wiederkehrende Unterlagen vorzubereiten.",
+    "slots": [
+      {
+        "time": "Mo · 08:00",
+        "label": "Heizungswartung"
+      },
+      {
+        "time": "Di · 10:30",
+        "label": "Besichtigung Bad"
+      },
+      {
+        "time": "Mi · 15:00",
+        "label": "Rückrufe"
+      }
+    ],
+    "cases": [
+      {
+        "id": "heizung-sanitaer-1",
+        "tab": "Wartung",
+        "title": "Wartungsanfragen geordnet vorbereiten.",
+        "problem": "Wartungstermine und andere Kundenanliegen kommen zwischen Einsätzen herein.",
+        "solution": "Wir sammeln Terminwünsche und Anlagenangaben in einer übersichtlichen Anfragevorlage.",
+        "result": "Sie können die Wartung mit den vorhandenen Angaben einplanen. Die fachliche Priorität legen Sie fest.",
+        "module": "inbox",
+        "request": "Unsere jährliche Heizungswartung steht an. Nächste Woche vormittags wäre es möglich.",
+        "facts": [
+          "Anliegen: Wartung",
+          "Wunsch: vormittags",
+          "Anlagenangaben noch ergänzen"
+        ],
+        "output": "Danke für Ihre Wartungsanfrage. Bitte nennen Sie uns noch den Anlagentyp. Wir prüfen einen Termin am Vormittag.",
+        "assistant": {
+          "name": "Wartungs-Helfer",
+          "working": "Ich sammle Wartungswunsch, Anlagentyp und gewünschte Vormittage.",
+          "rule": "Fehlenden Anlagentyp erfragen. Der Betrieb prüft freie Zeiten und bestätigt den Wartungstermin."
+        }
+      },
+      {
+        "id": "heizung-sanitaer-2",
+        "tab": "Termine",
+        "title": "Terminwünsche in eine klare Übersicht bringen.",
+        "problem": "Wünsche aus Anrufen müssen später mühsam in den Kalender übertragen werden.",
+        "solution": "Ich bereite Terminnotizen vor und zeige, wie Sie freie Zeiten und Rückrufe gemeinsam planen.",
+        "result": "Sie bestätigen passende Termine und haben offene Abstimmungen sichtbar.",
+        "module": "calendar",
+        "request": "Besichtigung für ein neues Bad: Dienstag am Nachmittag bevorzugt.",
+        "facts": [
+          "Terminart: Badbesichtigung",
+          "Wunsch: Dienstag nachmittags",
+          "Freie Zeit im Kalender prüfen"
+        ],
+        "output": "Terminnotiz für die Badbesichtigung ist vorbereitet. Der Betrieb prüft die Verfügbarkeit und bestätigt.",
+        "assistant": {
+          "name": "Besichtigungs-Helfer",
+          "working": "Ich bereite den Terminwunsch für die Badbesichtigung übersichtlich vor.",
+          "rule": "Dienstag am Nachmittag als Wunsch festhalten. Dauer und Verfügbarkeit vor einer Zusage prüfen."
+        }
+      },
+      {
+        "id": "heizung-sanitaer-3",
+        "tab": "Unterlagen",
+        "title": "Wartungsanschreiben nicht jedes Mal neu tippen.",
+        "problem": "Für Wartungshinweise und begleitende Anschreiben wiederholen sich dieselben Texte.",
+        "solution": "Wir erstellen Vorlagen, in denen Kunde, Anlage und Termin ergänzt werden.",
+        "result": "Sie nutzen wiederkehrende Texte und prüfen nur die Angaben zum jeweiligen Kunden.",
+        "module": "documents",
+        "request": "Anschreiben für die nächste jährliche Wartung der Heizung vorbereiten.",
+        "facts": [
+          "Kundenfeld ergänzen",
+          "Anlage und Wartung nennen",
+          "Terminabstimmung anbieten"
+        ],
+        "output": "Wartungsanschreiben mit Feldern für Kunde, Anlage und Terminvorschlag.",
+        "assistant": {
+          "name": "Unterlagen-Helfer",
+          "working": "Ich setze die vorhandenen Angaben in Ihr Wartungsanschreiben ein.",
+          "rule": "Nur bestätigte Kunden- und Anlagendaten verwenden. Der Betrieb prüft Inhalt und Terminvorschlag."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "elektrobetriebe",
+    "label": "Elektrobetriebe",
+    "singular": "Elektrobetrieb",
+    "group": "handwerk-haus",
+    "headline": "Anfragen und Absprachen zwischen Einsätzen festhalten.",
+    "intro": "Sie sind mit Installation und Kundenterminen beschäftigt. Ich helfe Ihnen, Besichtigungsanfragen, Materialrückfragen und Angebotsunterlagen leichter nachzuhalten.",
+    "slots": [
+      {
+        "time": "Mo · 09:00",
+        "label": "Besichtigung"
+      },
+      {
+        "time": "Di · 13:00",
+        "label": "Installation"
+      },
+      {
+        "time": "Mi · 16:00",
+        "label": "Materialrückfragen"
+      }
+    ],
+    "cases": [
+      {
+        "id": "elektrobetriebe-1",
+        "tab": "Anfragen",
+        "title": "Besichtigungen mit den wichtigen Angaben vorbereiten.",
+        "problem": "Neue Anfragen enthalten oft noch zu wenig Angaben für Ihre Planung.",
+        "solution": "Wir bereiten eine Rückfragenvorlage zu Vorhaben, Ort und Terminwunsch vor.",
+        "result": "Sie können die nächsten Schritte anhand einer vollständiger vorbereiteten Anfrage klären.",
+        "module": "inbox",
+        "request": "Wir möchten eine Wallbox installieren lassen. Was benötigen Sie für ein Angebot?",
+        "facts": [
+          "Vorhaben: Wallbox",
+          "Installationsort klären",
+          "Besichtigung abstimmen"
+        ],
+        "output": "Danke für Ihre Anfrage. Bitte nennen Sie den Installationsort und Ihre gewünschten Zeiten für eine Besichtigung.",
+        "assistant": {
+          "name": "Anfragen-Helfer",
+          "working": "Ich sammle die Angaben für die Besichtigung zur Wallbox.",
+          "rule": "Installationsort und Terminwunsch erfragen. Technische Machbarkeit und Preise beurteilt Ihr Betrieb."
+        }
+      },
+      {
+        "id": "elektrobetriebe-2",
+        "tab": "Rückfragen",
+        "title": "Materialrückfragen mit Wiedervorlage sammeln.",
+        "problem": "Zwischen Baustellen gehen Rückmeldungen vom Lieferanten und offene Kundenfragen leicht durcheinander.",
+        "solution": "Wir führen eine kurze Liste mit Anliegen, Ansprechpartner und Rückmeldedatum.",
+        "result": "Sie sehen vor dem nächsten Einsatz, welche Materialfrage noch offen ist.",
+        "module": "notes",
+        "request": "Lieferant meldet sich Freitag zur Verfügbarkeit der Leuchten.",
+        "facts": [
+          "Leuchtenverfügbarkeit offen",
+          "Lieferant antwortet Freitag",
+          "Kundenrückmeldung danach"
+        ],
+        "output": "Wiedervorlage Freitag: Lieferantenantwort prüfen und Kunden zum Leuchtentermin informieren.",
+        "assistant": {
+          "name": "Material-Helfer",
+          "working": "Ich halte die offene Leuchten-Rückfrage mit Wiedervorlage für Freitag fest.",
+          "rule": "Lieferant, Materialfrage und Rückmeldedatum verbinden. Einen Liefertermin erst nach Bestätigung nennen."
+        }
+      },
+      {
+        "id": "elektrobetriebe-3",
+        "tab": "Angebote",
+        "title": "Leistungsübersichten strukturiert vorbereiten.",
+        "problem": "Bei ähnlichen Installationen beginnen Sie immer wieder mit einem leeren Dokument.",
+        "solution": "Wir erstellen eine Angebotsstruktur für Beschreibung, Leistungen und Ihre Kalkulation.",
+        "result": "Sie ergänzen technische Angaben und Preise in einer vorbereiteten Vorlage.",
+        "module": "documents",
+        "request": "Angebotsstruktur für neue Beleuchtung im Laden vorbereiten.",
+        "facts": [
+          "Vorhaben: Ladenbeleuchtung",
+          "Leistungsumfang ergänzen",
+          "Kalkulation durch den Betrieb"
+        ],
+        "output": "Vorlage mit Bereichen für Beleuchtung, Montageumfang, Material und Preise.",
+        "assistant": {
+          "name": "Angebots-Helfer",
+          "working": "Ich ordne die Beleuchtungsleistungen in Ihrer Angebotsstruktur.",
+          "rule": "Montage und Material getrennt aufführen. Technische Angaben und Kalkulation werden von Ihnen ergänzt."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "malerbetriebe",
+    "label": "Malerbetriebe",
+    "singular": "Malerbetrieb",
+    "group": "handwerk-haus",
+    "headline": "Vom ersten Raumfoto bis zum Angebot mehr Ordnung.",
+    "intro": "Kunden schicken Fotos, fragen nach Terminen und warten auf Angebote. Ich helfe Ihnen, diese Informationen übersichtlich vorzubereiten.",
+    "slots": [
+      {
+        "time": "Mo · 10:00",
+        "label": "Besichtigung Räume"
+      },
+      {
+        "time": "Di · 14:00",
+        "label": "Farbabstimmung"
+      },
+      {
+        "time": "Mi · 16:30",
+        "label": "Angebotszeit"
+      }
+    ],
+    "cases": [
+      {
+        "id": "malerbetriebe-1",
+        "tab": "Anfragen",
+        "title": "Raumangaben und Terminwünsche sammeln.",
+        "problem": "Fotos, Raumangaben und Kundenwünsche kommen über mehrere Nachrichten verteilt.",
+        "solution": "Wir bereiten eine kurze Liste der vorhandenen und fehlenden Angaben vor.",
+        "result": "Sie wissen, welche Rückfrage nötig ist, bevor Sie die Besichtigung planen.",
+        "module": "inbox",
+        "request": "Drei Zimmer sollen gestrichen werden. Fotos habe ich angehängt. Können Sie im November?",
+        "facts": [
+          "Drei Zimmer",
+          "Zeitraum: November",
+          "Besichtigung erforderlich"
+        ],
+        "output": "Danke für die Angaben. Für ein passendes Angebot stimmen wir eine Besichtigung der drei Zimmer ab.",
+        "assistant": {
+          "name": "Anfragen-Helfer",
+          "working": "Ich fasse Raumangaben und den Terminwunsch für die Besichtigung zusammen.",
+          "rule": "Drei Zimmer und den gewünschten Zeitraum festhalten. Fläche und Zustand vor Ort prüfen lassen."
+        }
+      },
+      {
+        "id": "malerbetriebe-2",
+        "tab": "Absprachen",
+        "title": "Farbwünsche und Freigaben nachhalten.",
+        "problem": "Farbwünsche ändern sich im Gespräch und stehen später nicht eindeutig in Ihren Notizen.",
+        "solution": "Wir halten die Absprachen als kurze Zusammenfassung mit offenem Bestätigungsschritt fest.",
+        "result": "Sie haben vor dem Auftrag eine übersichtliche Liste der noch zu bestätigenden Wünsche.",
+        "module": "notes",
+        "request": "Wohnzimmer hellgrün, Flur weiß. Kundin bestätigt den Farbton noch.",
+        "facts": [
+          "Wohnzimmer: Farbton offen",
+          "Flur: weiß",
+          "Bestätigung anfragen"
+        ],
+        "output": "Farbabstimmung: Hellgrün für das Wohnzimmer noch bestätigen lassen; Flur weiß festgehalten.",
+        "assistant": {
+          "name": "Absprachen-Helfer",
+          "working": "Ich trenne bestätigte Farbwünsche von der noch offenen Freigabe.",
+          "rule": "Eine offene Farbfreigabe sichtbar lassen. Den Farbton erst nach Bestätigung als fest vereinbart markieren."
+        }
+      },
+      {
+        "id": "malerbetriebe-3",
+        "tab": "Angebote",
+        "title": "Wiederkehrende Angebotstexte vorbereiten.",
+        "problem": "Vorbereitung, Anstrich und Zusatzleistungen beschreiben Sie immer wieder neu.",
+        "solution": "Ich richte Textbausteine und eine Angebotsvorlage ein. Mengen und Preise kommen von Ihnen.",
+        "result": "Sie übernehmen passende Bausteine und passen sie an den Auftrag an.",
+        "module": "documents",
+        "request": "Angebot für drei Räume mit Untergrundvorbereitung und zwei Anstrichen.",
+        "facts": [
+          "Untergrundvorbereitung",
+          "Anstrichbeschreibung",
+          "Mengen und Preise ergänzen"
+        ],
+        "output": "Angebotsstruktur mit Leistungsbeschreibung und Feldern für Flächen, Material und Preis.",
+        "assistant": {
+          "name": "Angebots-Helfer",
+          "working": "Ich bereite die Abschnitte für Vorarbeiten und Anstriche vor.",
+          "rule": "Leistungen beschreiben. Flächen, Material und Preise werden von Ihrem Betrieb geprüft und ergänzt."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "tischlereien",
+    "label": "Tischlereien",
+    "singular": "Tischlerei",
+    "group": "handwerk-haus",
+    "headline": "Kundenwünsche vom Gespräch bis zur Werkstatt festhalten.",
+    "intro": "Maße, Materialien und Änderungswünsche landen in verschiedenen Notizen. Gemeinsam sorgen wir für eine klarere Vorbereitung Ihrer Büroarbeit.",
+    "slots": [
+      {
+        "time": "Mo · 09:30",
+        "label": "Aufmaß"
+      },
+      {
+        "time": "Di · 14:00",
+        "label": "Materialabstimmung"
+      },
+      {
+        "time": "Mi · 16:00",
+        "label": "Angebote"
+      }
+    ],
+    "cases": [
+      {
+        "id": "tischlereien-1",
+        "tab": "Anfragen",
+        "title": "Wünsche vor dem Aufmaß ordnen.",
+        "problem": "Erste Möbelanfragen sind interessant, aber häufig unvollständig.",
+        "solution": "Wir sammeln Zweck, ungefähre Maße und Materialwünsche in einer Anfrageübersicht.",
+        "result": "Sie können das Aufmaß und die nächsten Rückfragen gezielter vorbereiten.",
+        "module": "inbox",
+        "request": "Wir wünschen uns einen Einbauschrank für den Flur in heller Eiche.",
+        "facts": [
+          "Einbauschrank im Flur",
+          "Materialwunsch: helle Eiche",
+          "Aufmaß abstimmen"
+        ],
+        "output": "Danke für Ihren Wunsch. Für die genaue Planung vereinbaren wir ein Aufmaß und besprechen die Ausführung.",
+        "assistant": {
+          "name": "Aufmaß-Helfer",
+          "working": "Ich ordne den Schrankwunsch vor dem Aufmaß.",
+          "rule": "Ausführung und Aufmaßbedarf festhalten. Maße und Fertigungsdetails werden persönlich geprüft."
+        }
+      },
+      {
+        "id": "tischlereien-2",
+        "tab": "Änderungen",
+        "title": "Änderungswünsche an einem Ort sammeln.",
+        "problem": "Telefonische Änderungen stehen auf Zetteln und müssen später zum Auftrag zugeordnet werden.",
+        "solution": "Wir erstellen kurze Auftragsnotizen mit Änderung, Datum und offenem Bestätigungsschritt.",
+        "result": "Sie erkennen, welche Ausführung vor der Fertigung noch bestätigt werden muss.",
+        "module": "notes",
+        "request": "Kunde möchte zwei zusätzliche Einlegeböden. Ausführung vor Fertigung bestätigen.",
+        "facts": [
+          "Zwei Einlegeböden zusätzlich",
+          "Auftrag zuordnen",
+          "Bestätigung vor Fertigung"
+        ],
+        "output": "Änderungsnotiz: Zwei Einlegeböden ergänzen, Umfang und Preis vor Fertigung bestätigen lassen.",
+        "assistant": {
+          "name": "Änderungs-Helfer",
+          "working": "Ich halte die zusätzlichen Einlegeböden als offene Änderung fest.",
+          "rule": "Änderung, Umfang und Preis vor der Fertigung bestätigen lassen. Keine Fertigungsfreigabe automatisch geben."
+        }
+      },
+      {
+        "id": "tischlereien-3",
+        "tab": "Unterlagen",
+        "title": "Angebotsunterlagen mit festen Abschnitten vorbereiten.",
+        "problem": "Möbelbeschreibung, Material und Montagehinweise kosten jedes Mal neue Schreibarbeit.",
+        "solution": "Wir erstellen eine wiederverwendbare Dokumentstruktur für Ihre Projekte.",
+        "result": "Sie ergänzen Maße, fachlichen Umfang und Kalkulation in vorbereiteten Abschnitten.",
+        "module": "documents",
+        "request": "Angebotsunterlage für Einbauschrank mit Montage vorbereiten.",
+        "facts": [
+          "Möbelbeschreibung",
+          "Material und Ausführung",
+          "Montage und Preisfelder"
+        ],
+        "output": "Projektunterlage mit Abschnitten für Maße, Ausführung, Montage und Ihre Kalkulation.",
+        "assistant": {
+          "name": "Unterlagen-Helfer",
+          "working": "Ich bereite die Angebotsabschnitte für Schrank und Montage vor.",
+          "rule": "Bestätigte Maße und Ausführung verwenden. Ihre Kalkulation und die Montageangaben bleiben zur Prüfung offen."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "friseursalons",
+    "label": "Friseursalons",
+    "singular": "Friseursalon",
+    "group": "schoenheit-gesundheit",
+    "headline": "Mehr Ruhe zwischen Kundenterminen.",
+    "intro": "Sie stehen am Stuhl, während Nachrichten und Terminfragen eingehen. Ich helfe Ihnen, häufige Antworten, Terminabsprachen und kleine Aktionen einfacher vorzubereiten.",
+    "slots": [
+      {
+        "time": "Sa · 09:00",
+        "label": "Waschen & Schneiden"
+      },
+      {
+        "time": "Sa · 11:00",
+        "label": "Farbberatung"
+      },
+      {
+        "time": "Sa · 14:00",
+        "label": "Waschen & Schneiden"
+      }
+    ],
+    "cases": [
+      {
+        "id": "friseursalons-1",
+        "tab": "Terminfragen",
+        "title": "Terminanfragen mit einer passenden Antwort vorbereiten.",
+        "problem": "Sie beantworten dieselben Fragen immer wieder zwischen zwei Kunden.",
+        "solution": "Wir bereiten Antwortvorlagen vor und halten Leistung und Terminwunsch fest.",
+        "result": "Sie müssen die passende freie Zeit nur noch prüfen und ergänzen.",
+        "module": "inbox",
+        "request": "Haben Sie am Samstag noch einen Termin für Waschen und Schneiden frei?",
+        "facts": [
+          "Waschen & Schneiden",
+          "Samstag gewünscht",
+          "Uhrzeit noch abstimmen"
+        ],
+        "output": "Danke für Ihre Nachricht. Passt es Ihnen am Samstag eher vormittags oder nachmittags?",
+        "assistant": {
+          "name": "Termin-Helfer",
+          "working": "Ich ordne den Wunsch für Waschen und Schneiden am Samstag.",
+          "rule": "Leistung und Wunschzeit erfragen. Ein freier Termin wird im Salonkalender geprüft und von Ihnen bestätigt."
+        }
+      },
+      {
+        "id": "friseursalons-2",
+        "tab": "Erinnerungen",
+        "title": "Erinnerungen in Ihrer Terminlösung sinnvoll nutzen.",
+        "problem": "Bei kurzfristigen Absagen und offenen Absprachen müssen Sie ständig nachsehen.",
+        "solution": "Wir prüfen die vorhandenen Erinnerungsfunktionen und richten passende Abläufe gemeinsam ein.",
+        "result": "Bestätigte Termine und offene Rückmeldungen sind leichter auseinanderzuhalten.",
+        "module": "calendar",
+        "request": "Termin für Farbberatung ist vereinbart. Erinnerung soll vorher vorbereitet werden.",
+        "facts": [
+          "Farbberatung",
+          "Termin vom Salon bestätigt",
+          "Erinnerung vorab prüfen"
+        ],
+        "output": "Erinnerungsvorlage für die Farbberatung; Versandzeit und Einwilligung werden im Salon abgestimmt.",
+        "assistant": {
+          "name": "Erinnerungs-Helfer",
+          "working": "Ich bereite eine Erinnerung für die vereinbarte Farbberatung vor.",
+          "rule": "Nur bestätigte Termine verwenden. Zeitpunkt, Empfänger und Einwilligung zum Versand im Salon klären."
+        }
+      },
+      {
+        "id": "friseursalons-3",
+        "tab": "Beiträge",
+        "title": "Öffnungszeiten und Aktionen leichter ankündigen.",
+        "problem": "Für einen einfachen Beitrag fehlt Ihnen nach Feierabend oft ein guter Anfang.",
+        "solution": "Wir erstellen eine Vorlage mit Ihrem Bild, einem kurzen Text und Ihren Angaben.",
+        "result": "Sie prüfen einen passenden Beitrag, statt mit einer leeren Seite zu beginnen.",
+        "module": "marketing",
+        "request": "Beitrag zu zusätzlichen Öffnungszeiten am Freitag vorbereiten.",
+        "facts": [
+          "Freitag länger geöffnet",
+          "Zeiten ergänzen",
+          "Eigenes Salonfoto verwenden"
+        ],
+        "output": "Beitragsentwurf: Diesen Freitag sind wir länger für Sie da. Öffnungszeiten und Terminweg ergänzen.",
+        "assistant": {
+          "name": "Beitrags-Helfer",
+          "working": "Ich bringe die zusätzlichen Freitagszeiten in eine Beitragsvorlage.",
+          "rule": "Nur Ihre bestätigten Öffnungszeiten und den richtigen Terminweg nennen. Sie prüfen den Beitrag vor Veröffentlichung."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "kosmetikstudios",
+    "label": "Kosmetikstudios",
+    "singular": "Kosmetikstudio",
+    "group": "schoenheit-gesundheit",
+    "headline": "Behandlungen begleiten, Büroaufgaben einfacher erledigen.",
+    "intro": "Anfragen zu Behandlungen, Terminwünsche und Beiträge für Ihr Studio brauchen ebenfalls Aufmerksamkeit. Gemeinsam bereiten wir diese Aufgaben übersichtlich vor.",
+    "slots": [
+      {
+        "time": "Di · 10:00",
+        "label": "Kennenlerngespräch"
+      },
+      {
+        "time": "Di · 13:00",
+        "label": "Behandlungstermin"
+      },
+      {
+        "time": "Mi · 15:00",
+        "label": "Beratung"
+      }
+    ],
+    "cases": [
+      {
+        "id": "kosmetikstudios-1",
+        "tab": "Anfragen",
+        "title": "Fragen zum Ablauf mit Vorlagen beantworten.",
+        "problem": "Neue Kunden fragen häufig nach Dauer, Vorbereitung und Terminmöglichkeiten.",
+        "solution": "Wir erstellen Antwortvorlagen aus Ihren eigenen Informationen zum Studioablauf.",
+        "result": "Sie geben verlässliche organisatorische Auskünfte mit weniger Schreibarbeit.",
+        "module": "inbox",
+        "request": "Wie läuft der erste Termin bei Ihnen ab und wie viel Zeit sollte ich einplanen?",
+        "facts": [
+          "Erster Studiobesuch",
+          "Ablauf erklären",
+          "Dauer vom Studio ergänzen"
+        ],
+        "output": "Danke für Ihr Interesse. Wir erklären Ihnen vorab den Ablauf und nennen Ihnen die Dauer Ihres gebuchten Termins.",
+        "assistant": {
+          "name": "Antwort-Helfer",
+          "working": "Ich bereite die organisatorische Antwort zum ersten Studiobesuch vor.",
+          "rule": "Nur den freigegebenen Ablauf und die passende Termindauer nennen. Unklare Angaben als Rückfrage markieren."
+        }
+      },
+      {
+        "id": "kosmetikstudios-2",
+        "tab": "Termine",
+        "title": "Terminwünsche und Rückmeldungen übersichtlich halten.",
+        "problem": "Zwischen Behandlungen bleiben Rückmeldungen zu Terminverschiebungen liegen.",
+        "solution": "Wir sammeln die offenen Abstimmungen und prüfen Erinnerungen in Ihrer Terminlösung.",
+        "result": "Sie sehen, welche Kundin auf eine Terminbestätigung wartet.",
+        "module": "calendar",
+        "request": "Kundin möchte den Termin von Dienstag auf Donnerstag verschieben.",
+        "facts": [
+          "Verschiebung gewünscht",
+          "Donnerstag prüfen",
+          "Bestätigung noch offen"
+        ],
+        "output": "Terminverschiebung ist als offene Abstimmung vorbereitet; Verfügbarkeit wird vom Studio geprüft.",
+        "assistant": {
+          "name": "Termin-Helfer",
+          "working": "Ich halte die gewünschte Verschiebung auf Donnerstag fest.",
+          "rule": "Den bisherigen Termin und den neuen Wunsch zusammenhalten. Die neue Zeit erst nach Ihrer Prüfung bestätigen."
+        }
+      },
+      {
+        "id": "kosmetikstudios-3",
+        "tab": "Werbung",
+        "title": "Studioinformationen als einfache Beiträge vorbereiten.",
+        "problem": "Leistungen und Öffnungszeiten online zu erklären kostet immer wieder neue Zeit.",
+        "solution": "Wir erstellen Vorlagen mit Ihren Bildern und sachlichen Angaben zu Ihren Angeboten.",
+        "result": "Sie können einen passenden Beitrag prüfen und selbst veröffentlichen.",
+        "module": "marketing",
+        "request": "Beitrag über den Ablauf eines Kennenlerntermins vorbereiten.",
+        "facts": [
+          "Kennenlerntermin",
+          "Ablauf aus Studioangaben",
+          "Foto und Kontakt ergänzen"
+        ],
+        "output": "Entwurf zum Kennenlerntermin: So können neue Kunden Ihr Studio und den organisatorischen Ablauf kennenlernen.",
+        "assistant": {
+          "name": "Beitrags-Helfer",
+          "working": "Ich bereite einen verständlichen Text zum Kennenlerntermin vor.",
+          "rule": "Ihre eigenen Ablaufangaben verwenden. Leistungen und Aussagen werden vor Veröffentlichung vom Studio geprüft."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "nagelstudios",
+    "label": "Nagelstudios",
+    "singular": "Nagelstudio",
+    "group": "schoenheit-gesundheit",
+    "headline": "Terminfragen leichter beantworten. Zeit für Ihre Arbeit behalten.",
+    "intro": "Während einer Behandlung lässt sich nicht jede Nachricht sofort beantworten. Ich helfe Ihnen, wiederkehrende Fragen und Terminabsprachen vorzubereiten.",
+    "slots": [
+      {
+        "time": "Di · 09:00",
+        "label": "Neumodellage"
+      },
+      {
+        "time": "Di · 11:00",
+        "label": "Auffüllen"
+      },
+      {
+        "time": "Mi · 14:00",
+        "label": "Auffüllen"
+      }
+    ],
+    "cases": [
+      {
+        "id": "nagelstudios-1",
+        "tab": "Anfragen",
+        "title": "Leistung und Terminwunsch zuerst festhalten.",
+        "problem": "Bei Terminanfragen fehlen oft Angaben, welche Leistung gewünscht ist.",
+        "solution": "Wir bereiten eine kurze Rückfragenvorlage vor und ordnen die Anfrage.",
+        "result": "Sie können einen passenden Zeitblock prüfen, bevor Sie den Termin bestätigen.",
+        "module": "inbox",
+        "request": "Ich hätte gerne einen Termin nächste Woche. Was müssen Sie vorher wissen?",
+        "facts": [
+          "Gewünschte Leistung klären",
+          "Wunschtag nächste Woche",
+          "Zeitbedarf durch Studio prüfen"
+        ],
+        "output": "Danke für Ihre Anfrage. Möchten Sie eine Neumodellage oder einen Termin zum Auffüllen?",
+        "assistant": {
+          "name": "Anfragen-Helfer",
+          "working": "Ich bereite die Rückfrage zur gewünschten Nagelpflege vor.",
+          "rule": "Zuerst Neumodellage oder Auffüllen klären. Dauer und Termin werden vom Studio festgelegt."
+        }
+      },
+      {
+        "id": "nagelstudios-2",
+        "tab": "Termine",
+        "title": "Offene Terminabsprachen sichtbar machen.",
+        "problem": "Mehrere Kunden wünschen dieselben Zeiten, während Bestätigungen noch fehlen.",
+        "solution": "Wir trennen bestätigte Termine von offenen Wünschen und bereiten Rückmeldungen vor.",
+        "result": "Sie behalten den Überblick und bestätigen die passende freie Zeit selbst.",
+        "module": "calendar",
+        "request": "Zwei Anfragen für Freitag am Nachmittag; eine Bestätigung fehlt noch.",
+        "facts": [
+          "Freitag nachmittags",
+          "Bestätigung offen",
+          "Freie Zeiten prüfen"
+        ],
+        "output": "Offene Abstimmung für Freitag ist markiert; ein Termin wird erst nach Ihrer Prüfung bestätigt.",
+        "assistant": {
+          "name": "Termin-Helfer",
+          "working": "Ich zeige, welche Freitagsanfrage noch auf Bestätigung wartet.",
+          "rule": "Offene und bestätigte Absprachen getrennt halten. Kein Termin wird ohne Ihre Prüfung zugesagt."
+        }
+      },
+      {
+        "id": "nagelstudios-3",
+        "tab": "Beiträge",
+        "title": "Eigene Arbeiten mit einem kurzen Text zeigen.",
+        "problem": "Sie haben schöne Fotos Ihrer Arbeit, aber wenig Zeit für einen Beitrag.",
+        "solution": "Wir erstellen eine einfache Vorlage für Bild, Beschreibung und Terminweg.",
+        "result": "Sie ergänzen Ihre eigenen Angaben und prüfen den Beitrag vor Veröffentlichung.",
+        "module": "marketing",
+        "request": "Foto eines neuen Nageldesigns mit kurzem Beschreibungstext vorbereiten.",
+        "facts": [
+          "Eigenes Designfoto",
+          "Design sachlich beschreiben",
+          "Terminweg ergänzen"
+        ],
+        "output": "Beitragsvorlage mit Platz für Ihr Designfoto, einen kurzen Text und die Terminanfrage.",
+        "assistant": {
+          "name": "Beitrags-Helfer",
+          "working": "Ich bereite einen kurzen Beitrag zu Ihrem eigenen Designfoto vor.",
+          "rule": "Nur Ihr eigenes, zur Veröffentlichung freigegebenes Bild verwenden. Beschreibung und Terminweg prüfen."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "massagebetriebe",
+    "label": "Massagebetriebe",
+    "singular": "Massagebetrieb",
+    "group": "schoenheit-gesundheit",
+    "headline": "Organisatorische Fragen neben Ihren Terminen leichter klären.",
+    "intro": "Sie möchten sich auf Ihre Kunden konzentrieren. Ich helfe Ihnen bei Terminwünschen, Informationen zum Ablauf und einfachen Unterlagen.",
+    "slots": [
+      {
+        "time": "Di · 09:00",
+        "label": "Kennenlerngespräch"
+      },
+      {
+        "time": "Di · 12:00",
+        "label": "Massage-Termin"
+      },
+      {
+        "time": "Mi · 15:00",
+        "label": "Massage-Termin"
+      }
+    ],
+    "cases": [
+      {
+        "id": "massagebetriebe-1",
+        "tab": "Ablauf",
+        "title": "Häufige organisatorische Fragen vorbereiten.",
+        "problem": "Dauer, Anfahrt und Terminablauf werden immer wieder angefragt.",
+        "solution": "Wir sammeln Ihre eigenen Angaben in übersichtlichen Antwortvorlagen.",
+        "result": "Sie beantworten organisatorische Fragen schnell mit einem passenden Text.",
+        "module": "inbox",
+        "request": "Wie lange dauert der Termin und wie finde ich Ihre Räume?",
+        "facts": [
+          "Terminart ergänzen",
+          "Dauer aus Ihren Angaben",
+          "Anfahrt beschreiben"
+        ],
+        "output": "Antwortvorlage mit Ihrer Termindauer, Adresse und Hinweisen zur Anfahrt.",
+        "assistant": {
+          "name": "Antwort-Helfer",
+          "working": "Ich bereite die Antwort zu Dauer und Anfahrt vor.",
+          "rule": "Nur Ihre organisatorischen Angaben verwenden. Medizinische Fragen werden nicht in dieser Vorlage beantwortet."
+        }
+      },
+      {
+        "id": "massagebetriebe-2",
+        "tab": "Termine",
+        "title": "Verschiebungen und Rückmeldungen geordnet halten.",
+        "problem": "Terminänderungen kommen herein, während Sie bereits einen Kunden betreuen.",
+        "solution": "Wir bereiten eine Liste offener Terminwünsche und Erinnerungen vor.",
+        "result": "Sie können freie Zeiten prüfen und die Abstimmung gezielt abschließen.",
+        "module": "calendar",
+        "request": "Termin soll von Mittwoch auf nächste Woche verschoben werden.",
+        "facts": [
+          "Verschiebung notiert",
+          "Wunsch für nächste Woche",
+          "Bestätigung vorbereiten"
+        ],
+        "output": "Terminwunsch ist geordnet; die passende Zeit wird von Ihnen bestätigt.",
+        "assistant": {
+          "name": "Termin-Helfer",
+          "working": "Ich ordne den Wunsch zur Verschiebung auf nächste Woche.",
+          "rule": "Bisherige Absprache und neue Wunschzeit festhalten. Eine passende Zeit wird von Ihnen bestätigt."
+        }
+      },
+      {
+        "id": "massagebetriebe-3",
+        "tab": "Unterlagen",
+        "title": "Informationen zum ersten Besuch übersichtlich schreiben.",
+        "problem": "Hinweise zu Adresse, Ankunft und Ablauf müssen Sie immer wieder neu zusammensuchen.",
+        "solution": "Wir erstellen ein kurzes Informationsblatt aus Ihren eigenen organisatorischen Angaben.",
+        "result": "Sie können eine geprüfte Vorlage für neue Kunden verwenden.",
+        "module": "documents",
+        "request": "Informationsblatt für einen ersten Besuch vorbereiten.",
+        "facts": [
+          "Adresse und Anfahrt",
+          "Ankunftszeit",
+          "Organisatorischer Ablauf"
+        ],
+        "output": "Informationsvorlage mit Anfahrt, Ankunftszeit und den von Ihnen festgelegten Ablaufhinweisen.",
+        "assistant": {
+          "name": "Besuchs-Helfer",
+          "working": "Ich setze Anfahrt und Ankunftshinweise in Ihre Besuchsvorlage ein.",
+          "rule": "Ihre freigegebenen organisatorischen Hinweise verwenden. Keine individuellen Gesundheitsangaben ergänzen."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "physiotherapiepraxen",
+    "label": "Physiotherapiepraxen",
+    "singular": "Physiotherapiepraxis",
+    "group": "schoenheit-gesundheit",
+    "headline": "Praxisorganisation verständlich vorbereiten.",
+    "intro": "Terminfragen und organisatorische Auskünfte fallen neben Ihrer Arbeit an. Wir starten bei diesen Büroaufgaben mit allgemeinen Praxisinformationen.",
+    "slots": [
+      {
+        "time": "Di · 08:30",
+        "label": "Organisationszeit"
+      },
+      {
+        "time": "Di · 12:30",
+        "label": "Rückrufe"
+      },
+      {
+        "time": "Mi · 16:00",
+        "label": "Terminabstimmungen"
+      }
+    ],
+    "cases": [
+      {
+        "id": "physiotherapiepraxen-1",
+        "tab": "Organisation",
+        "title": "Organisatorische Auskünfte mit geprüften Vorlagen geben.",
+        "problem": "Öffnungszeiten, Anfahrt und Kontaktmöglichkeiten werden immer wieder nachgefragt.",
+        "solution": "Wir erstellen Vorlagen aus Ihren freigegebenen Praxisinformationen.",
+        "result": "Das Team findet eine passende organisatorische Antwort an einem Ort.",
+        "module": "inbox",
+        "request": "Wo finde ich die Praxis und wann erreichen wir Sie telefonisch?",
+        "facts": [
+          "Anfahrt",
+          "Telefonzeiten",
+          "Kontaktweg"
+        ],
+        "output": "Antwortvorlage mit Ihrer Praxisadresse, Anfahrt und den festgelegten Telefonzeiten.",
+        "assistant": {
+          "name": "Praxis-Helfer",
+          "working": "Ich bereite die organisatorische Auskunft zu Anfahrt und Telefonzeiten vor.",
+          "rule": "Nur freigegebene Praxisinformationen verwenden. Mit allgemeinen Praxisinformationen arbeiten; Diagnosen und Patientendaten bleiben außen vor."
+        }
+      },
+      {
+        "id": "physiotherapiepraxen-2",
+        "tab": "Rückrufe",
+        "title": "Offene Terminrückrufe übersichtlich nachhalten.",
+        "problem": "Rückrufwünsche zur Terminabstimmung liegen zwischen anderen Aufgaben.",
+        "solution": "Wir richten eine kurze organisatorische Aufgabenliste mit Erinnerung ein.",
+        "result": "Sie sehen, welche Abstimmung noch offen ist, ohne Behandlungsinhalte in die Liste aufzunehmen.",
+        "module": "notes",
+        "request": "Rückruf zur Terminabstimmung für Donnerstag vormerken. Ohne personenbezogene Angaben.",
+        "facts": [
+          "Terminabstimmung",
+          "Donnerstag zurückrufen",
+          "Keine Behandlungsangaben"
+        ],
+        "output": "Organisatorische Rückrufaufgabe mit Datum; der sichere Umgang mit echten Daten wird vor Einrichtung geklärt.",
+        "assistant": {
+          "name": "Rückruf-Helfer",
+          "working": "Ich halte den organisatorischen Rückruf für Donnerstag fest.",
+          "rule": "Zunächst ohne Patientennamen arbeiten. Umgang mit echten Daten und Zugriff vor der Einrichtung klären."
+        }
+      },
+      {
+        "id": "physiotherapiepraxen-3",
+        "tab": "Hinweise",
+        "title": "Praxisinformationen übersichtlich bereitstellen.",
+        "problem": "Organisatorische Hinweise werden über verschiedene Dokumente verteilt gepflegt.",
+        "solution": "Wir führen freigegebene Angaben zu Anfahrt, Kontakt und Terminorganisation in einer Vorlage zusammen.",
+        "result": "Sie haben ein verständliches Informationsblatt für organisatorische Fragen.",
+        "module": "documents",
+        "request": "Praxisblatt mit Anfahrt, Kontakt und Öffnungszeiten erstellen.",
+        "facts": [
+          "Praxisadresse",
+          "Kontaktzeiten",
+          "Terminorganisation"
+        ],
+        "output": "Entwurf für ein Praxisinformationsblatt aus den organisatorischen Angaben der Praxis.",
+        "assistant": {
+          "name": "Hinweis-Helfer",
+          "working": "Ich ordne Kontakt, Anfahrt und Öffnungszeiten für das Praxisblatt.",
+          "rule": "Nur bestätigte organisatorische Praxisangaben aufnehmen. Das Blatt wird von der Praxis geprüft."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "fitnessstudios",
+    "label": "Kleine Fitnessstudios",
+    "singular": "kleines Fitnessstudio",
+    "group": "sport-freizeit",
+    "headline": "Mehr Zeit auf der Fläche. Weniger offene Anfragen.",
+    "intro": "Probetrainingsanfragen, Kursfragen und Beiträge brauchen Zeit neben dem Studiobetrieb. Ich helfe Ihnen, diese Aufgaben verständlich vorzubereiten.",
+    "slots": [
+      {
+        "time": "Mo · 18:00",
+        "label": "Probetraining"
+      },
+      {
+        "time": "Di · 19:00",
+        "label": "Einsteigerkurs"
+      },
+      {
+        "time": "Mi · 17:30",
+        "label": "Studiotour"
+      }
+    ],
+    "cases": [
+      {
+        "id": "fitnessstudios-1",
+        "tab": "Probetraining",
+        "title": "Interessenten zum nächsten Schritt führen.",
+        "problem": "Anfragen zum Probetraining kommen herein, während Sie Kunden betreuen.",
+        "solution": "Wir halten Terminwunsch und Interesse fest und bereiten eine passende Rückfrage vor.",
+        "result": "Sie können einen konkreten Termin prüfen und die Anfrage gezielt beantworten.",
+        "module": "inbox",
+        "request": "Kann ich nächste Woche abends ein Probetraining machen?",
+        "facts": [
+          "Probetraining",
+          "Nächste Woche abends",
+          "Termin mit Team abstimmen"
+        ],
+        "output": "Schön, dass Sie unser Studio kennenlernen möchten. Welcher Abend passt Ihnen? Wir stimmen danach den Termin ab.",
+        "assistant": {
+          "name": "Probetraining-Helfer",
+          "working": "Ich bereite den nächsten Schritt für die Anfrage zum Probetraining vor.",
+          "rule": "Gewünschten Abend erfragen. Betreuung und Verfügbarkeit im Studio prüfen, bevor ein Termin zugesagt wird."
+        }
+      },
+      {
+        "id": "fitnessstudios-2",
+        "tab": "Kursinfos",
+        "title": "Kursinformationen an einem Ort vorbereiten.",
+        "problem": "Zu Zeiten, Einstiegen und Anmeldung stellen Interessenten wiederkehrende Fragen.",
+        "solution": "Wir strukturieren die von Ihnen bestätigten Kursinformationen und erstellen passende Antworten.",
+        "result": "Sie finden die richtige Kursinfo schneller und prüfen Änderungen zentral.",
+        "module": "calendar",
+        "request": "Wann startet der Einsteigerkurs und wie kann ich mich anmelden?",
+        "facts": [
+          "Einsteigerkurs",
+          "Bestätigte Kurszeit verwenden",
+          "Anmeldeweg ergänzen"
+        ],
+        "output": "Antwortvorlage mit Ihrer freigegebenen Kurszeit und dem richtigen Anmeldeweg.",
+        "assistant": {
+          "name": "Kurs-Helfer",
+          "working": "Ich fasse Kurszeit und den passenden Anmeldeweg zusammen.",
+          "rule": "Nur vom Studio bestätigte Kurszeiten nennen. Freie Plätze und Anmeldung werden vor einer Zusage geprüft."
+        }
+      },
+      {
+        "id": "fitnessstudios-3",
+        "tab": "Beiträge",
+        "title": "Kursankündigungen ohne leere Seite starten.",
+        "problem": "Neue Kurse sollen sichtbar werden, aber ein Beitrag bleibt liegen.",
+        "solution": "Wir bereiten Text und Gestaltung aus Ihren bestätigten Kursangaben vor.",
+        "result": "Sie prüfen einen konkreten Kursbeitrag und veröffentlichen ihn selbst.",
+        "module": "marketing",
+        "request": "Neuen Einsteigerkurs im Studio ankündigen.",
+        "facts": [
+          "Kursname",
+          "Zeit und Start ergänzen",
+          "Eigenes Trainingsfoto"
+        ],
+        "output": "Kursbeitrag mit Kursname, bestätigtem Start, Zeit und Anmeldung.",
+        "assistant": {
+          "name": "Beitrags-Helfer",
+          "working": "Ich bereite einen Text zum neuen Einsteigerkurs vor.",
+          "rule": "Kursname, Start und Anmeldung aus Ihren Angaben übernehmen. Der Beitrag bleibt bis zu Ihrer Freigabe ein Entwurf."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "yogastudios",
+    "label": "Yogastudios",
+    "singular": "Yogastudio",
+    "group": "sport-freizeit",
+    "headline": "Raum für Ihre Stunden. Mehr Ordnung bei den Kursfragen.",
+    "intro": "Anfragen zur ersten Stunde, Kurszeiten und Workshopinfos fallen neben dem Unterricht an. Gemeinsam bereiten wir diese Aufgaben einfacher vor.",
+    "slots": [
+      {
+        "time": "Mo · 18:00",
+        "label": "Yoga für Einsteiger"
+      },
+      {
+        "time": "Di · 19:00",
+        "label": "Abendkurs"
+      },
+      {
+        "time": "Mi · 17:30",
+        "label": "Kennenlernstunde"
+      }
+    ],
+    "cases": [
+      {
+        "id": "yogastudios-1",
+        "tab": "Erste Stunde",
+        "title": "Fragen zum Einstieg ruhig beantworten.",
+        "problem": "Neue Teilnehmer fragen nach Voraussetzungen, Ablauf und passenden Kursen.",
+        "solution": "Wir bereiten Antworten mit Ihren eigenen Informationen zum Einstieg vor.",
+        "result": "Sie können Interessenten einen klaren nächsten Schritt nennen.",
+        "module": "inbox",
+        "request": "Ich war noch nie beim Yoga. Welche Stunde eignet sich zum Einstieg?",
+        "facts": [
+          "Erster Yogabesuch",
+          "Einsteigerangebot prüfen",
+          "Anmeldung abstimmen"
+        ],
+        "output": "Schön, dass Sie Yoga kennenlernen möchten. Ich erkläre Ihnen unser Einsteigerangebot und den Anmeldeweg.",
+        "assistant": {
+          "name": "Einstiegs-Helfer",
+          "working": "Ich bereite eine ruhige Antwort zum Einstieg in die erste Yogastunde vor.",
+          "rule": "Ihr freigegebenes Einsteigerangebot und den Anmeldeweg verwenden. Individuelle Fragen persönlich klären."
+        }
+      },
+      {
+        "id": "yogastudios-2",
+        "tab": "Kurszeiten",
+        "title": "Bestätigte Kurszeiten übersichtlich zeigen.",
+        "problem": "Kursfragen werden über einzelne Nachrichten und unterschiedliche Aushänge beantwortet.",
+        "solution": "Wir führen Ihre bestätigten Zeiten in einer übersichtlichen Wochenvorlage zusammen.",
+        "result": "Sie haben eine klare Kursinfo, die Sie bei Änderungen leicht anpassen.",
+        "module": "calendar",
+        "request": "Die neue Woche mit Einsteiger- und Abendkurs übersichtlich darstellen.",
+        "facts": [
+          "Einsteigerkurs",
+          "Abendkurs",
+          "Anmeldeweg"
+        ],
+        "output": "Wochenübersicht mit Ihren bestätigten Kurszeiten und einem eindeutigen Anmeldehinweis.",
+        "assistant": {
+          "name": "Kursplan-Helfer",
+          "working": "Ich ordne die bestätigten Einsteiger- und Abendkurse für die Wochenübersicht.",
+          "rule": "Nur tatsächlich bestätigte Kurszeiten aufnehmen. Änderungen und Anmeldehinweise vor Ausgabe prüfen."
+        }
+      },
+      {
+        "id": "yogastudios-3",
+        "tab": "Workshops",
+        "title": "Workshopunterlagen leichter vorbereiten.",
+        "problem": "Für einen Workshop brauchen Sie Einladung, Ablauf und eine kurze Ankündigung.",
+        "solution": "Wir erstellen wiederverwendbare Textvorlagen für Ihre eigenen Workshopangaben.",
+        "result": "Sie starten mit vorbereiteten Abschnitten und prüfen nur die konkreten Angaben.",
+        "module": "documents",
+        "request": "Einladung für einen Samstagsworkshop vorbereiten.",
+        "facts": [
+          "Thema des Workshops",
+          "Samstagszeit ergänzen",
+          "Teilnahmeweg nennen"
+        ],
+        "output": "Workshopvorlage mit Thema, bestätigtem Termin, Ablauf und Anmeldung.",
+        "assistant": {
+          "name": "Workshop-Helfer",
+          "working": "Ich bringe Thema, Ablauf und Anmeldung in die Workshopvorlage.",
+          "rule": "Den bestätigten Samstagstermin und Ihre eigenen Workshopangaben verwenden. Unklare Punkte offenlassen."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "pilatesstudios",
+    "label": "Pilatesstudios",
+    "singular": "Pilatesstudio",
+    "group": "sport-freizeit",
+    "headline": "Kursfragen geordnet beantworten. Zeit fürs Training behalten.",
+    "intro": "Einsteigeranfragen und Terminwünsche brauchen ebenfalls Betreuung. Ich helfe Ihnen, organisatorische Antworten und Kursunterlagen vorzubereiten.",
+    "slots": [
+      {
+        "time": "Mo · 17:00",
+        "label": "Einsteigerkurs"
+      },
+      {
+        "time": "Di · 18:30",
+        "label": "Kleingruppenkurs"
+      },
+      {
+        "time": "Mi · 10:00",
+        "label": "Kennenlerngespräch"
+      }
+    ],
+    "cases": [
+      {
+        "id": "pilatesstudios-1",
+        "tab": "Einstieg",
+        "title": "Anfragen zum ersten Kurs vorbereiten.",
+        "problem": "Interessenten möchten wissen, welcher Einstieg möglich ist und wie die Anmeldung läuft.",
+        "solution": "Wir erstellen eine Antwortvorlage aus Ihren freigegebenen Kursinformationen.",
+        "result": "Sie können den passenden nächsten Schritt persönlich abstimmen.",
+        "module": "inbox",
+        "request": "Ich möchte Pilates ausprobieren. Wie melde ich mich für den ersten Kurs an?",
+        "facts": [
+          "Pilates kennenlernen",
+          "Kursangebot prüfen",
+          "Anmeldung erklären"
+        ],
+        "output": "Danke für Ihr Interesse. Wir besprechen den passenden Einstieg und nennen Ihnen den Anmeldeweg.",
+        "assistant": {
+          "name": "Einstiegs-Helfer",
+          "working": "Ich bereite die Antwort zur Anmeldung für den ersten Pilateskurs vor.",
+          "rule": "Den freigegebenen Einstiegsweg erklären. Passenden Kurs und Teilnahmevoraussetzungen persönlich klären."
+        }
+      },
+      {
+        "id": "pilatesstudios-2",
+        "tab": "Kursplan",
+        "title": "Zeiten und Anmeldung übersichtlich zusammenstellen.",
+        "problem": "Bei Kursänderungen müssen Sie dieselbe Information an mehreren Stellen anpassen.",
+        "solution": "Wir erstellen eine klare Kursplanvorlage mit Ihren bestätigten Zeiten.",
+        "result": "Sie haben eine gemeinsame Ausgangslage für Antworten und Aushänge.",
+        "module": "calendar",
+        "request": "Kleingruppenkurs am Dienstag in die Kursübersicht aufnehmen.",
+        "facts": [
+          "Kleingruppenkurs",
+          "Dienstagszeit bestätigen",
+          "Anmeldeweg"
+        ],
+        "output": "Vorbereitete Kursübersicht mit einem Platz für den neuen Kleingruppenkurs.",
+        "assistant": {
+          "name": "Kursplan-Helfer",
+          "working": "Ich bereite den Platz für den neuen Dienstagskurs in der Übersicht vor.",
+          "rule": "Nur bestätigte Kursdaten verwenden. Kapazität und Anmeldung werden im Studio geprüft."
+        }
+      },
+      {
+        "id": "pilatesstudios-3",
+        "tab": "Beiträge",
+        "title": "Ein neues Kursangebot einfach ankündigen.",
+        "problem": "Für eine Kursankündigung fehlt neben dem Training die Zeit für Text und Gestaltung.",
+        "solution": "Wir erstellen eine Vorlage mit Ihren Kursangaben und Ihrem eigenen Bild.",
+        "result": "Sie können den Entwurf prüfen und passend zum Studio veröffentlichen.",
+        "module": "marketing",
+        "request": "Ankündigung eines neuen Pilates-Einsteigerkurses vorbereiten.",
+        "facts": [
+          "Einsteigerkurs",
+          "Startdatum ergänzen",
+          "Eigenes Studiobild"
+        ],
+        "output": "Beitragsvorlage mit Beschreibung, bestätigtem Start und dem Anmeldeweg.",
+        "assistant": {
+          "name": "Beitrags-Helfer",
+          "working": "Ich bereite einen Entwurf zur Ankündigung des Einsteigerkurses vor.",
+          "rule": "Ihre Kursbeschreibung und den bestätigten Start verwenden. Der Beitrag wird erst nach Ihrer Prüfung veröffentlicht."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "tanzschulen",
+    "label": "Tanzschulen",
+    "singular": "Tanzschule",
+    "group": "sport-freizeit",
+    "headline": "Kurse erklären. Interessenten einen klaren Einstieg geben.",
+    "intro": "Fragen zu Kursen, Tanzabenden und dem ersten Besuch wiederholen sich. Gemeinsam machen wir die Antworten und Ankündigungen leichter.",
+    "slots": [
+      {
+        "time": "Mo · 19:00",
+        "label": "Einsteigerkurs"
+      },
+      {
+        "time": "Di · 18:00",
+        "label": "Schnupperstunde"
+      },
+      {
+        "time": "Mi · 20:00",
+        "label": "Übungsabend"
+      }
+    ],
+    "cases": [
+      {
+        "id": "tanzschulen-1",
+        "tab": "Schnuppern",
+        "title": "Schnupperanfragen übersichtlich vorbereiten.",
+        "problem": "Interessenten fragen nach Kursstart, Voraussetzungen und dem ersten Termin.",
+        "solution": "Wir halten Kursinteresse und Terminwunsch fest und bereiten eine freundliche Antwort vor.",
+        "result": "Sie können einen passenden Einstieg anbieten und die Teilnahme persönlich klären.",
+        "module": "inbox",
+        "request": "Wir möchten gemeinsam Tanzen lernen. Können wir erst einmal schnuppern?",
+        "facts": [
+          "Tanzen kennenlernen",
+          "Schnupperangebot prüfen",
+          "Passenden Einstieg abstimmen"
+        ],
+        "output": "Schön, dass Sie Tanzen kennenlernen möchten. Wir nennen Ihnen das passende Schnupperangebot und den Anmeldeweg.",
+        "assistant": {
+          "name": "Schnupper-Helfer",
+          "working": "Ich bereite die Antwort auf die Anfrage zum gemeinsamen Schnuppern vor.",
+          "rule": "Ihr freigegebenes Schnupperangebot und den Anmeldeweg nennen. Die Teilnahme wird von der Tanzschule bestätigt."
+        }
+      },
+      {
+        "id": "tanzschulen-2",
+        "tab": "Kursplan",
+        "title": "Kurszeiten verständlich zeigen.",
+        "problem": "Unterschiedliche Kursstarts und Zeiten sorgen für wiederkehrende Rückfragen.",
+        "solution": "Wir bereiten eine klare Übersicht Ihrer bestätigten Kurse und Starttermine vor.",
+        "result": "Interessenten erhalten eine verständliche Kursinfo, die Sie leicht aktuell halten.",
+        "module": "calendar",
+        "request": "Neue Einsteigerkurse und Übungsabend in einer Übersicht darstellen.",
+        "facts": [
+          "Einsteigerkurse",
+          "Bestätigte Starttermine",
+          "Übungsabend"
+        ],
+        "output": "Kursplanvorlage mit Niveau, bestätigtem Start, Wochentag und Anmeldung.",
+        "assistant": {
+          "name": "Kursplan-Helfer",
+          "working": "Ich ordne Niveau, Kursstart und Übungsabend für die Übersicht.",
+          "rule": "Nur bestätigte Kurszeiten und Niveauangaben verwenden. Offene Angaben werden vor Ausgabe ergänzt."
+        }
+      },
+      {
+        "id": "tanzschulen-3",
+        "tab": "Ankündigungen",
+        "title": "Tanzabende mit fertigen Abschnitten ankündigen.",
+        "problem": "Einladung, Ablauf und Social-Media-Text müssen jedes Mal neu geschrieben werden.",
+        "solution": "Wir erstellen Vorlagen aus Ihren Angaben zu Veranstaltung und Anmeldung.",
+        "result": "Sie haben einen prüfbaren Entwurf für Einladung und Beitrag.",
+        "module": "marketing",
+        "request": "Tanzabend am Freitag ankündigen.",
+        "facts": [
+          "Freitagsveranstaltung",
+          "Uhrzeit ergänzen",
+          "Teilnahmebedingungen prüfen"
+        ],
+        "output": "Ankündigungsentwurf mit Termin, Ablauf und von Ihnen bestätigten Teilnahmeangaben.",
+        "assistant": {
+          "name": "Ankündigungs-Helfer",
+          "working": "Ich bereite den Text für den Tanzabend am Freitag vor.",
+          "rule": "Termin, Teilnahmeangaben und Ablauf aus Ihren bestätigten Informationen verwenden. Sie geben den Text frei."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "kampfsportschulen",
+    "label": "Kampfsportschulen",
+    "singular": "Kampfsportschule",
+    "group": "sport-freizeit",
+    "headline": "Probetrainingsfragen mit Überblick beantworten.",
+    "intro": "Neue Interessenten und Eltern fragen nach Einstiegen und Trainingszeiten. Ich helfe Ihnen, organisatorische Antworten und Stundenpläne vorzubereiten.",
+    "slots": [
+      {
+        "time": "Mo · 17:00",
+        "label": "Kinder-Einstieg"
+      },
+      {
+        "time": "Di · 19:00",
+        "label": "Erwachsenen-Einstieg"
+      },
+      {
+        "time": "Mi · 18:00",
+        "label": "Probetraining"
+      }
+    ],
+    "cases": [
+      {
+        "id": "kampfsportschulen-1",
+        "tab": "Probetraining",
+        "title": "Einstiegsanfragen passend vorbereiten.",
+        "problem": "Bei Anfragen fehlen oft Altersgruppe und passende Trainingszeit.",
+        "solution": "Wir erstellen organisatorische Rückfragen und eine Übersicht Ihrer freigegebenen Einstiegsangebote.",
+        "result": "Sie können das passende Probetraining persönlich abstimmen.",
+        "module": "inbox",
+        "request": "Welche Möglichkeiten gibt es für ein Probetraining für Erwachsene?",
+        "facts": [
+          "Erwachsenen-Einstieg",
+          "Trainingszeiten prüfen",
+          "Anmeldung abstimmen"
+        ],
+        "output": "Danke für Ihr Interesse. Wir nennen Ihnen das Einstiegsangebot für Erwachsene und klären den Termin zum Probetraining.",
+        "assistant": {
+          "name": "Probetraining-Helfer",
+          "working": "Ich bereite den Einstieg für die Anfrage zum Erwachsenen-Probetraining vor.",
+          "rule": "Nur das freigegebene Erwachsenenangebot nennen. Gruppe und Termin werden persönlich abgestimmt."
+        }
+      },
+      {
+        "id": "kampfsportschulen-2",
+        "tab": "Trainingsplan",
+        "title": "Trainingsgruppen verständlich darstellen.",
+        "problem": "Gruppen, Altersbereiche und Zeiten müssen in Antworten immer wieder erklärt werden.",
+        "solution": "Wir erstellen eine übersichtliche Vorlage mit Ihren bestätigten Trainingsgruppen.",
+        "result": "Sie haben eine klare Ausgangslage für Anfragen und Aushänge.",
+        "module": "calendar",
+        "request": "Trainingsplan für Kinder und Erwachsene vorbereiten.",
+        "facts": [
+          "Gruppenbezeichnung",
+          "Altersbereich vom Betrieb",
+          "Bestätigte Zeiten"
+        ],
+        "output": "Trainingsplanvorlage mit freigegebenen Gruppenangaben und dem richtigen Kontaktweg.",
+        "assistant": {
+          "name": "Trainingsplan-Helfer",
+          "working": "Ich ordne die bestätigten Kinder- und Erwachsenengruppen für den Trainingsplan.",
+          "rule": "Nur freigegebene Gruppenzeiten aufnehmen. Alterszuordnung und Teilnahmeangaben werden von Ihnen geprüft."
+        }
+      },
+      {
+        "id": "kampfsportschulen-3",
+        "tab": "Infos",
+        "title": "Hinweise zum ersten Besuch vorbereiten.",
+        "problem": "Neue Teilnehmer stellen wiederkehrende Fragen zu Treffpunkt und organisatorischem Ablauf.",
+        "solution": "Wir erstellen ein kurzes Infoblatt aus Ihren eigenen Angaben.",
+        "result": "Sie versenden eine geprüfte organisatorische Vorlage.",
+        "module": "documents",
+        "request": "Infoblatt für den ersten Besuch erstellen.",
+        "facts": [
+          "Treffpunkt",
+          "Ankunftszeit",
+          "Organisatorische Hinweise"
+        ],
+        "output": "Vorlage für den ersten Besuch mit Treffpunkt und den von Ihnen festgelegten Hinweisen.",
+        "assistant": {
+          "name": "Besuchs-Helfer",
+          "working": "Ich bereite Treffpunkt und organisatorische Hinweise für den ersten Besuch vor.",
+          "rule": "Ihre bestätigten Besuchshinweise verwenden. Individuelle Fragen bleiben für das persönliche Gespräch offen."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "reinigungsbetriebe",
+    "label": "Reinigungsbetriebe",
+    "singular": "Reinigungsbetrieb",
+    "group": "service-vor-ort",
+    "headline": "Anfragen, Besichtigungen und Einsätze geordnet vorbereiten.",
+    "intro": "Kunden fragen nach Flächen, Zeiten und wiederkehrender Reinigung. Ich helfe Ihnen, die Informationen und die nächsten Schritte übersichtlich zu halten.",
+    "slots": [
+      {
+        "time": "Mo · 08:00",
+        "label": "Objektbesichtigung"
+      },
+      {
+        "time": "Di · 14:00",
+        "label": "Kundenrückruf"
+      },
+      {
+        "time": "Mi · 16:00",
+        "label": "Einsatzplanung"
+      }
+    ],
+    "cases": [
+      {
+        "id": "reinigungsbetriebe-1",
+        "tab": "Anfragen",
+        "title": "Objektangaben vor der Besichtigung sammeln.",
+        "problem": "Neue Anfragen nennen häufig noch nicht Fläche, Häufigkeit und gewünschte Zeiten.",
+        "solution": "Wir bereiten eine kurze Rückfragenliste und passende Antworten vor.",
+        "result": "Sie können die Besichtigung und Kalkulation gezielter vorbereiten.",
+        "module": "inbox",
+        "request": "Wir suchen eine wöchentliche Büroreinigung. Was benötigen Sie für ein Angebot?",
+        "facts": [
+          "Büroreinigung",
+          "Wöchentlich gewünscht",
+          "Fläche und Zeiten klären"
+        ],
+        "output": "Danke für die Anfrage. Bitte nennen Sie uns die ungefähre Fläche und gewünschte Reinigungszeiten.",
+        "assistant": {
+          "name": "Objekt-Helfer",
+          "working": "Ich sammle Fläche und gewünschte Zeiten für die Büroreinigung.",
+          "rule": "Fehlende Objektangaben erfragen. Besichtigung, Leistungen und Preis werden vom Betrieb festgelegt."
+        }
+      },
+      {
+        "id": "reinigungsbetriebe-2",
+        "tab": "Einsätze",
+        "title": "Änderungen und offene Aufgaben festhalten.",
+        "problem": "Schlüsselübergaben oder neue Wünsche werden zwischen Einsätzen telefonisch abgestimmt.",
+        "solution": "Wir sammeln die nächsten Schritte in einer kurzen Objektliste mit Erinnerung.",
+        "result": "Vor dem nächsten Einsatz erkennen Sie, was noch geklärt werden muss.",
+        "module": "notes",
+        "request": "Schlüsselübergabe vor dem ersten Einsatz am Donnerstag abstimmen.",
+        "facts": [
+          "Schlüsselübergabe",
+          "Ansprechpartner klären",
+          "Donnerstag erster Einsatz"
+        ],
+        "output": "Aufgabe: Schlüsselübergabe vor Donnerstag abstimmen und Bestätigung festhalten.",
+        "assistant": {
+          "name": "Einsatz-Helfer",
+          "working": "Ich halte die offene Schlüsselübergabe vor Donnerstag fest.",
+          "rule": "Übergabe erst nach persönlicher Bestätigung als erledigt markieren. Zugangsdaten bleiben geschützt."
+        }
+      },
+      {
+        "id": "reinigungsbetriebe-3",
+        "tab": "Angebote",
+        "title": "Wiederkehrende Leistungen übersichtlich beschreiben.",
+        "problem": "Leistungsumfang und Reinigungsrhythmus werden in Angeboten immer wieder neu formuliert.",
+        "solution": "Wir erstellen eine Vorlage mit Feldern für Leistungen, Rhythmus und Ihre Preise.",
+        "result": "Sie passen eine vorhandene Struktur an das Objekt an.",
+        "module": "documents",
+        "request": "Vorlage für regelmäßige Büroreinigung vorbereiten.",
+        "facts": [
+          "Leistungsverzeichnis",
+          "Reinigungsrhythmus",
+          "Kalkulation ergänzen"
+        ],
+        "output": "Angebotsvorlage für Objekt, Leistungen, Rhythmus und vom Betrieb ergänzte Preise.",
+        "assistant": {
+          "name": "Angebots-Helfer",
+          "working": "Ich bereite Objekt, Leistungen und Rhythmus für die Angebotsvorlage vor.",
+          "rule": "Ihre vereinbarten Leistungen verwenden. Objektumfang und Preise werden von Ihnen ergänzt und geprüft."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "gartenpflege",
+    "label": "Gartenpflege",
+    "singular": "Gartenpflegebetrieb",
+    "group": "service-vor-ort",
+    "headline": "Kundenwünsche und Pflegeeinsätze besser nachhalten.",
+    "intro": "Sie sind draußen im Einsatz. Anfragen, Fotos und Terminwünsche brauchen trotzdem eine klare Vorbereitung.",
+    "slots": [
+      {
+        "time": "Mo · 09:00",
+        "label": "Gartenbesichtigung"
+      },
+      {
+        "time": "Di · 13:00",
+        "label": "Pflegeeinsatz"
+      },
+      {
+        "time": "Mi · 16:00",
+        "label": "Rückrufe"
+      }
+    ],
+    "cases": [
+      {
+        "id": "gartenpflege-1",
+        "tab": "Anfragen",
+        "title": "Pflegewünsche vor dem Besuch ordnen.",
+        "problem": "Kunden schicken Bilder und beschreiben mehrere Arbeiten in einer Nachricht.",
+        "solution": "Wir fassen die gewünschten Arbeiten und fehlenden Angaben kurz zusammen.",
+        "result": "Sie können den Besuch vorbereiten und notwendige Rückfragen gezielt stellen.",
+        "module": "inbox",
+        "request": "Rasen und Hecke brauchen Pflege. Können Sie den Garten einmal ansehen?",
+        "facts": [
+          "Rasenpflege",
+          "Heckenpflege",
+          "Besichtigung abstimmen"
+        ],
+        "output": "Danke für Ihre Anfrage. Gerne stimmen wir einen Termin ab, um Rasen und Hecke vor Ort anzusehen.",
+        "assistant": {
+          "name": "Besichtigungs-Helfer",
+          "working": "Ich ordne den Pflegewunsch für Rasen und Hecke vor dem Gartenbesuch.",
+          "rule": "Den Kundenwunsch und Besichtigungsbedarf festhalten. Umfang und Termin werden von Ihnen bestätigt."
+        }
+      },
+      {
+        "id": "gartenpflege-2",
+        "tab": "Nachhalten",
+        "title": "Offene Absprachen nach einem Einsatz festhalten.",
+        "problem": "Zusätzliche Wünsche oder Materialfragen werden vor Ort kurz besprochen.",
+        "solution": "Wir erstellen aus Ihren Notizen eine übersichtliche Liste der nächsten Schritte.",
+        "result": "Sie wissen vor dem nächsten Besuch, was noch offen ist.",
+        "module": "notes",
+        "request": "Kunde wünscht Mulch für das Beet. Menge und nächsten Termin prüfen.",
+        "facts": [
+          "Mulchbedarf",
+          "Menge vor Ort klären",
+          "Nächsten Besuch abstimmen"
+        ],
+        "output": "Wiedervorlage: Mulchbedarf und Termin für den nächsten Gartenbesuch klären.",
+        "assistant": {
+          "name": "Absprachen-Helfer",
+          "working": "Ich mache aus der Mulchnotiz eine Aufgabe für den nächsten Besuch.",
+          "rule": "Materialmenge und Termin als offene Prüfpunkte festhalten. Erst bestätigte Angaben an Kunden weitergeben."
+        }
+      },
+      {
+        "id": "gartenpflege-3",
+        "tab": "Saisoninfos",
+        "title": "Saisonale Leistungen mit Vorlagen erklären.",
+        "problem": "Für wiederkehrende Saisoninfos beginnen Sie jedes Mal neu mit einem Text.",
+        "solution": "Wir bereiten eine Vorlage für Ihre Leistungen und den Kontaktweg vor.",
+        "result": "Sie prüfen einen passenden Text für Aushang, Website oder Beitrag.",
+        "module": "marketing",
+        "request": "Beitrag zur Gartenpflege im Herbst vorbereiten.",
+        "facts": [
+          "Eigene Leistungen",
+          "Saison: Herbst",
+          "Kontaktweg"
+        ],
+        "output": "Beitragsvorlage zu Ihren Herbstleistungen mit eigenem Gartenfoto und Kontaktmöglichkeit.",
+        "assistant": {
+          "name": "Beitrags-Helfer",
+          "working": "Ich bereite einen Beitrag zu Ihren eigenen Herbstleistungen vor.",
+          "rule": "Ihre Leistungen und ein freigegebenes eigenes Foto verwenden. Aussagen und Kontaktangaben prüfen."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "autowerkstaetten",
+    "label": "Autowerkstätten",
+    "singular": "Autowerkstatt",
+    "group": "service-vor-ort",
+    "headline": "Kundenanfragen neben der Werkstattarbeit geordnet beantworten.",
+    "intro": "Terminwünsche, Ersatzteilrückfragen und Abholabsprachen kommen zwischen den Arbeiten herein. Ich helfe Ihnen, diese Büroaufgaben übersichtlich zu halten.",
+    "slots": [
+      {
+        "time": "Mo · 08:00",
+        "label": "Fahrzeugannahme"
+      },
+      {
+        "time": "Di · 14:00",
+        "label": "Kundenrückrufe"
+      },
+      {
+        "time": "Mi · 16:00",
+        "label": "Abholabstimmung"
+      }
+    ],
+    "cases": [
+      {
+        "id": "autowerkstaetten-1",
+        "tab": "Terminfragen",
+        "title": "Serviceanfragen mit den nötigen Angaben vorbereiten.",
+        "problem": "Bei Terminwünschen fehlen häufig Fahrzeugangaben und gewünschte Leistung.",
+        "solution": "Wir bereiten eine organisatorische Rückfragenvorlage vor.",
+        "result": "Die Anfrage ist für Ihre Terminplanung vollständiger vorbereitet.",
+        "module": "inbox",
+        "request": "Ich brauche einen Termin zum Reifenwechsel. Welche Angaben benötigen Sie?",
+        "facts": [
+          "Reifenwechsel",
+          "Fahrzeugangaben klären",
+          "Terminwunsch"
+        ],
+        "output": "Danke für Ihre Anfrage. Bitte nennen Sie uns das Fahrzeug und Ihre gewünschten Termintage.",
+        "assistant": {
+          "name": "Service-Helfer",
+          "working": "Ich bereite die nötigen Rückfragen zum Reifenwechsel vor.",
+          "rule": "Fahrzeug und Terminwunsch erfragen. Leistung, Dauer und freie Werkstattzeit werden vom Betrieb geprüft."
+        }
+      },
+      {
+        "id": "autowerkstaetten-2",
+        "tab": "Rückrufe",
+        "title": "Ersatzteil- und Abholrückfragen nachhalten.",
+        "problem": "Offene Rückmeldungen hängen an mehreren Fahrzeugen und Ansprechpartnern.",
+        "solution": "Wir halten Anliegen, Fahrzeugzuordnung und Rückmeldetermin in einer kurzen Liste fest.",
+        "result": "Sie sehen, welchen Kunden Sie nach der Teileprüfung informieren müssen.",
+        "module": "notes",
+        "request": "Liefertermin des Ersatzteils morgen prüfen und Kunden zur Abholung informieren.",
+        "facts": [
+          "Teilelieferung prüfen",
+          "Fahrzeug zuordnen",
+          "Kunden danach informieren"
+        ],
+        "output": "Rückrufaufgabe: Teilelieferung prüfen, anschließend Abholzeit persönlich abstimmen.",
+        "assistant": {
+          "name": "Rückruf-Helfer",
+          "working": "Ich halte Teilelieferung und den anschließenden Abholrückruf fest.",
+          "rule": "Erst den tatsächlichen Lieferstand prüfen. Danach eine Abholzeit persönlich mit dem Kunden abstimmen."
+        }
+      },
+      {
+        "id": "autowerkstaetten-3",
+        "tab": "Unterlagen",
+        "title": "Begleitende Kundentexte mit Vorlagen schreiben.",
+        "problem": "Abholhinweise und organisatorische Informationen wiederholen sich.",
+        "solution": "Wir erstellen Textbausteine aus Ihren freigegebenen Werkstattangaben.",
+        "result": "Sie können eine passende Kundennachricht prüfen und ergänzen.",
+        "module": "documents",
+        "request": "Organisatorischen Abholhinweis vorbereiten.",
+        "facts": [
+          "Abholtermin ergänzen",
+          "Kontaktweg",
+          "Angaben durch Werkstatt prüfen"
+        ],
+        "output": "Abholvorlage mit Termin, Kontakt und von der Werkstatt bestätigten Angaben.",
+        "assistant": {
+          "name": "Abhol-Helfer",
+          "working": "Ich bereite den organisatorischen Abholhinweis in Ihrer Vorlage vor.",
+          "rule": "Nur bestätigte Fertigstellung und Abholangaben verwenden. Der Betrieb prüft den Hinweis vor Versand."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "tierpflege",
+    "label": "Tierpflege",
+    "singular": "Tierpflegebetrieb",
+    "group": "service-vor-ort",
+    "headline": "Anfragen und Termine neben der Tierpflege leichter klären.",
+    "intro": "Kunden möchten Termine vereinbaren und den Ablauf verstehen. Ich helfe Ihnen bei organisatorischen Antworten und übersichtlichen Notizen.",
+    "slots": [
+      {
+        "time": "Di · 09:00",
+        "label": "Kennenlerntermin"
+      },
+      {
+        "time": "Di · 11:00",
+        "label": "Pflege-Termin"
+      },
+      {
+        "time": "Mi · 14:00",
+        "label": "Pflege-Termin"
+      }
+    ],
+    "cases": [
+      {
+        "id": "tierpflege-1",
+        "tab": "Anfragen",
+        "title": "Terminwünsche mit passenden Rückfragen vorbereiten.",
+        "problem": "Anfragen nennen oft noch nicht, welche Pflege gewünscht ist und welcher Zeitbedarf passt.",
+        "solution": "Wir erstellen eine organisatorische Vorlage mit Ihren eigenen Rückfragen.",
+        "result": "Sie können die passende Leistung und Zeit persönlich abstimmen.",
+        "module": "inbox",
+        "request": "Ich möchte einen Pflegetermin für meinen Hund vereinbaren. Was brauchen Sie vorab?",
+        "facts": [
+          "Gewünschte Pflege klären",
+          "Angaben des Halters",
+          "Terminwunsch"
+        ],
+        "output": "Danke für die Anfrage. Bitte beschreiben Sie kurz die gewünschte Pflege und Ihre möglichen Termine.",
+        "assistant": {
+          "name": "Anfragen-Helfer",
+          "working": "Ich bereite die Rückfrage zur gewünschten Pflege und möglichen Tagen vor.",
+          "rule": "Gewünschte Pflege und Wunschtermine sammeln. Individuellen Aufwand und Verfügbarkeit persönlich klären."
+        }
+      },
+      {
+        "id": "tierpflege-2",
+        "tab": "Termine",
+        "title": "Offene Verschiebungen festhalten.",
+        "problem": "Während der Arbeit lassen sich Änderungen nicht immer sofort abschließen.",
+        "solution": "Wir sammeln Terminänderungen und bereiten eine Erinnerung zur Rückmeldung vor.",
+        "result": "Sie sehen, welche Abstimmung noch eine Antwort braucht.",
+        "module": "calendar",
+        "request": "Pflegetermin soll auf Donnerstag verschoben werden.",
+        "facts": [
+          "Änderungswunsch",
+          "Donnerstag prüfen",
+          "Bestätigung offen"
+        ],
+        "output": "Offene Terminabstimmung mit Erinnerung; die Verfügbarkeit wird von Ihnen geprüft.",
+        "assistant": {
+          "name": "Termin-Helfer",
+          "working": "Ich halte die gewünschte Verschiebung des Pflegetermins fest.",
+          "rule": "Die neue Zeit bleibt bis zur Prüfung offen. Ein Termin wird erst von Ihnen bestätigt."
+        }
+      },
+      {
+        "id": "tierpflege-3",
+        "tab": "Hinweise",
+        "title": "Organisatorische Hinweise vorab verständlich machen.",
+        "problem": "Kunden fragen wiederholt nach Treffpunkt und dem Ablauf der Übergabe.",
+        "solution": "Wir erstellen ein kurzes Infoblatt aus Ihren freigegebenen Betriebsangaben.",
+        "result": "Sie nutzen dieselbe geprüfte Vorlage für Anfahrt und Übergabe.",
+        "module": "documents",
+        "request": "Hinweise zur Anfahrt und Übergabe vorbereiten.",
+        "facts": [
+          "Adresse",
+          "Ankunftszeit",
+          "Übergabeablauf"
+        ],
+        "output": "Organisatorische Vorlage mit Anfahrt und dem von Ihnen festgelegten Übergabeablauf.",
+        "assistant": {
+          "name": "Übergabe-Helfer",
+          "working": "Ich bereite Anfahrt und Ihren organisatorischen Übergabeablauf vor.",
+          "rule": "Nur Ihre bestätigten Übergabehinweise verwenden. Angaben zum konkreten Tier werden persönlich geklärt."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "ferienwohnungen",
+    "label": "Ferienwohnungsvermietung",
+    "singular": "Ferienwohnungsbetrieb",
+    "group": "service-vor-ort",
+    "headline": "Gästeanfragen und Anreiseinfos übersichtlich vorbereiten.",
+    "intro": "Buchungsfragen, Ankunftszeiten und Übergaben brauchen viele kleine Antworten. Gemeinsam machen wir diese wiederkehrende Kommunikation leichter.",
+    "slots": [
+      {
+        "time": "Fr · 15:00",
+        "label": "Anreiseabstimmung"
+      },
+      {
+        "time": "Sa · 10:00",
+        "label": "Übergabe"
+      },
+      {
+        "time": "So · 11:00",
+        "label": "Abreisehinweise"
+      }
+    ],
+    "cases": [
+      {
+        "id": "ferienwohnungen-1",
+        "tab": "Gästeanfragen",
+        "title": "Anfragen mit den wichtigsten Angaben ordnen.",
+        "problem": "Zeitraum und Personenzahl stehen oft verteilt in mehreren Nachrichten.",
+        "solution": "Wir fassen die Angaben zusammen und bereiten eine passende Rückfrage vor.",
+        "result": "Sie können Verfügbarkeit und Konditionen selbst prüfen, bevor Sie antworten.",
+        "module": "inbox",
+        "request": "Ist Ihre Wohnung für zwei Personen vom 12. bis 15. November frei?",
+        "facts": [
+          "Zwei Personen",
+          "12.–15. November",
+          "Verfügbarkeit selbst prüfen"
+        ],
+        "output": "Danke für Ihre Anfrage. Wir prüfen den gewünschten Zeitraum und melden uns mit den passenden Angaben.",
+        "assistant": {
+          "name": "Gäste-Helfer",
+          "working": "Ich ordne Zeitraum und Personenzahl aus der Gästeanfrage.",
+          "rule": "Keine Verfügbarkeit zusagen, bevor Sie Belegung und Konditionen geprüft haben. Die Antwort bleibt ein Entwurf."
+        }
+      },
+      {
+        "id": "ferienwohnungen-2",
+        "tab": "Übergabe",
+        "title": "Anreise und nächste Aufgaben auf einer Liste halten.",
+        "problem": "Ankunftszeit, Schlüsselübergabe und Reinigung müssen zusammenpassen.",
+        "solution": "Wir bereiten eine übersichtliche Anreiseliste aus den bestätigten Angaben vor.",
+        "result": "Sie erkennen, welche Übergabe oder Abstimmung noch offen ist.",
+        "module": "notes",
+        "request": "Gäste reisen Freitag nach 18 Uhr an. Schlüsselübergabe noch klären.",
+        "facts": [
+          "Freitag nach 18 Uhr",
+          "Schlüsselübergabe offen",
+          "Vor Anreise abstimmen"
+        ],
+        "output": "Anreiseaufgabe: Schlüsselübergabe für Freitagabend klären und den Gästen bestätigen.",
+        "assistant": {
+          "name": "Anreise-Helfer",
+          "working": "Ich halte die offene Schlüsselübergabe für Freitagabend fest.",
+          "rule": "Ankunftszeit und Übergabeabstimmung verbinden. Zugangscodes und Schlüsselorte bleiben geschützt."
+        }
+      },
+      {
+        "id": "ferienwohnungen-3",
+        "tab": "Gästeinfos",
+        "title": "Anreiseinformationen mit einer festen Vorlage senden.",
+        "problem": "Adresse, Zugang und Hinweise tippen Sie für jede Buchung erneut.",
+        "solution": "Wir erstellen eine geprüfte Vorlage mit Ihren Hausinformationen und Feldern für die Anreise.",
+        "result": "Sie ergänzen die Buchungsangaben und prüfen die Nachricht vor dem Versand.",
+        "module": "documents",
+        "request": "Anreiseblatt für eine bestätigte Buchung vorbereiten.",
+        "facts": [
+          "Adresse",
+          "Bestätigte Anreisezeit",
+          "Zugang persönlich prüfen"
+        ],
+        "output": "Anreisevorlage mit Ihren freigegebenen Hausinformationen und den geprüften Buchungsangaben.",
+        "assistant": {
+          "name": "Gästeinfo-Helfer",
+          "working": "Ich bereite die Anreiseinformationen für die bestätigte Buchung vor.",
+          "rule": "Nur geprüfte Buchungs- und Hausangaben verwenden. Der Gastgeber prüft Empfänger und Inhalt vor Versand."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "einzelhandel",
+    "label": "Einzelhandel",
+    "singular": "Laden",
+    "group": "handel-selbststaendige",
+    "headline": "Kundenfragen und Unterlagen neben dem Verkauf vorbereiten.",
+    "intro": "Sie sind im Laden für Ihre Kunden da. Wiederkehrende Fragen, Bestellungen und Ankündigungen sollen dabei übersichtlich bleiben.",
+    "slots": [
+      {
+        "time": "Mo · 09:00",
+        "label": "Anfragen beantworten"
+      },
+      {
+        "time": "Di · 12:00",
+        "label": "Bestellrückfragen"
+      },
+      {
+        "time": "Mi · 16:00",
+        "label": "Aktionen vorbereiten"
+      }
+    ],
+    "cases": [
+      {
+        "id": "einzelhandel-1",
+        "tab": "Kundenfragen",
+        "title": "Produktanfragen mit passenden Vorlagen beantworten.",
+        "problem": "Verfügbarkeit, Öffnungszeiten und Abholung werden immer wieder angefragt.",
+        "solution": "Wir bereiten Antworten vor und markieren Angaben, die Sie im Laden prüfen müssen.",
+        "result": "Sie können gezielt auf Kundenfragen reagieren, ohne ungeprüfte Verfügbarkeit zu versprechen.",
+        "module": "inbox",
+        "request": "Haben Sie den Artikel noch da und kann ich ihn am Samstag abholen?",
+        "facts": [
+          "Artikel prüfen",
+          "Abholung Samstag",
+          "Bestand im Laden bestätigen"
+        ],
+        "output": "Danke für die Anfrage. Wir prüfen den Artikelbestand und stimmen danach eine Abholung am Samstag ab.",
+        "assistant": {
+          "name": "Kundenfragen-Helfer",
+          "working": "Ich bereite die Antwort zu Artikelbestand und Abholung am Samstag vor.",
+          "rule": "Bestand erst im eigenen System prüfen. Keine Reservierung oder Abholung ohne Ihre Bestätigung zusagen."
+        }
+      },
+      {
+        "id": "einzelhandel-2",
+        "tab": "Bestellungen",
+        "title": "Offene Rückmeldungen zu Bestellungen festhalten.",
+        "problem": "Lieferantenantworten und Kundenrückfragen liegen zwischen dem Verkauf.",
+        "solution": "Wir erstellen eine kurze Liste mit Bestellung, offener Frage und nächstem Rückmeldetermin.",
+        "result": "Sie sehen, welche Bestellung noch eine Antwort braucht.",
+        "module": "notes",
+        "request": "Lieferant antwortet morgen zur Nachbestellung. Kunden anschließend informieren.",
+        "facts": [
+          "Nachbestellung",
+          "Lieferantenantwort morgen",
+          "Kunden informieren"
+        ],
+        "output": "Wiedervorlage zur Nachbestellung: Liefertermin prüfen und danach den Kunden informieren.",
+        "assistant": {
+          "name": "Bestell-Helfer",
+          "working": "Ich halte die Lieferantenrückmeldung zur Nachbestellung als Aufgabe fest.",
+          "rule": "Den bestätigten Liefertermin abwarten. Anschließend den Kunden mit geprüften Angaben informieren."
+        }
+      },
+      {
+        "id": "einzelhandel-3",
+        "tab": "Aktionen",
+        "title": "Aktionen mit Ihren eigenen Angaben ankündigen.",
+        "problem": "Für einen Aushang oder Beitrag fehlt neben dem Verkauf die Zeit.",
+        "solution": "Wir erstellen eine Vorlage für Aktion, Zeitraum und Ihr eigenes Produktbild.",
+        "result": "Sie prüfen Text, Preise und Bedingungen vor der Veröffentlichung.",
+        "module": "marketing",
+        "request": "Aushang für eine Wochenendaktion vorbereiten.",
+        "facts": [
+          "Aktionstitel",
+          "Zeitraum",
+          "Preise und Bedingungen prüfen"
+        ],
+        "output": "Aktionsvorlage mit Ihren bestätigten Angaben, eigenem Bild und den geprüften Bedingungen.",
+        "assistant": {
+          "name": "Aktions-Helfer",
+          "working": "Ich bereite Ihre bestätigten Aktionsangaben für einen Aushang vor.",
+          "rule": "Preise, Zeitraum und Bedingungen aus Ihren Angaben übernehmen. Sie prüfen den Aushang vor Veröffentlichung."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "floristik",
+    "label": "Floristik",
+    "singular": "Floristikbetrieb",
+    "group": "handel-selbststaendige",
+    "headline": "Blumenwünsche ordnen. Zeit für Ihre Gestaltung behalten.",
+    "intro": "Anlässe, Abholzeiten und individuelle Wünsche kommen über viele kleine Nachrichten. Ich helfe Ihnen, diese Angaben übersichtlich vorzubereiten.",
+    "slots": [
+      {
+        "time": "Fr · 10:00",
+        "label": "Beratung"
+      },
+      {
+        "time": "Sa · 11:00",
+        "label": "Abholung Strauß"
+      },
+      {
+        "time": "Sa · 14:00",
+        "label": "Veranstaltungsabstimmung"
+      }
+    ],
+    "cases": [
+      {
+        "id": "floristik-1",
+        "tab": "Blumenwünsche",
+        "title": "Anlass und Wünsche vor der Rückmeldung sammeln.",
+        "problem": "Bei individuellen Anfragen fehlen Farbe, Budget oder gewünschte Abholung.",
+        "solution": "Wir bereiten eine freundliche Rückfragenvorlage vor.",
+        "result": "Sie können eine passende Gestaltung persönlich besprechen.",
+        "module": "inbox",
+        "request": "Ich brauche einen Geburtstagsstrauß für Samstag. Was müssen Sie wissen?",
+        "facts": [
+          "Geburtstag",
+          "Abholung Samstag",
+          "Farbe und Budget klären"
+        ],
+        "output": "Danke für die Anfrage. Welche Farben wünschen Sie sich und welches Budget haben Sie für den Geburtstagsstrauß?",
+        "assistant": {
+          "name": "Blumenwunsch-Helfer",
+          "working": "Ich bereite die Rückfrage zu Farben und Budget für den Geburtstagsstrauß vor.",
+          "rule": "Anlass und Kundenwünsche erfragen. Preis, Ausführung und Abholzeit werden persönlich vereinbart."
+        }
+      },
+      {
+        "id": "floristik-2",
+        "tab": "Abholungen",
+        "title": "Offene Abholabsprachen sichtbar halten.",
+        "problem": "Bestellungen und Abholzeiten werden im Tagesgeschäft kurz besprochen.",
+        "solution": "Wir halten die nächste Abstimmung und eine Erinnerung in einer übersichtlichen Liste fest.",
+        "result": "Sie sehen, welche Abholzeit noch bestätigt werden muss.",
+        "module": "notes",
+        "request": "Abholzeit für den Hochzeitsstrauß am Freitag noch bestätigen.",
+        "facts": [
+          "Hochzeitsstrauß",
+          "Freitag",
+          "Abholzeit bestätigen"
+        ],
+        "output": "Aufgabe: Abholzeit am Freitag mit dem Kunden abstimmen und festhalten.",
+        "assistant": {
+          "name": "Abhol-Helfer",
+          "working": "Ich halte die noch offene Abholzeit für den Hochzeitsstrauß fest.",
+          "rule": "Die Freitagsabholung erst nach Rückmeldung des Kunden als bestätigt markieren."
+        }
+      },
+      {
+        "id": "floristik-3",
+        "tab": "Beiträge",
+        "title": "Eigene Arbeiten mit einem einfachen Beitrag zeigen.",
+        "problem": "Fotos von Sträußen sind vorhanden, aber die Veröffentlichung bleibt liegen.",
+        "solution": "Wir erstellen eine Vorlage für Ihr Bild, Anlass und Kontaktweg.",
+        "result": "Sie prüfen einen Beitrag aus Ihrer eigenen Arbeit und veröffentlichen ihn selbst.",
+        "module": "marketing",
+        "request": "Beitrag mit Foto eines Frühlingsstraußes vorbereiten.",
+        "facts": [
+          "Eigenes Straußfoto",
+          "Frühlingsgestaltung",
+          "Kontaktweg"
+        ],
+        "output": "Beitragsvorlage mit eigenem Foto, kurzer Gestaltungsbeschreibung und Bestellkontakt.",
+        "assistant": {
+          "name": "Beitrags-Helfer",
+          "working": "Ich bereite einen kurzen Text zu Ihrem eigenen Straußfoto vor.",
+          "rule": "Ein freigegebenes eigenes Foto und Ihre Gestaltungsangaben verwenden. Bestellkontakt vor Veröffentlichung prüfen."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "fotografie",
+    "label": "Fotografie",
+    "singular": "Fotografiebetrieb",
+    "group": "handel-selbststaendige",
+    "headline": "Anfragen und Shooting-Unterlagen mit weniger Schreibarbeit vorbereiten.",
+    "intro": "Zwischen Shooting und Bildbearbeitung warten Terminfragen und Unterlagen. Gemeinsam vereinfachen wir die wiederkehrende Kommunikation.",
+    "slots": [
+      {
+        "time": "Mo · 10:00",
+        "label": "Kennenlerngespräch"
+      },
+      {
+        "time": "Di · 14:00",
+        "label": "Shooting"
+      },
+      {
+        "time": "Mi · 16:00",
+        "label": "Unterlagen vorbereiten"
+      }
+    ],
+    "cases": [
+      {
+        "id": "fotografie-1",
+        "tab": "Anfragen",
+        "title": "Shootingwünsche übersichtlich zusammenfassen.",
+        "problem": "Bei Anfragen fehlen Motiv, gewünschte Nutzung oder Terminvorstellung.",
+        "solution": "Wir erstellen Rückfragenvorlagen und sammeln die Angaben für Ihr Gespräch.",
+        "result": "Sie können das passende Shooting persönlich besprechen und kalkulieren.",
+        "module": "inbox",
+        "request": "Wir brauchen Teamfotos für unsere Website. Wie läuft das ab?",
+        "facts": [
+          "Teamfotos",
+          "Nutzung: Website",
+          "Personenzahl und Termin klären"
+        ],
+        "output": "Danke für Ihre Anfrage. Wie viele Personen sollen fotografiert werden und welchen Zeitraum haben Sie im Blick?",
+        "assistant": {
+          "name": "Shooting-Helfer",
+          "working": "Ich sammle Personenzahl und Zeitraum für die Anfrage zu Teamfotos.",
+          "rule": "Fehlende Eckdaten erfragen. Leistungsumfang, Nutzungsrechte und Termin werden persönlich vereinbart."
+        }
+      },
+      {
+        "id": "fotografie-2",
+        "tab": "Vorbereitung",
+        "title": "Organisatorische Shootinghinweise mit Vorlagen teilen.",
+        "problem": "Treffpunkt und Ablauf werden vor jedem Shooting neu zusammengestellt.",
+        "solution": "Wir erstellen eine Vorlage mit den von Ihnen bestätigten Hinweisen.",
+        "result": "Sie haben ein übersichtliches Blatt zur organisatorischen Vorbereitung.",
+        "module": "documents",
+        "request": "Vorbereitungsblatt für ein Teamshooting erstellen.",
+        "facts": [
+          "Treffpunkt",
+          "Bestätigter Ablauf",
+          "Kontakt am Shootingtag"
+        ],
+        "output": "Shootingvorlage mit Ort, Ablauf und dem Kontakt für den Termin.",
+        "assistant": {
+          "name": "Vorbereitungs-Helfer",
+          "working": "Ich bereite Ort, Ablauf und Kontakt für das Teamshooting vor.",
+          "rule": "Nur Ihre bestätigten Shootingangaben verwenden. Unklare Absprachen als Rückfrage markieren."
+        }
+      },
+      {
+        "id": "fotografie-3",
+        "tab": "Nachhalten",
+        "title": "Offene Auswahl- und Rückmeldeschritte festhalten.",
+        "problem": "Nach einem Shooting warten Sie auf mehrere Rückmeldungen zur Bildauswahl.",
+        "solution": "Wir führen eine kurze Aufgabenliste mit Projekt und Wiedervorlagedatum.",
+        "result": "Sie sehen, bei welchem Projekt die nächste Rückmeldung aussteht.",
+        "module": "notes",
+        "request": "Kunde gibt Freitag Rückmeldung zur Bildauswahl.",
+        "facts": [
+          "Projekt zuordnen",
+          "Bildauswahl offen",
+          "Freitag nachhalten"
+        ],
+        "output": "Wiedervorlage Freitag: Rückmeldung zur Bildauswahl prüfen und nächsten Projektschritt klären.",
+        "assistant": {
+          "name": "Projekt-Helfer",
+          "working": "Ich halte die Rückmeldung zur Bildauswahl für Freitag fest.",
+          "rule": "Auf die tatsächliche Auswahl warten. Erst danach den nächsten Projektschritt vereinbaren."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "veranstaltungsservice",
+    "label": "Veranstaltungsservice",
+    "singular": "Veranstaltungsbetrieb",
+    "group": "handel-selbststaendige",
+    "headline": "Viele Absprachen. Ein klarer nächster Schritt.",
+    "intro": "Anfragen, Zeiten und Dienstleisterabsprachen liegen häufig in langen Nachrichten. Ich helfe Ihnen, die Büroorganisation übersichtlicher vorzubereiten.",
+    "slots": [
+      {
+        "time": "Mo · 10:00",
+        "label": "Erstgespräch"
+      },
+      {
+        "time": "Di · 14:00",
+        "label": "Ablaufabstimmung"
+      },
+      {
+        "time": "Mi · 16:00",
+        "label": "Partner-Rückfragen"
+      }
+    ],
+    "cases": [
+      {
+        "id": "veranstaltungsservice-1",
+        "tab": "Anfragen",
+        "title": "Veranstaltungsangaben für das erste Gespräch ordnen.",
+        "problem": "Neue Anfragen enthalten viele Wünsche, aber oft noch keinen klaren Umfang.",
+        "solution": "Wir sammeln Datum, Ort, Teilnehmerzahl und offene Fragen in einer Übersicht.",
+        "result": "Sie können das Erstgespräch und Ihren Leistungsumfang gezielter klären.",
+        "module": "inbox",
+        "request": "Wir planen eine Firmenfeier im Dezember für etwa 60 Personen.",
+        "facts": [
+          "Firmenfeier",
+          "Dezember",
+          "Etwa 60 Personen"
+        ],
+        "output": "Danke für die Anfrage. Welcher Termin und welcher Veranstaltungsort sind vorgesehen?",
+        "assistant": {
+          "name": "Anfragen-Helfer",
+          "working": "Ich ordne die Eckdaten zur Firmenfeier mit etwa 60 Personen.",
+          "rule": "Termin und Ort erfragen. Leistungen, Kapazitäten und Preise werden persönlich bestätigt."
+        }
+      },
+      {
+        "id": "veranstaltungsservice-2",
+        "tab": "Ablauf",
+        "title": "Aus Absprachen eine übersichtliche Aufgabenliste machen.",
+        "problem": "Rückmeldungen von Auftraggebern und Dienstleistern kommen zu verschiedenen Zeiten.",
+        "solution": "Wir halten Aufgabe, Ansprechpartner und Rückmeldedatum zusammen fest.",
+        "result": "Sie sehen vor der nächsten Abstimmung, wer noch was bestätigen muss.",
+        "module": "notes",
+        "request": "Technikpartner bestätigt Aufbauzeit am Mittwoch. Catering-Rückmeldung noch offen.",
+        "facts": [
+          "Aufbauzeit am Mittwoch",
+          "Catering-Rückmeldung",
+          "Nächste Abstimmung"
+        ],
+        "output": "Aufgabenliste mit offenen Bestätigungen zu Aufbau und Catering.",
+        "assistant": {
+          "name": "Ablauf-Helfer",
+          "working": "Ich trenne die offene Aufbau-Bestätigung von der Catering-Rückmeldung.",
+          "rule": "Jede Absprache mit ihrem Verantwortlichen nachhalten. Nur eingegangene Bestätigungen als fest markieren."
+        }
+      },
+      {
+        "id": "veranstaltungsservice-3",
+        "tab": "Unterlagen",
+        "title": "Ablaufunterlagen mit festen Abschnitten vorbereiten.",
+        "problem": "Für ähnliche Veranstaltungen beginnen Ablauf und Ansprechpartnerliste immer wieder neu.",
+        "solution": "Wir erstellen eine Vorlage mit Zeitplan, Rollen und den freigegebenen Angaben.",
+        "result": "Sie ergänzen die bestätigten Veranstaltungsdetails in einer klaren Struktur.",
+        "module": "documents",
+        "request": "Ablaufblatt für Firmenfeier vorbereiten.",
+        "facts": [
+          "Zeitplan",
+          "Ansprechpartner",
+          "Bestätigte Leistungen"
+        ],
+        "output": "Ablaufvorlage für Termin, Zeiten, Verantwortliche und bestätigte Leistungen.",
+        "assistant": {
+          "name": "Unterlagen-Helfer",
+          "working": "Ich bringe Zeiten und Verantwortliche in die Ablaufvorlage.",
+          "rule": "Nur bestätigte Veranstaltungsangaben übernehmen. Offene Leistungen sichtbar lassen und den Ablauf prüfen."
+        }
+      }
+    ]
+  },
+  {
+    "slug": "beratung-freie-berufe",
+    "label": "Beratung & freie Berufe",
+    "singular": "Beratungs- oder Dienstleistungsbetrieb",
+    "group": "handel-selbststaendige",
+    "headline": "Kundenarbeit konzentriert erledigen. Büroaufgaben leichter vorbereiten.",
+    "intro": "Anfragen, Gesprächsnotizen und Projektunterlagen fallen neben Ihrer eigentlichen Leistung an. Ich helfe Ihnen bei diesen wiederkehrenden Aufgaben.",
+    "slots": [
+      {
+        "time": "Mo · 09:00",
+        "label": "Kennenlerngespräch"
+      },
+      {
+        "time": "Di · 14:00",
+        "label": "Projektgespräch"
+      },
+      {
+        "time": "Mi · 16:00",
+        "label": "Unterlagen"
+      }
+    ],
+    "cases": [
+      {
+        "id": "beratung-freie-berufe-1",
+        "tab": "Anfragen",
+        "title": "Projektanfragen vor dem Gespräch ordnen.",
+        "problem": "Neue Kunden beschreiben viele Wünsche, ohne einen klaren nächsten Schritt.",
+        "solution": "Wir fassen Anliegen und offene organisatorische Fragen für Ihr Erstgespräch zusammen.",
+        "result": "Sie gehen mit einer vorbereiteten Übersicht ins Gespräch.",
+        "module": "inbox",
+        "request": "Wir suchen Unterstützung für ein Projekt ab November. Können wir uns kennenlernen?",
+        "facts": [
+          "Projektstart November",
+          "Umfang klären",
+          "Kennenlerngespräch"
+        ],
+        "output": "Danke für Ihre Anfrage. Gerne besprechen wir das Vorhaben. Welche Zeiten passen Ihnen für ein erstes Gespräch?",
+        "assistant": {
+          "name": "Projektanfragen-Helfer",
+          "working": "Ich bereite die Rückfrage zum Vorhaben und zum ersten Gespräch vor.",
+          "rule": "Projektwunsch und mögliche Gesprächszeiten sammeln. Leistungsumfang erst im persönlichen Gespräch klären."
+        }
+      },
+      {
+        "id": "beratung-freie-berufe-2",
+        "tab": "Notizen",
+        "title": "Besprochene Aufgaben und Rückmeldungen festhalten.",
+        "problem": "Nach Kundengesprächen müssen Sie die nächsten Schritte aus verschiedenen Notizen zusammensuchen.",
+        "solution": "Wir erstellen eine kurze Aufgabenübersicht aus Ihren freigegebenen Gesprächsnotizen.",
+        "result": "Sie sehen Zuständigkeiten und den nächsten Rückmeldetermin.",
+        "module": "notes",
+        "request": "Entwurf bis Donnerstag vorbereiten; Kunde gibt Freitag Rückmeldung.",
+        "facts": [
+          "Entwurf Donnerstag",
+          "Kundenrückmeldung Freitag",
+          "Nächste Abstimmung"
+        ],
+        "output": "Projektaufgaben mit Entwurfsdatum, Rückmeldetermin und offenen Punkten.",
+        "assistant": {
+          "name": "Notizen-Helfer",
+          "working": "Ich mache aus Entwurfsdatum und Rückmeldung eine klare Projektliste.",
+          "rule": "Aufgaben, Datum und offene Punkte zusammenhalten. Kundenrückmeldungen erst nach Eingang als bestätigt markieren."
+        }
+      },
+      {
+        "id": "beratung-freie-berufe-3",
+        "tab": "Dokumente",
+        "title": "Wiederkehrende Projektunterlagen einfacher starten.",
+        "problem": "Angebot, Ablauf und Ergebnisdokumentation beginnen häufig mit einer leeren Seite.",
+        "solution": "Wir erstellen eine Struktur für Ihre eigenen Leistungen und Projektangaben.",
+        "result": "Sie ergänzen fachliche Inhalte in einer wiederverwendbaren Vorlage.",
+        "module": "documents",
+        "request": "Projektangebot mit Umfang, Ablauf und Preisfeldern vorbereiten.",
+        "facts": [
+          "Leistungsumfang",
+          "Projektablauf",
+          "Eigene Kalkulation"
+        ],
+        "output": "Angebotsvorlage mit Leistungsbeschreibung, Ablauf und Feldern für Ihre Konditionen.",
+        "assistant": {
+          "name": "Angebots-Helfer",
+          "working": "Ich bereite Leistungsumfang und Ablauf für Ihr Projektangebot vor.",
+          "rule": "Ihre eigenen Konditionen und bestätigten Leistungen verwenden. Keine fehlenden Preise ergänzen."
+        }
+      }
+    ]
+  }
+]

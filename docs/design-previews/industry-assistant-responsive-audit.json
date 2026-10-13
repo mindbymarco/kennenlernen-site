@@ -1,0 +1,632 @@
+[
+  {
+    "path": "/",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/ressourcen",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/impressum",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/datenschutz",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/handwerk",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/heizung-sanitaer",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/elektrobetriebe",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/malerbetriebe",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/tischlereien",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/friseursalons",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/kosmetikstudios",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/nagelstudios",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/massagebetriebe",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/physiotherapiepraxen",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/fitnessstudios",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/yogastudios",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/pilatesstudios",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/tanzschulen",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/kampfsportschulen",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/reinigungsbetriebe",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/gartenpflege",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/autowerkstaetten",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/tierpflege",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/ferienwohnungen",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/einzelhandel",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/floristik",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/fotografie",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/veranstaltungsservice",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/beratung-freie-berufe",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/handwerk-haus",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/schoenheit-gesundheit",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/sport-freizeit",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/service-vor-ort",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/handel-selbststaendige",
+    "requestedWidth": 390,
+    "actualWidth": 390,
+    "overflow": false
+  },
+  {
+    "path": "/",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/ressourcen",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/impressum",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/datenschutz",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/handwerk",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/heizung-sanitaer",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/elektrobetriebe",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/malerbetriebe",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/tischlereien",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/friseursalons",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/kosmetikstudios",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/nagelstudios",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/massagebetriebe",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/physiotherapiepraxen",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/fitnessstudios",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/yogastudios",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/pilatesstudios",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/tanzschulen",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/kampfsportschulen",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/reinigungsbetriebe",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/gartenpflege",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/autowerkstaetten",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/tierpflege",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/ferienwohnungen",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/einzelhandel",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/floristik",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/fotografie",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/veranstaltungsservice",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/beratung-freie-berufe",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/handwerk-haus",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/schoenheit-gesundheit",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/sport-freizeit",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/service-vor-ort",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/handel-selbststaendige",
+    "requestedWidth": 768,
+    "actualWidth": 768,
+    "overflow": false
+  },
+  {
+    "path": "/",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/ressourcen",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/impressum",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/datenschutz",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/handwerk",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/heizung-sanitaer",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/elektrobetriebe",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/malerbetriebe",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/tischlereien",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/friseursalons",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/kosmetikstudios",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/nagelstudios",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/massagebetriebe",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/physiotherapiepraxen",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/fitnessstudios",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/yogastudios",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/pilatesstudios",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/tanzschulen",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/kampfsportschulen",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/reinigungsbetriebe",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/gartenpflege",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/autowerkstaetten",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/tierpflege",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/ferienwohnungen",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/einzelhandel",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/floristik",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/fotografie",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/veranstaltungsservice",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/branchen/beratung-freie-berufe",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/handwerk-haus",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/schoenheit-gesundheit",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/sport-freizeit",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/service-vor-ort",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  },
+  {
+    "path": "/bereiche/handel-selbststaendige",
+    "requestedWidth": 1280,
+    "actualWidth": 1280,
+    "overflow": false
+  }
+]

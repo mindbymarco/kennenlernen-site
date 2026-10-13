@@ -7,18 +7,21 @@ const krub = Krub({ subsets: ["latin"], variable: "--font-sans", weight: ["400",
 const krubMono = Krub({ subsets: ["latin"], variable: "--font-mono", weight: ["400","500"] });
 
 export const metadata: Metadata = {
-  title: "Marco Grotemeyer — KI-Transformation für den Mittelstand",
-  description: "Partner für unternehmensweite KI-Transformation. Befähigung und technische Umsetzung aus einer Hand.",
+  title: "Weniger Büroarbeit für kleine Unternehmen | Marco Grotemeyer",
+  description: "Digitale Assistenten für kleine Unternehmen: E-Mails, Termine und Unterlagen leichter erledigen. Persönliche Einrichtung, kostenlose Hilfen und ein unverbindlicher Angebotsrechner.",
+  metadataBase: new URL("https://www.marcogrotemeyer.de"),
+  alternates: { canonical: "/" },
+  openGraph: { title: "Mehr Zeit für Ihr Geschäft | Marco Grotemeyer", description: "Digitale Assistenten für kleine Unternehmen – persönlich eingerichtet und verständlich erklärt.", locale: "de_DE", type: "website", images: [{ url: "/profile.jpg", alt: "Marco Grotemeyer" }] },
   icons: {
-    icon: [{ url: "/favicon.ico" }, { url: "/favicon.png", type: "image/png" }, { url: "/logo.png", type: "image/png" }],
-    apple: [{ url: "/logo.png" }],
+    icon: [{ url: "/brand/fibonacci-mark.png", type: "image/png" }],
+    apple: [{ url: "/brand/fibonacci-mark.png" }],
   },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de" className={`${inter.variable} ${krub.variable} ${krubMono.variable}`}>
-      <body className="antialiased bg-[#F2E7DE]">{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }

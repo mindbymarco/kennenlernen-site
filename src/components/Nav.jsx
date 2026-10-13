@@ -1,41 +1,59 @@
 "use client";
+import { useState } from "react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-const links = [
-  { href: '#workspace', label: 'Workspace' },
-  { href: '#use-cases', label: 'Use-Cases' },
-  { href: '#prozess', label: 'Ablauf' },
-  { href: '#ueber-mich', label: 'Über mich' },
-  { href: '#faq', label: 'FAQ' },
-]
+import { ArrowUpRight, Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { NavigationMenu, NavigationMenuContent, NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationMenuTrigger } from "@/components/ui/navigation-menu";
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { sectorGroups, sectorsInGroup, sectorHref, groupHref } from "@/lib/sectors";
 
 export default function Nav() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
-  const hrefFor = (hash) => (isHome ? hash : `/${hash}`);
-  return (
-    <header className="fixed top-5 lg:top-6 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-24px)] lg:w-[calc(100%-32px)] max-w-[1180px]">
-      <nav
-        className="flex items-center justify-between gap-4 lg:gap-6 bg-white/55 backdrop-blur-2xl rounded-full shadow-[0_8px_32px_rgba(44,28,18,0.08),0_2px_12px_rgba(44,28,18,0.06)] border border-white/40 px-4 lg:px-6 py-3 supports-[backdrop-filter]:bg-white/40"
-        aria-label="Hauptnavigation"
-      >
-        <a href={isHome ? "#top" : "/"} className="flex items-center gap-2.5 font-[family-name:var(--font-serif)] text-[17px] md:text-[19px] font-bold tracking-[-0.04em] whitespace-nowrap">
-          <img src="/logo.png" alt="" width="28" height="28" className="w-7 h-7 rounded-lg border border-black/[0.06] bg-white object-cover shadow-sm" />
-          Marco Grotemeyer
-        </a>
-        <div className="hidden md:flex gap-6 lg:gap-7 text-[13px] font-medium text-[var(--color-ink-muted)]">
-          {links.map((l) => (
-            <a key={l.href} href={hrefFor(l.href)} className="hover:text-[var(--color-ink)] transition-colors duration-150">
-              {l.label}
-            </a>
-          ))}
-        </div>
-        <a
-          href={hrefFor("#erstgespraech")}
-          className="inline-flex items-center gap-1.5 px-5 py-2.5 text-[13px] font-semibold bg-[var(--color-ink)] text-white rounded-full hover:bg-[var(--color-accent)] transition-colors duration-150"
-        >
-          Erstgespräch <span aria-hidden="true">→</span>
-        </a>
-      </nav>
-    </header>
-  )
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [desktopValue, setDesktopValue] = useState(null);
+  const localPage = pathname === "/" || pathname === "/design" || pathname.startsWith("/branchen/") || pathname.startsWith("/bereiche/");
+  const hrefFor = hash => localPage ? hash : `/${hash}`;
+  const activeGroup = sectorGroups.find(group => pathname === groupHref(group.slug) || sectorsInGroup(group.slug).some(sector => pathname === sectorHref(sector.slug)));
+  return <header className="site-header">
+    <nav aria-label="Hauptnavigation" className="site-nav">
+      <Link href="/" className="site-wordmark"><span className="site-brand-mark"><img src="/brand/fibonacci-mark.png" alt="" width="385" height="382" /></span><span>Marco Grotemeyer</span></Link>
+      <div className="nav-desktop">
+        <NavigationMenu align="center" value={desktopValue} onValueChange={setDesktopValue}>
+          <NavigationMenuList>
+            <NavigationMenuItem value="industries">
+              <NavigationMenuTrigger>Für Ihren Betrieb</NavigationMenuTrigger>
+              <NavigationMenuContent className="sector-mega-menu">
+                <div className="mega-intro"><strong>Finden Sie Ihren Betrieb.</strong><p>Eigene Beispiele, passende Hilfen und mögliche Ergebnisse.</p></div>
+                <div className="mega-grid">{sectorGroups.map(group => <div key={group.slug}>
+                  <NavigationMenuLink render={<Link href={`${groupHref(group.slug)}#top`} />} onClick={() => setDesktopValue(null)} className="mega-group-link" active={pathname === groupHref(group.slug)}>{group.label} <ArrowUpRight aria-hidden="true" /></NavigationMenuLink>
+                  <ul>{sectorsInGroup(group.slug).map(sector => <li key={sector.slug}><NavigationMenuLink render={<Link href={`${sectorHref(sector.slug)}#top`} />} active={pathname === sectorHref(sector.slug)} onClick={() => setDesktopValue(null)}>{sector.label}</NavigationMenuLink></li>)}</ul>
+                </div>)}</div>
+                <NavigationMenuLink render={<Link href="/branchen" />} onClick={() => setDesktopValue(null)}>Alle Bereiche und Betriebe ansehen <ArrowUpRight aria-hidden="true" /></NavigationMenuLink>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+        <Link href="/ressourcen">Kostenlose Hilfen</Link>
+        <a href={hrefFor("#rechner")}>Preisrahmen</a>
+        <a href={hrefFor("#prozess")}>Zusammenarbeit</a>
+        <Button render={<a href={hrefFor("#erstgespraech")} />} nativeButton={false}>Kontakt</Button>
+      </div>
+      <div className="nav-mobile"><Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+        <SheetTrigger render={<Button variant="outline" />}><Menu data-icon="inline-start" /> Menü</SheetTrigger>
+        <SheetContent className="mobile-sector-sheet">
+          <SheetHeader><SheetTitle>Welchen Betrieb führen Sie?</SheetTitle><SheetDescription>Wählen Sie Ihren Bereich oder direkt Ihren Betrieb.</SheetDescription></SheetHeader>
+          <div className="mobile-sector-list"><Accordion defaultValue={activeGroup ? [activeGroup.slug] : []}>
+            {sectorGroups.map(group => <AccordionItem key={group.slug} value={group.slug}>
+              <AccordionTrigger>{group.label}</AccordionTrigger>
+              <AccordionContent><Link className="mobile-group-link" href={`${groupHref(group.slug)}#top`} onClick={() => setMobileOpen(false)}>Bereich {group.label} ansehen <ArrowUpRight aria-hidden="true" /></Link><ul>{sectorsInGroup(group.slug).map(sector => <li key={sector.slug}><Link href={`${sectorHref(sector.slug)}#top`} aria-current={pathname === sectorHref(sector.slug) ? "page" : undefined} onClick={() => setMobileOpen(false)}>{sector.label}</Link></li>)}</ul></AccordionContent>
+            </AccordionItem>)}
+          </Accordion>
+          <div className="mobile-utility-links"><Link href="/branchen" onClick={() => setMobileOpen(false)}>Alle Betriebe</Link><Link href="/ressourcen" onClick={() => setMobileOpen(false)}>Kostenlose Hilfen</Link><a href={hrefFor("#rechner")} onClick={() => setMobileOpen(false)}>Preisrahmen</a><a href={hrefFor("#prozess")} onClick={() => setMobileOpen(false)}>Zusammenarbeit</a><a href={hrefFor("#erstgespraech")} onClick={() => setMobileOpen(false)}>Marco kontaktieren</a></div>
+          </div>
+        </SheetContent>
+      </Sheet></div>
+    </nav>
+  </header>;
 }

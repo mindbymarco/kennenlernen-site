@@ -1,55 +1,43 @@
 # marcogrotemeyer.de
 
-Persönliche Site — AI Builder für den deutschen Mittelstand. Ruhig · menschlich · befähigend. Craft Scaffold + eigene Brand (Cream/Sage/Sky).
+Persönliche Bürohilfe und digitale Assistenten für kleine Unternehmen. Die Website verwendet Next.js, React, Tailwind und vorhandene shadcn/Base-UI-Komponenten.
 
-## Quickstart
+## Lokal starten
 
-```bash
+```sh
 npm install
-npm run dev      # http://localhost:5173 (Vite main)
-npm run build    # → dist/
-npm run lint     # oxlint src
+npm run dev -- --port 3100
+```
 
-# Brand Preview (Next.js + cult UI)
-cd brand-next-preview
-npm run dev      # http://192.168.1.188:5174 (/a Natur70 /b Himmel)
+Vorschau: http://localhost:3100/
+
+## Prüfen
+
+```sh
 npm run build
+node scripts/check-offer.mjs
+CHECK_SITE_ORIGIN=http://localhost:3100 node scripts/check-sectors.mjs
 ```
 
-Deploy: Vercel (`dist/`).
+Der Katalog enthält 25 Betriebe mit jeweils drei individuellen Alltagssituationen, Assistentenrollen und Arbeitsregeln. Die fünf Bereichsseiten verwenden Beispiele aus ihrem eigenen Bereich. Die Startseite zeigt drei allgemeine Assistenten. `/ressourcen` bietet kostenlose Einstiege und offizielle Quellen.
 
-## Struktur
+## Veröffentlichung
 
-```
-index.html            Vite-Entry (Inter/Krub, OG-Tags)
-src/
-├── index.css         Tailwind v4 @theme Tokens
-└── components/
-    ├── Nav.jsx               pill fixed top-5/6
-    ├── Hero.jsx              Sky #B8E0F5 Card rounded 24, torn-paper, PixelGradient LEVELS 18 rechts
-    ├── PixelGradient.jsx     Canvas Bayer 4x4, cursor-magnet
-    ├── Pain.jsx  Workspace.jsx  DemoBuilds.jsx  Services.jsx (340+1fr Craft)
-    ├── Process.jsx  About.jsx  Faq.jsx  Cta.jsx  Footer.jsx
-brand-next-preview/   Next.js + TS + shadcn (button/card) + PixelHero.tsx
-public/               profile.jpg, og-image.jpg
-docs/
-├── design-system.md   Tokens, Typo, Motion, Tuning-Knobs (B Himmel)
-├── decisions.md       D1-D13 (D13 Brand B)
-├── brand-next-preview.md  Preview Docu
-├── geo-audit.md / geo-90day-plan.md
-└── hero-bg/ / phase-2-audit/  (alt, zu archivieren)
+Das bestehende Vercel-Projekt `kennenlernen-site` ist mit `www.marcogrotemeyer.de` und `marcogrotemeyer.de` verbunden. Eine Veröffentlichung kann vor der Domainumschaltung separat gebaut und geprüft werden:
+
+```sh
+vercel deploy --prod --skip-domain --yes
+vercel promote <Deployment-URL> --yes
 ```
 
-## Dokumentation
+`.vercelignore` schließt Zugangsdaten, lokale Builds, Tests, interne Dokumentation und Arbeitsdateien aus. Veröffentlichungen werden über das angemeldete Vercel-Konto ausgeführt; Zugangsdaten gehören nicht ins Projekt.
 
-- `docs/design-system.md` — Source-of-Truth (Code überschreibt)
-- `docs/decisions.md` — Decision-Log
-- `docs/brand-next-preview.md` — Next.js Preview Varianten A/B
+## Maßgebliche Dateien
 
-## Tokens
+- `src/lib/sectors.json`: individuelle Betriebsfälle, Assistentenrollen und Regeln.
+- `src/components/SectorDemo.tsx`: fünf Darstellungsarten und der vorbereiten/prüfen-Ablauf.
+- `src/components/AssistantDemo.tsx`: eigene Figuren und allgemeine Startseitenbeispiele.
+- `src/components/OfferCalculator.tsx`: unverbindlicher Rechner mit Beispielpreisen.
+- `docs/design-system.md`: Markendesign, Besucherführung und Prüfprotokolle.
 
-Cream #F5F3F0 / Sage #8FA69A / Slate #7BA7D1 / Dusty #B8C6D8 / Ink #0A0A09
-Fonts: Inter 400-800 / Krub 400-700 (Body 15-17px/1.6, Mono 400/500 uppercase)
-Radius 24/16, LEVELS 18, rad 0.55/0.62 intens 0.75/0.85
-```
-Branch: Brand B gewählt (Himmel #B8E0F5 full-bleed).
+Die Demonstrationen verwenden erfundene Angaben. Sie buchen keine Termine und versenden keine Nachrichten. Einrichtung, Einführung und persönliche Begleitung werden im Gespräch konkret vereinbart. Der freigegebene Praxisfall trennt gemessene Zeitersparnis von einer Hochrechnung des Zeitwerts.
