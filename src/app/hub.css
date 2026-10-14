@@ -327,7 +327,10 @@
 .hub .legal dl { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 10px 24px; margin: 0; }
 .hub .legal dt { font-weight: 600; color: var(--ink); }
 .hub .legal dd { margin: 0; color: var(--ink-2); }
-.hub .legal a { text-underline-offset: 3px; }
+.hub .legal h3 { font-size: 20px; font-weight: 600; color: var(--ink); margin: 32px 0 8px; }
+.hub .legal h4 { font-size: 17px; font-weight: 600; color: var(--ink); margin: 20px 0 6px; }
+.hub .legal ul { margin: 12px 0 16px; }
+.hub .legal a { text-underline-offset: 3px; overflow-wrap: anywhere; }
 .hub .legal .stand { margin-top: 56px; font-size: 14px; }
 @media (max-width: 600px) { .hub .legal dl { grid-template-columns: 1fr; gap: 2px; } .hub .legal dd { margin-bottom: 10px; } }
 .hub .lg.abend { width: 16px; height: 0; border-radius: 0; border-top: 1px dashed #8C847C; }
