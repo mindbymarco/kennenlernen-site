@@ -9,3 +9,5 @@ node_modules/
 out/
 dist/
 *.tsbuildinfo
+.wrangler/
+out/

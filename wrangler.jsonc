@@ -1,0 +1,25 @@
+// Cloudflare Workers Static Assets (Umzug von Vercel, Oktober 2026).
+// Next.js wird statisch exportiert (output: "export") nach out/.
+// Statische Dateien kommen direkt aus out/ (mit _headers und _redirects). Nur Videos laufen über
+// worker/index.js, weil Static Assets keine Range-Anfragen beantwortet und Safari sonst nicht abspielt.
+// Deploy: npx wrangler@4.145.0 deploy (baut vorher über next build).
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "marcogrotemeyer-de",
+	"main": "worker/index.js",
+	"compatibility_date": "2026-09-30",
+	"build": {
+		"command": "npx next build"
+	},
+	"assets": {
+		"directory": "./out",
+		// /beratung liefert beratung.html, /beratung.html leitet auf /beratung um (wie cleanUrls bei Vercel)
+		"html_handling": "auto-trailing-slash",
+		"not_found_handling": "404-page",
+		"binding": "ASSETS",
+		"run_worker_first": ["/hub/*.mp4", "/hub/*.webm"]
+	},
+	"workers_dev": true,
+	"routes": [{ "pattern": "cf-test.marcogrotemeyer.de", "custom_domain": true }],
+	"preview_urls": false
+}

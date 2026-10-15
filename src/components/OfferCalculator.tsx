@@ -20,9 +20,8 @@ export default function OfferCalculator({ industry, selected, onIndustry, onSele
   const summary = makeSummary(industry, selected, connected, support);
   const mail = `mailto:hello@marcogrotemeyer.de?subject=${encodeURIComponent("Mein Büroalltag – unverbindliche Anfrage")}&body=${encodeURIComponent(`Hallo Marco,\n\n${summary}\n\nLass uns dazu sprechen.\n`)}`;
 
-  const downloadParams = new URLSearchParams({ branche: industry, verbindungen: connected ? "ja" : "nein", betreuung: support });
-  selected.forEach(id => downloadParams.append("aufgabe", id));
-  const downloadUrl = `/api/angebot?${downloadParams.toString()}`;
+  // Statische Seite ohne Server: die Textdatei entsteht direkt im Browser (vorher /api/angebot).
+  const downloadUrl = `data:text/plain;charset=utf-8,${encodeURIComponent(summary)}`;
 
   return <section id="rechner" className="section calculator-section" aria-labelledby="rechner-heading">
     <div className="site-wrap">
