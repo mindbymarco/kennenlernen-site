@@ -1,0 +1,8 @@
+# Umbau zum Hub (G3, H23): bisherige Inhalte für Betriebe liegen unter /betriebe. 308 = dauerhaft.
+/branchen /betriebe/branchen 308
+/ressourcen /betriebe/ressourcen 308
+/assistenten-vorschau /betriebe 308
+/design /betriebe 308
+/preview /betriebe 308
+/branchen/* /betriebe/branchen/:splat 308
+/bereiche/* /betriebe/bereiche/:splat 308

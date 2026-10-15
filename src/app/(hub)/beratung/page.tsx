@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Ablauf from "@/components/hub/Ablauf";
+import AdFilm from "@/components/hub/AdFilm";
 import { Accent, Words } from "@/components/hub/Words";
 import { Faq, Ladder, Promises } from "@/components/hub/Blocks";
 import { training } from "@/lib/hub";
@@ -35,6 +36,11 @@ export default function Beratung() {
         <h1 className="display" data-words><Words>Ein Agent für die Aufgabe, die dich jede Woche</Words> <Accent shimmer>Stunden</Accent> <Words>kostet.</Words></h1>
         <p className="lede rv" style={{ ["--d" as string]: "500ms" }}>Für Solo-Gründer:innen, die Wissen oder eine Dienstleistung verkaufen und ChatGPT oder Claude schon nutzen. Ich baue den Ablauf und übergebe ihn dir so, dass du ihn allein weiter nutzen kannst.</p>
         <div className="acts rv" style={{ ["--d" as string]: "650ms" }}><Link className="btn" href="/kontakt">Erstgespräch buchen <span className="arr" aria-hidden="true">→</span></Link><a className="mono-link" href="#preise">Preise ansehen</a></div>
+        <div className="rv" style={{ ["--d" as string]: "800ms" }}>
+          <AdFilm label="Kurzfilm: Ein Agent nimmt dir den Kleinkram ab. Weniger Tools, mehr Business."
+            wide={{ mp4: "/hub/beratung-ad-16x9.mp4", webm: "/hub/beratung-ad-16x9.webm", poster: "/hub/beratung-ad-16x9-poster.jpg" }}
+            tall={{ mp4: "/hub/beratung-ad-9x16.mp4", poster: "/hub/beratung-ad-9x16-poster.jpg" }} />
+        </div>
       </div>
     </section>
 
