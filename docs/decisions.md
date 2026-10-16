@@ -95,7 +95,7 @@ Chronologisch, mit Begründung. Neue Entscheidungen unten anhängen.
 **Quelle:** `~/Projects/marcogrotemeyer-de/Strategie/KONZEPT-BETRIEBE.md` Abschnitt 6.
 
 ## D19 — Startplan statt Textdatei, Schnellcheck vor dem Rechner (17.10.2026)
-**Kontext:** Der Rechner auf `/betriebe` lieferte eine Textdatei ohne nächsten Schritt. Konzept in `~/Projects/marcogrotemeyer-de/Strategie/STARTPLAN-DOWNLOAD.md` (Variante A). Entscheidung H30 (leichter Funnel statt reiner Visitenkarte) steht bei Marco noch aus; der Branch `startplan` wartet darauf.
+**Kontext:** Der Rechner auf `/betriebe` lieferte eine Textdatei ohne nächsten Schritt. Konzept in `~/Projects/marcogrotemeyer-de/Strategie/STARTPLAN-DOWNLOAD.md` (Variante A). Marco hat H30 (leichter Funnel statt reiner Visitenkarte, ändert H3) am 17.10.2026 freigegeben.
 **Entscheidung:**
 - Neue Seite `/betriebe/startplan` (`src/app/betriebe/startplan/page.tsx` mit Suspense, Client-Komponente `components/betriebe/Startplan.tsx`, Logik in `lib/startplan.ts`). Sie liest `?betrieb=&module=&einrichtung=&betreuung=` aus der URL und erzeugt im Browser „Startplan für Ihren Betrieb“ als A4-Blatt im Papier-Look: Kopf, erste Aufgabe (Heute/Mit Helfer), Branchenbeispiel (Anfrage, Regel, Ergebnis), was Sie brauchen, Preisrahmen mit den drei Zusagen, nächster Schritt mit Cal.com-Link `?quelle=startplan` und QR-Code, Vorbereitung in 5 Minuten, Fuß. Keine Datenübertragung, `noindex`.
 - Beispiel: erster Fall aus `sectors.json` des gewählten Betriebs, dessen Modul ausgewählt ist; sonst Postfach-Beispiel der Vorschau (`demoExamples`). Mehrere Aufgaben: eine als Start, die übrigen als „Danach möglich“.
