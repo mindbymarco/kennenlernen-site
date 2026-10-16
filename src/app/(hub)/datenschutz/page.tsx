@@ -3,7 +3,7 @@ import { CAL_URL, MAIL } from "@/lib/hub";
 
 export const metadata: Metadata = {
   title: "Datenschutz | Marco Grotemeyer",
-  description: "Datenschutzerklärung von marcogrotemeyer.de: Hosting über Vercel und Cloudflare, Kontakt, Terminbuchung, Videogespräche und Ihre Rechte.",
+  description: "Datenschutzerklärung von marcogrotemeyer.de: Hosting über Cloudflare, Kontakt, E-Mail, Terminbuchung, Videogespräche und Ihre Rechte.",
   alternates: { canonical: "/datenschutz" },
 };
 
@@ -12,7 +12,9 @@ export const metadata: Metadata = {
 // weil die Gratis-Fassung Cloudflare und Google Meet nur in Premium enthält. Grundlage: Audit vom 14.10.2026
 // (keine Cookies, kein lokaler Speicher, kein Tracking, Cloudflare als Proxy mit E-Mail-Schutz und NEL,
 // E-Mail-Weiterleitung über Cloudflare an iCloud, Cal.com nur als Link, Google Meet für Gespräche).
-// Offen: Vercel-AVV gilt laut Vercel nur für Pro/Enterprise; Anschrift von Cal.com, Speicherdauer der Aufzeichnungen.
+// 16.10.2026: Hosting von Vercel zu Cloudflare Workers umgezogen (statischer Export), E-Mail-Verschleierung entfällt,
+// Versand eigener E-Mails über Resend, Angebotsrechner erzeugt die Datei im Browser.
+// Offen: Anschrift von Cal.com, Speicherdauer der Aufzeichnungen.
 export default function Datenschutz() {
   return <section className="legal">
     <div className="wrap"><div className="prose">
@@ -41,8 +43,8 @@ export default function Datenschutz() {
       <p>Das externe Hosting erfolgt zum Zwecke der Vertragserfüllung gegenüber unseren potenziellen und bestehenden Kunden (Art. 6 Abs. 1 lit. b DSGVO) und im Interesse einer sicheren, schnellen und effizienten Bereitstellung unseres Online-Angebots durch einen professionellen Anbieter (Art. 6 Abs. 1 lit. f DSGVO). Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.</p>
       <p>Unser(e) Hoster wird bzw. werden Ihre Daten nur insoweit verarbeiten, wie dies zur Erfüllung seiner Leistungspflichten erforderlich ist und unsere Weisungen in Bezug auf diese Daten befolgen.</p>
       <p>Wir setzen folgende(n) Hoster ein:</p>
-      <p>Vercel Inc.<br />440 N Barranca Avenue #4133<br />Covina, CA 91723, USA</p>
-      <p>Dabei können Daten in die USA übertragen werden. Vercel ist nach dem EU-U.S. Data Privacy Framework zertifiziert (Angemessenheitsbeschluss, Art. 45 DSGVO).</p>
+      <p>Cloudflare, Inc.<br />101 Townsend St.<br />San Francisco, CA 94107, USA</p>
+      <p>Die Website wird über Cloudflare Workers ausgeliefert (siehe Abschnitt 5). Dabei können Daten in die USA übertragen werden. Cloudflare ist nach dem EU-U.S. Data Privacy Framework zertifiziert (Angemessenheitsbeschluss, Art. 45 DSGVO).</p>
 
       <h2 className="display">3. Allgemeine Hinweise und Pflicht&shy;informationen</h2>
       <h3>Datenschutz</h3>
@@ -107,11 +109,13 @@ export default function Datenschutz() {
 
       <h2 className="display">5. Cloudflare</h2>
       <h3>Auslieferung und Schutz der Website</h3>
-      <p>Diese Website nutzt Dienste der Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA. Alle Aufrufe dieser Website laufen über die Server von Cloudflare, bevor sie an unseren Hoster weitergeleitet werden (sogenannter Reverse Proxy). Cloudflare verwaltet außerdem die DNS-Einträge dieser Domain. Dabei verarbeitet Cloudflare insbesondere Ihre IP-Adresse, die aufgerufene Adresse, Datum und Uhrzeit, Browser und Betriebssystem, um die Website schnell auszuliefern, Inhalte zwischenzuspeichern und Angriffe abzuwehren.</p>
-      <p>Cloudflare schützt die auf dieser Website angezeigten E-Mail-Adressen vor dem automatischen Auslesen durch Spam-Programme. Dafür wird ein kleines Skript von dieser Domain ausgeliefert, das die Adressen erst in Ihrem Browser lesbar macht. Kann Ihr Browser die Website wegen eines Netzwerkfehlers nicht erreichen, kann er außerdem einen technischen Fehlerbericht an Cloudflare senden (Network Error Logging). Cookies setzt Cloudflare auf dieser Website nicht.</p>
+      <p>Diese Website nutzt Dienste der Cloudflare, Inc., 101 Townsend St., San Francisco, CA 94107, USA. Cloudflare stellt diese Website über das eigene Netzwerk bereit (Cloudflare Workers) und verwaltet außerdem die DNS-Einträge dieser Domain. Dabei verarbeitet Cloudflare insbesondere Ihre IP-Adresse, die aufgerufene Adresse, Datum und Uhrzeit, Browser und Betriebssystem, um die Website schnell auszuliefern, Inhalte zwischenzuspeichern und Angriffe abzuwehren.</p>
+      <p>Kann Ihr Browser die Website wegen eines Netzwerkfehlers nicht erreichen, kann er außerdem einen technischen Fehlerbericht an Cloudflare senden (Network Error Logging). Cookies setzt Cloudflare auf dieser Website nicht.</p>
       <p>Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in einer sicheren, schnellen und zuverlässigen Bereitstellung der Website. Cloudflare verarbeitet die Daten als Auftragsverarbeiter. Dabei können Daten in die USA übertragen werden. Cloudflare ist nach dem EU-U.S. Data Privacy Framework zertifiziert. Weitere Informationen: <a href="https://www.cloudflare.com/de-de/privacypolicy/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Cloudflare</a>.</p>
       <h3>E-Mail-Weiterleitung</h3>
       <p>E-Mails an Adressen dieser Domain (z.&nbsp;B. {MAIL}) werden über Cloudflare Email Routing empfangen und an unser Postfach bei Apple iCloud weitergeleitet. Anbieter des Postfachs ist für Nutzer in der EU die Apple Distribution International Ltd., Hollyhill Industrial Estate, Hollyhill, Cork, Irland. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO (Bearbeitung Ihrer Anfrage, siehe Abschnitt 4).</p>
+      <h3>Versand unserer E-Mails</h3>
+      <p>Wenn wir Ihnen per E-Mail antworten, versenden wir die Nachricht über Resend. Anbieter ist die Plus Five Five, Inc., 2261 Market Street #5039, San Francisco, CA 94114, USA. Resend verarbeitet dabei in unserem Auftrag Ihre E-Mail-Adresse, den Inhalt der Nachricht und technische Versanddaten, um die E-Mail zuzustellen. Die Zustellung läuft über Server in der EU (Irland); eine Übertragung in die USA ist dennoch möglich. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO. Weitere Informationen: <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Resend</a>.</p>
 
       <h2 className="display">6. Terminbuchung über Cal.com</h2>
       <p>Für das Erstgespräch verlinken wir auf unsere Buchungsseite bei Cal.com (<a href={CAL_URL} target="_blank" rel="noopener noreferrer">{CAL_URL.replace("https://", "")}</a>). Anbieter ist die Cal.com, Inc., USA. Die Buchungsseite ist nicht in diese Website eingebettet; Daten gehen erst an Cal.com, wenn Sie den Link öffnen. Für die Buchung verarbeitet Cal.com in unserem Auftrag die Angaben, die Sie eingeben, etwa Name, E-Mail-Adresse, gewünschter Termin und ggf. eine Nachricht.</p>
@@ -123,13 +127,13 @@ export default function Datenschutz() {
       <p>Die Nutzung erfolgt zur Durchführung des Vertrags bzw. vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO), im Übrigen auf Grundlage unseres berechtigten Interesses an einer einfachen und sicheren Kommunikation (Art. 6 Abs. 1 lit. f DSGVO). Google kann Daten in die USA übertragen. Grundlage sind die Standardvertragsklauseln der EU-Kommission sowie die Zertifizierung von Google LLC nach dem EU-U.S. Data Privacy Framework. Weitere Informationen: <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>.</p>
 
       <h2 className="display">8. Angebotsrechner für Betriebe</h2>
-      <p>Der Angebotsrechner unter /betriebe rechnet in Ihrem Browser. Wenn Sie sich die Übersicht herunterladen, wird Ihre Auswahl (Branche, Aufgaben, Verbindungen und Betreuung, keine persönlichen Angaben) an unseren Server übertragen, nur um die Datei zu erstellen. Wir speichern die Auswahl nicht. Die Adresse des Abrufs kann in den Server-Protokollen von Vercel und Cloudflare erscheinen (siehe Abschnitte 2, 4 und 5). Wenn Sie „Auswahl per E-Mail besprechen“ wählen, öffnet sich Ihr eigenes E-Mail-Programm mit einer vorausgefüllten Nachricht; gesendet wird erst, wenn Sie die E-Mail selbst abschicken.</p>
+      <p>Der Angebotsrechner unter /betriebe rechnet vollständig in Ihrem Browser. Auch die Übersicht zum Herunterladen wird direkt in Ihrem Browser erstellt; Ihre Auswahl wird dabei nicht an uns übertragen und nicht gespeichert. Wenn Sie „Auswahl per E-Mail besprechen“ wählen, öffnet sich Ihr eigenes E-Mail-Programm mit einer vorausgefüllten Nachricht; gesendet wird erst, wenn Sie die E-Mail selbst abschicken.</p>
 
       <h2 className="display">9. Cookies, Schriften und Links</h2>
       <p>Diese Website setzt keine Cookies, legt nichts im Speicher Ihres Browsers ab und nutzt keine Analyse- oder Werbedienste. Deshalb gibt es auch kein Cookie-Banner. Schriften, Bilder und Videos werden von dieser Domain ausgeliefert; beim Laden der Seite besteht keine Verbindung zu Google Fonts, YouTube oder ähnlichen Diensten.</p>
       <p>Diese Website verlinkt auf andere Seiten, zum Beispiel handschrift.studio, Cal.com oder Hilfeseiten von OpenAI und Anthropic. Sobald Sie einem Link folgen, gilt die Datenschutzerklärung der jeweiligen Seite. Zuständige Aufsichtsbehörde ist die Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen.</p>
 
-      <p className="stand">Stand: 14. Oktober 2026</p>
+      <p className="stand">Stand: 16. Oktober 2026</p>
     </div></div>
   </section>;
 }
