@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import SectorPage from "@/components/SectorPage";
+import SectorPage from "@/components/betriebe/SectorPage";
 import { sectors, sectorBySlug, sectorHref } from "@/lib/sectors";
 export const dynamicParams = false;
 export function generateStaticParams() { return sectors.map(sector => ({ slug: sector.slug })); }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import BusinessHome from "@/components/BusinessHome";
+import Home from "@/components/betriebe/Home";
 
 export const metadata: Metadata = {
   title: "Weniger Büroarbeit für kleine Unternehmen | Marco Grotemeyer",
@@ -9,5 +9,5 @@ export const metadata: Metadata = {
 };
 
 export default function Betriebe() {
-  return <BusinessHome />;
+  return <Home />;
 }

@@ -35,9 +35,9 @@ Seit 15.10.2026 liegt die Seite bei **Cloudflare Workers** (Worker `marcogroteme
 ## Maßgebliche Dateien
 
 - `src/lib/sectors.json`: individuelle Betriebsfälle, Assistentenrollen und Regeln.
-- `src/components/SectorDemo.tsx`: fünf Darstellungsarten und der vorbereiten/prüfen-Ablauf.
-- `src/components/AssistantDemo.tsx`: eigene Figuren und allgemeine Startseitenbeispiele.
-- `src/components/OfferCalculator.tsx`: unverbindlicher Rechner mit Beispielpreisen.
-- `docs/design-system.md`: Markendesign, Besucherführung und Prüfprotokolle.
+- `src/components/betriebe/SectorDemo.tsx`: fünf Darstellungsarten und der vorbereiten/prüfen-Ablauf.
+- `src/components/betriebe/Demo.tsx`: die drei allgemeinen Helfer der Betriebe-Startseite.
+- `src/components/betriebe/Calculator.tsx`: unverbindlicher Rechner mit Beispielpreisen (`src/lib/offer.ts`).
+- `src/app/hub.css` und `src/app/betriebe.css`: Look der Dachmarke, Quelle `~/Projects/marcogrotemeyer-de/Brand/DESIGNSYSTEM.md`. `docs/design-system.md` beschreibt den alten Look (archiviert).
 
 Die Demonstrationen verwenden erfundene Angaben. Sie buchen keine Termine und versenden keine Nachrichten. Einrichtung, Einführung und persönliche Begleitung werden im Gespräch konkret vereinbart. Der freigegebene Praxisfall trennt gemessene Zeitersparnis von einer Hochrechnung des Zeitwerts.

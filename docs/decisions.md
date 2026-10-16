@@ -80,3 +80,11 @@ Chronologisch, mit Begründung. Neue Entscheidungen unten anhängen.
 **Kontext:** Marcos Entscheidungen H25–H27.
 **Entscheidung:** Startseite folgt dem Weg Alltag → „Ich kenne das“ → Ergebnis → Aufwand → Builds → Preise und Vertrauen. Drei Motion-Bausteine in `src/components/hub/viz/` (Woche, Checkliste, Vorher/Nachher-Wisch), ohne Videodateien, bei „Bewegung reduzieren“ nur Endzustand. Impressum und Datenschutz liegen jetzt in `src/app/(hub)/` im Look der Dachmarke, beschreiben den tatsächlichen Stand (keine Cookies, kein lokaler Speicher, Cal.com nur als Link) und nennen die Kleinunternehmerregel. „beyond925“ entfernt.
 **Quelle:** `~/Projects/marcogrotemeyer-de/Strategie/STARTSEITE-TEXTE.md`, `ENTSCHEIDUNGEN.md`.
+
+## D17 — Betriebe im Look der Dachmarke (16.10.2026)
+**Kontext:** Marco: `/betriebe` komplett an die Designsprache der Hauptseite anpassen, Wording bleibt. Entscheidung H28, Konzept und Recherche in `~/Projects/marcogrotemeyer-de/Strategie/KONZEPT-BETRIEBE.md`.
+**Entscheidung:**
+- `src/app/betriebe/layout.tsx` kapselt den Bereich in `.hub.bb[data-bereich="betriebe"]`. `hub.css` kennt jetzt `--accent-hell`, `--accent-shimmer`, `--accent-soft` je Bereich; `betriebe.css` enthält die Bausteine des Bereichs (Kopfzeile mit Branchen-Menü, Fenster-Demos, Rechner, Raster, Bühne).
+- Neue Komponenten in `src/components/betriebe/`. Entfernt: `BusinessHome`, `AssistantDemo`, `SectorDemo`, `SectorPage`, `SectorDirectory`, `OfferCalculator`, `EverydayPreview`, `BrandGeometry`, `Nav`, `Footer` und die alten Hero/Pain/Process-Komponenten, dazu der `.business-home`-Block in `globals.css` und die Aquarell-/Pixel-Bilder in `public/brand/`. `components/ui/` (shadcn) bleibt installiert, wird aber nicht mehr importiert.
+- Texte, Anker-IDs, URLs, Metadaten, Rechnerlogik (`lib/offer.ts`) und Katalog (`lib/sectors.json`) unverändert. Prüfskripte grün.
+**Begründung:** Eine Marke, drei Bereiche (H5, H18). Zielgruppe 55+ verlangt Größe und Kontrast, deshalb Mono-Labels 13 px und sichtbare Branchenlisten statt Akkordeons.
