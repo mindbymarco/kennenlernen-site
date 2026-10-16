@@ -26,7 +26,7 @@ export default function UeberMich() {
           <h2>Was ich selbst nutze</h2>
           <ul>{builds.map(build => <li key={build.slug}><Link href={`/builds/${build.slug}`}><strong>{build.title}</strong></Link>: {build.short}</li>)}</ul>
           <h2>Wie ich arbeite</h2>
-          <p>Wenn sich ein Build für dich nicht lohnt, sage ich dir das. Den Preis kennst du, bevor du zahlst. Und was ich baue, gehört danach dir, mit Anleitung und Aufzeichnung.</p>
+          <p>Wenn sich ein Build für dich nicht lohnt, sage ich dir das. Den Preis kennst du, bevor du zahlst. Und was ich baue, gehört danach dir, mit Anleitung.</p>
           <h2>Was ich sonst mache</h2>
           <p><a href={HANDSCHRIFT_URL} target="_blank" rel="noopener"><strong>Handschrift</strong></a> ist mein System, mit dem ich meine eigenen Reels mit Claude schneide. <Link href="/betriebe"><strong>Für Betriebe</strong></Link> richte ich digitale Assistenten ein, für Praxen, Studios und Handwerk.</p>
           <div style={{ marginTop: 48 }}><Link className="btn" href="/kontakt">Lass uns sprechen <span className="arr" aria-hidden="true">→</span></Link></div>

@@ -8,7 +8,7 @@ import { training } from "@/lib/hub";
 
 export const metadata: Metadata = {
   title: "Beratung: KI-Agenten zum Festpreis | Marco Grotemeyer",
-  description: "Ich baue Solo-Gründer:innen einen KI-Agenten für eine wiederkehrende Aufgabe. Erstgespräch 0 €, Build-Session 390 €, Pilot-Build 1.490 € (die ersten drei 990 €).",
+  description: "Ich baue Solo-Gründer:innen einen KI-Agenten für eine wiederkehrende Aufgabe. Erstgespräch 0 €, Build-Session 390 €, Pilot-Build 990 € (Einführungspreis für die ersten drei).",
   alternates: { canonical: "/beratung" },
 };
 
@@ -25,7 +25,7 @@ const flow = [
   { n: "01", t: "Erstgespräch", d: "In 20 Minuten erzählst du mir, welche Aufgabe dich Zeit kostet. Ich sage dir ehrlich, ob sich ein Agent dafür lohnt." },
   { n: "02", t: "Umfang festlegen", d: "Wir schreiben auf, was der Ablauf können soll und woran wir merken, dass er funktioniert. Der Preis steht fest, bevor du etwas zahlst." },
   { n: "03", t: "Bauen und testen", d: "Ich baue in deinen Programmen und teste mit echten Fällen aus deinem Alltag. Nach zwei Wochen läuft der Ablauf." },
-  { n: "04", t: "Übergabe", d: "Du bekommst eine Anleitung und die Aufzeichnung, und 14 Tage lang bin ich für Fragen da. Ob du danach Betreuung willst, entscheidest du." },
+  { n: "04", t: "Übergabe", d: "Du bekommst eine Anleitung, und 14 Tage lang bin ich für Fragen da. Ob du danach Betreuung willst, entscheidest du." },
 ];
 
 export default function Beratung() {

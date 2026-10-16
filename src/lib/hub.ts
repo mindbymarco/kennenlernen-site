@@ -84,8 +84,8 @@ export const buildBySlug = (slug: string) => builds.find(b => b.slug === slug);
 export type Stufe = { stufe: string; was: string; preis: string; alt?: string; hi?: boolean };
 export const ladder: Stufe[] = [
   { stufe: "Erstgespräch", was: "20 Minuten per Video. Ich sage dir ehrlich, ob sich ein Agent für deine Aufgabe lohnt.", preis: "0 €" },
-  { stufe: "Build-Session", was: "90 Minuten live, in denen wir zusammen einen kleinen Agenten bauen. Am nächsten Tag bekommst du die Aufzeichnung und eine Anleitung. Buchst du innerhalb von drei Monaten einen Pilot, rechne ich die 390 € voll an.", preis: "390 €" },
-  { stufe: "Pilot-Build", was: "Nach zwei Wochen läuft dein Ablauf. Vorher testen wir ihn mit echten Fällen, danach übergebe ich ihn und bin noch 14 Tage für Fragen da. Die ersten drei Piloten kosten 990 €. Im Gegenzug messen wir gemeinsam, was er bringt, und ich darf darüber berichten.", preis: "990 €", alt: "1.490 €", hi: true },
+  { stufe: "Build-Session", was: "90 Minuten live, in denen wir an deinem konkreten Fall zusammen einen kleinen Agenten bauen. Am nächsten Tag bekommst du eine kurze technische Dokumentation. Eine Aufzeichnung gibt es nicht. Buchst du innerhalb von drei Monaten einen Pilot, rechne ich die 390 € voll an.", preis: "390 €" },
+  { stufe: "Pilot-Build", was: "Nach zwei Wochen läuft dein Ablauf. Vorher testen wir ihn mit echten Fällen, danach übergebe ich ihn und bin noch 14 Tage für Fragen da. Einführungspreis für die ersten drei Pilotprojekte: 990 € Endpreis. Im Gegenzug messen wir gemeinsam, was er bringt. Ob und wie ich darüber berichten darf, vereinbaren wir vorher schriftlich.", preis: "990 €", hi: true },
   { stufe: "Build-Sprint", was: "Drei bis vier Wochen für zwei oder drei Abläufe, die zusammenhängen. Was genau dazugehört, schreiben wir vorher auf.", preis: "ab 2.900 €" },
   { stufe: "Betreuung", was: "Gibt es nur nach einem Pilot. Ich passe an und beantworte Fragen, und einmal im Monat telefonieren wir. Du kannst monatlich kündigen.", preis: "149 € / Monat" },
 ];
@@ -94,7 +94,7 @@ export const training: Stufe = { stufe: "Team-Training", was: "Auf Anfrage. Ein 
 // Vertrauen (H25: Variante 6A, ergänzt um 6B)
 export const promises = [
   { t: "Den Preis kennst du, bevor du zahlst.", d: "Festpreise, alle als Endpreise. Laufende Kosten für Claude oder Hosting siehst du vorher." },
-  { t: "Was ich baue, gehört dir.", d: "Mit allen Konten, Zugängen und dem Code. Dazu bekommst du eine Anleitung und die Aufzeichnung." },
+  { t: "Was ich baue, gehört dir.", d: "Mit allen Konten, Zugängen und dem Code. Dazu bekommst du eine Anleitung." },
   { t: "Sonst Geld zurück.", d: "Läuft der Ablauf 14 Tage nach der Übergabe nicht wie vereinbart, bessere ich nach oder du bekommst dein Geld zurück." },
 ];
 export const honesty = "Wenn sich ein Agent für deine Aufgabe nicht lohnt, sage ich dir das im Erstgespräch. Ich verdiene lieber an einem Pilot, der läuft, als an einem, der dich enttäuscht.";
