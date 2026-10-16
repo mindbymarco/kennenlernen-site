@@ -15,7 +15,8 @@ export const metadata: Metadata = {
 // 16.10.2026: Hosting von Vercel zu Cloudflare Workers umgezogen (statischer Export), E-Mail-Verschleierung entfällt,
 // Versand eigener E-Mails über Resend, Angebotsrechner erzeugt die Datei im Browser.
 // 16.10.2026 (Abgleich Rechts-Session): Anschrift und DPF von Cal.com laut cal.com/privacy, Resend laut
-// dataprivacyframework.gov (Teilnehmer 8907, aktiv). Offen: Speicherdauer der Aufzeichnungen, AV-Vertrag Cal.com.
+// dataprivacyframework.gov (Teilnehmer 8907, aktiv). Offen: AV-Vertrag Cal.com.
+// 16.10.2026 (Kanzlei-Antwort): Build-Sessions werden nicht mehr aufgezeichnet; Nichtweitergabe-Satz um Auftragsverarbeiter ergänzt.
 export default function Datenschutz() {
   return <section className="legal">
     <div className="wrap"><div className="prose">
@@ -103,7 +104,7 @@ export default function Datenschutz() {
       <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen wird nicht vorgenommen.</p>
       <p>Die Erfassung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der technisch fehlerfreien Darstellung und der Optimierung seiner Website – hierzu müssen die Server-Log-Files erfasst werden.</p>
       <h3>Anfrage per E-Mail, Telefon oder Telefax</h3>
-      <p>Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+      <p>Wenn Sie uns per E-Mail, Telefon oder Telefax kontaktieren, wird Ihre Anfrage inklusive aller daraus hervorgehenden personenbezogenen Daten (Name, Anfrage) zum Zwecke der Bearbeitung Ihres Anliegens bei uns gespeichert und verarbeitet. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter. Ausgenommen sind die in dieser Erklärung genannten Dienstleister, die sie in unserem Auftrag verarbeiten (Cloudflare und Apple für den Empfang, Resend für den Versand von E-Mails).</p>
       <p>Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. In allen übrigen Fällen beruht die Verarbeitung auf unserem berechtigten Interesse an der effektiven Bearbeitung der an uns gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO) oder auf Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO) sofern diese abgefragt wurde; die Einwilligung ist jederzeit widerrufbar.</p>
       <p>Die von Ihnen an uns per Kontaktanfragen übersandten Daten verbleiben bei uns, bis Sie uns zur Löschung auffordern, Ihre Einwilligung zur Speicherung widerrufen oder der Zweck für die Datenspeicherung entfällt (z.&nbsp;B. nach abgeschlossener Bearbeitung Ihres Anliegens). Zwingende gesetzliche Bestimmungen – insbesondere gesetzliche Aufbewahrungsfristen – bleiben unberührt.</p>
       <p>Quelle der Abschnitte 1 bis 4: <a href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer">eRecht24</a></p>
@@ -124,7 +125,7 @@ export default function Datenschutz() {
 
       <h2 className="display">7. Videogespräche über Google Meet</h2>
       <p>Erstgespräche, Build-Sessions und weitere Termine führen wir über Google Meet. Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Wenn Sie teilnehmen, verarbeitet Google Ihren Namen bzw. Anzeigenamen, gegebenenfalls Ihre E-Mail-Adresse, Ihre IP-Adresse, Geräte- und Verbindungsdaten, Beginn und Ende der Teilnahme sowie Ihre Ton- und Bildübertragung und Chat-Nachrichten, soweit Sie Mikrofon, Kamera oder Chat nutzen.</p>
-      <p>Build-Sessions werden aufgezeichnet, damit Sie die Aufzeichnung als Teil der Leistung erhalten. Darauf weisen wir vor Beginn hin. Die Aufzeichnung stellen wir Ihnen bereit und bewahren sie nur so lange auf, wie sie für die Übergabe und spätere Rückfragen benötigt wird. Andere Gespräche zeichnen wir nicht auf.</p>
+      <p>Gespräche zeichnen wir nicht auf.</p>
       <p>Die Nutzung erfolgt zur Durchführung des Vertrags bzw. vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. b DSGVO), im Übrigen auf Grundlage unseres berechtigten Interesses an einer einfachen und sicheren Kommunikation (Art. 6 Abs. 1 lit. f DSGVO). Google kann Daten in die USA übertragen. Grundlage sind die Standardvertragsklauseln der EU-Kommission sowie die Zertifizierung von Google LLC nach dem EU-U.S. Data Privacy Framework. Weitere Informationen: <a href="https://policies.google.com/privacy?hl=de" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von Google</a>.</p>
 
       <h2 className="display">8. Angebotsrechner für Betriebe</h2>

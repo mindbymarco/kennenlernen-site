@@ -84,7 +84,7 @@ export default function Home() {
           <div><span className="label">Erstgespräch</span><p style={{ marginTop: 10 }}>Im Erstgespräch erzählst du mir 20 Minuten lang, welche Aufgabe dich nervt.</p></div>
           <div><span className="label">Aufschreiben</span><p style={{ marginTop: 10 }}>Danach schreiben wir zusammen auf, was der Agent können soll.</p></div>
           <div><span className="label">Testen</span><p style={{ marginTop: 10 }}>Ich baue ihn, und du testest mit echten Fällen aus deinem Alltag.</p></div>
-          <div><span className="label">Übergabe</span><p style={{ marginTop: 10 }}>Nach zwei Wochen läuft er. Du bekommst eine Anleitung und die Aufzeichnung.</p></div>
+          <div><span className="label">Übergabe</span><p style={{ marginTop: 10 }}>Nach zwei Wochen läuft er. Du bekommst eine Anleitung.</p></div>
         </div>
         <div className="head rv" style={{ marginBottom: 32 }}><h3 className="display" style={{ fontSize: "clamp(30px, 3.4vw, 40px)" }}>Und danach bleibt bei dir nur noch ein Handgriff.</h3></div>
         <TaskViz />
