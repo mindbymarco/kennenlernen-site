@@ -14,7 +14,7 @@ Persönliche Solo-Site als **AI Builder für den deutschen Mittelstand**. These:
 | Styling | Tailwind CSS v4 (`@theme`-Tokens in `src/index.css`) + `src/app/globals.css` im Preview |
 | Motion | Framer Motion 12 (`LazyMotion`) · Preview: gleiche PixelHero Canvas |
 | Fonts | **Inter** (Serif/Header) · **Krub** (Sans/Body) · **Krub** (Mono) via `next/font` |
-| Deploy | Vercel, statisch |
+| Deploy | Cloudflare Workers, statischer Export (seit 15.10.2026) |
 
 ## Design-Richtung — Brand B
 
