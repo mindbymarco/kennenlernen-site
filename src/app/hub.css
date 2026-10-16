@@ -1,4 +1,4 @@
-/* Hub und Beratung im Look der Dachmarke (H18–H22). Quelle: ~/Movies/Content/marcogrotemeyer.de/Brand/DESIGNSYSTEM.md + tokens.css, Probe A.
+/* Hub und Beratung im Look der Dachmarke (H18–H22). Quelle: ~/Projects/marcogrotemeyer-de/Brand/DESIGNSYSTEM.md + tokens.css, Probe A.
    Alles ist unter .hub gekapselt, damit /betriebe (shadcn-Variablen) unberührt bleibt. */
 .hub {
   --paper: #F7F5F0; --paper-2: #ECE8E1; --surface: #FBFAF8; --surface-2: #E3DED5;

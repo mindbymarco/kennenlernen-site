@@ -1,4 +1,4 @@
-// Erzeugt mit pandoc aus ~/Movies/Content/marcogrotemeyer.de/Vertrag/01-Leistungsbedingungen_2026-10-16.md
+// Erzeugt mit pandoc aus ~/Projects/marcogrotemeyer-de/Vertrag/01-Leistungsbedingungen_2026-10-16.md
 // (Quelle der Wahrheit). Bei einer neuen Version dort ändern, neu erzeugen, VERSION und PDF in public/vertrag/ ersetzen.
 export const BEDINGUNGEN_VERSION = "16.10.2026";
 export const BEDINGUNGEN_PDF = "/vertrag/leistungsbedingungen-2026-10-16.pdf";

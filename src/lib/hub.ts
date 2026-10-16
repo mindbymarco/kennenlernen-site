@@ -1,4 +1,4 @@
-// Inhalte für Hub und Beratung. Quelle: ~/Movies/Content/marcogrotemeyer.de/Strategie/POSITIONIERUNG.md und STARTSEITE-TEXTE.md (H11, H16, H25).
+// Inhalte für Hub und Beratung. Quelle: ~/Projects/marcogrotemeyer-de/Strategie/POSITIONIERUNG.md und STARTSEITE-TEXTE.md (H11, H16, H25).
 // Nur belegte Aussagen: keine Zahlen ohne Messung, keine Kundenstimmen, kein HR-Autopilot (H14).
 
 export const CAL_URL = "https://cal.com/marco-grotemeyer/discovery";
