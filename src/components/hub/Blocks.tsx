@@ -32,7 +32,7 @@ export function Ladder({ extra = [] }: { extra?: Stufe[] }) {
         </tr>)}
       </tbody>
     </table>
-    <p className="label note">Endpreise · Kleinunternehmer nach § 19 UStG</p>
+    <p className="label note">Endpreise · Kleinunternehmer nach § 19 UStG · Es gelten meine <Link href="/bedingungen">Leistungsbedingungen</Link></p>
   </div>;
 }
 

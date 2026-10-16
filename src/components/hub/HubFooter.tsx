@@ -15,7 +15,7 @@ export default function HubFooter() {
       </div>
       <div>
         <div className="label" style={{ marginBottom: 12 }}>Rechtliches</div>
-        <Link href="/impressum">Impressum</Link><Link href="/datenschutz">Datenschutz</Link>
+        <Link href="/impressum">Impressum</Link><Link href="/datenschutz">Datenschutz</Link><Link href="/bedingungen">Leistungsbedingungen</Link>
       </div>
     </div>
     <div className="wrap"><p className="foot-legal">© {new Date().getFullYear()} Marco Grotemeyer · Bad Oeynhausen</p></div>
