@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import SectorPage from "@/components/SectorPage";
+import SectorPage from "@/components/betriebe/SectorPage";
 import { sectorGroups, groupBySlug, groupHref } from "@/lib/sectors";
 export const dynamicParams = false;
 export function generateStaticParams() { return sectorGroups.map(group => ({ slug: group.slug })); }

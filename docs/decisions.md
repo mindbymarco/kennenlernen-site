@@ -80,3 +80,26 @@ Chronologisch, mit Begründung. Neue Entscheidungen unten anhängen.
 **Kontext:** Marcos Entscheidungen H25–H27.
 **Entscheidung:** Startseite folgt dem Weg Alltag → „Ich kenne das“ → Ergebnis → Aufwand → Builds → Preise und Vertrauen. Drei Motion-Bausteine in `src/components/hub/viz/` (Woche, Checkliste, Vorher/Nachher-Wisch), ohne Videodateien, bei „Bewegung reduzieren“ nur Endzustand. Impressum und Datenschutz liegen jetzt in `src/app/(hub)/` im Look der Dachmarke, beschreiben den tatsächlichen Stand (keine Cookies, kein lokaler Speicher, Cal.com nur als Link) und nennen die Kleinunternehmerregel. „beyond925“ entfernt.
 **Quelle:** `~/Projects/marcogrotemeyer-de/Strategie/STARTSEITE-TEXTE.md`, `ENTSCHEIDUNGEN.md`.
+
+## D17 — Betriebe im Look der Dachmarke (16.10.2026)
+**Kontext:** Marco: `/betriebe` komplett an die Designsprache der Hauptseite anpassen, Wording bleibt. Entscheidung H28, Konzept und Recherche in `~/Projects/marcogrotemeyer-de/Strategie/KONZEPT-BETRIEBE.md`.
+**Entscheidung:**
+- `src/app/betriebe/layout.tsx` kapselt den Bereich in `.hub.bb[data-bereich="betriebe"]`. `hub.css` kennt jetzt `--accent-hell`, `--accent-shimmer`, `--accent-soft` je Bereich; `betriebe.css` enthält die Bausteine des Bereichs (Kopfzeile mit Branchen-Menü, Fenster-Demos, Rechner, Raster, Bühne).
+- Neue Komponenten in `src/components/betriebe/`. Entfernt: `BusinessHome`, `AssistantDemo`, `SectorDemo`, `SectorPage`, `SectorDirectory`, `OfferCalculator`, `EverydayPreview`, `BrandGeometry`, `Nav`, `Footer` und die alten Hero/Pain/Process-Komponenten, dazu der `.business-home`-Block in `globals.css` und die Aquarell-/Pixel-Bilder in `public/brand/`. `components/ui/` (shadcn) bleibt installiert, wird aber nicht mehr importiert.
+- Texte, Anker-IDs, URLs, Metadaten, Rechnerlogik (`lib/offer.ts`) und Katalog (`lib/sectors.json`) unverändert. Prüfskripte grün.
+**Begründung:** Eine Marke, drei Bereiche (H5, H18). Zielgruppe 55+ verlangt Größe und Kontrast, deshalb Mono-Labels 13 px und sichtbare Branchenlisten statt Akkordeons.
+
+## D18 — Betriebe: Führung für Geschäftsführer:innen 50+ (17.10.2026)
+**Kontext:** Bewertung der neuen Betriebe-Seite aus Sicht eines 50-jährigen GF (7/10), Marco: alle neun Empfehlungen umsetzen, einfache Bilder statt Erklärtext (H29).
+**Entscheidung:** Neue Abfolge auf `/betriebe` (siehe `Home.tsx`), Sie-Fassungen der Hub-Visualisierungen in `components/betriebe/Viz.tsx`, `StickyContact.tsx` für Mobil, Datenschutz- und Zusagen-Blöcke, „Über Marco“ zeigt auf `#ueber-mich`. Rechner und `lib/offer.ts` sagen „Endpreis“ statt „netto“ (§ 19 UStG). Ort einheitlich Bad Oeynhausen.
+**Quelle:** `~/Projects/marcogrotemeyer-de/Strategie/KONZEPT-BETRIEBE.md` Abschnitt 6.
+
+## D19 — Startplan statt Textdatei, Schnellcheck vor dem Rechner (17.10.2026)
+**Kontext:** Der Rechner auf `/betriebe` lieferte eine Textdatei ohne nächsten Schritt. Konzept in `~/Projects/marcogrotemeyer-de/Strategie/STARTPLAN-DOWNLOAD.md` (Variante A). Marco hat H30 (leichter Funnel statt reiner Visitenkarte, ändert H3) am 17.10.2026 freigegeben.
+**Entscheidung:**
+- Neue Seite `/betriebe/startplan` (`src/app/betriebe/startplan/page.tsx` mit Suspense, Client-Komponente `components/betriebe/Startplan.tsx`, Logik in `lib/startplan.ts`). Sie liest `?betrieb=&module=&einrichtung=&betreuung=` aus der URL und erzeugt im Browser „Startplan für Ihren Betrieb“ als A4-Blatt im Papier-Look: Kopf, erste Aufgabe (Heute/Mit Helfer), Branchenbeispiel (Anfrage, Regel, Ergebnis), was Sie brauchen, Preisrahmen mit den drei Zusagen, nächster Schritt mit Cal.com-Link `?quelle=startplan` und QR-Code, Vorbereitung in 5 Minuten, Fuß. Keine Datenübertragung, `noindex`.
+- Beispiel: erster Fall aus `sectors.json` des gewählten Betriebs, dessen Modul ausgewählt ist; sonst Postfach-Beispiel der Vorschau (`demoExamples`). Mehrere Aufgaben: eine als Start, die übrigen als „Danach möglich“.
+- „Als PDF sichern“ über `window.print()`; Druck-Stylesheet in `betriebe.css` (A4, ohne Kopfzeile, Fußzeile, Sticky-Knopf und Werkzeugleiste). Geprüft mit Headless Chrome: eine Seite.
+- QR-Code mit dem Paket `qrcode` (nur Modul-Matrix, SVG wird selbst gerendert).
+- Schnellcheck mit drei Ja/Nein-Fragen über dem Rechner (`Calculator.tsx`), Ja setzt `inbox`, `documents` bzw. `notes`; null Ja zeigt die ehrliche Absage. Rechner-Knopf heißt „Startplan erstellen“ (neuer Tab), der Mail-Knopf trägt Betreff „Startplan [Betrieb]: Gespräch?“ und den Startplan-Text im Body. `makeSummary` in `lib/offer.ts` bleibt für `check-offer.mjs`.
+**Offen:** Variante B (Startplan per E-Mail mit Double-Opt-in) ab G4.
