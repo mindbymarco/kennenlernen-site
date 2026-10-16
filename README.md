@@ -23,14 +23,14 @@ Der Katalog enthält 25 Betriebe mit jeweils drei individuellen Alltagssituation
 
 ## Veröffentlichung
 
-Das Vercel-Projekt `kennenlernen-site` ist mit diesem GitHub-Repo (`mindbymarco/kennenlernen-site`) verbunden und liefert `marcogrotemeyer.de` und `www.marcogrotemeyer.de` aus.
+Seit 15.10.2026 liegt die Seite bei **Cloudflare Workers** (Worker `marcogrotemeyer-de`, Konto marcoicloudalternative@gmail.com), nicht mehr bei Vercel. Next.js wird statisch exportiert (`output: "export"` → `out/`).
 
-- **Push auf `main` = Deploy.** Jeder Push auf `main` baut und veröffentlicht die Seite live.
-- **PR = Vorschau.** Jeder Pull Request bekommt eine eigene Vorschau-URL. Vercel schreibt den Link als Kommentar in den PR. Vorschauen sind durch den Vercel-Login geschützt.
-- Arbeiten auf einem Branch, PR öffnen, Vorschau prüfen, dann mergen. Nicht mehr per CLI deployen (`vercel deploy --prod`).
-- Zurückrollen: im Vercel-Dashboard unter Deployments ein früheres Deployment wählen und „Instant Rollback“ nutzen.
-
-`.vercelignore` schließt Zugangsdaten, lokale Builds, Tests, interne Dokumentation und Arbeitsdateien aus. Zugangsdaten liegen als Environment Variables in Vercel, nicht im Projekt.
+- **Push auf `main` = Deploy.** Cloudflare Workers Builds baut bei jedem Push auf `main` (`npm run build`, dann `npx wrangler deploy`) und veröffentlicht live auf `www.marcogrotemeyer.de`.
+- Arbeiten auf einem Branch, PR öffnen, lokal prüfen (`npx wrangler@4.145.0 dev`), dann mergen.
+- Manuell deployen geht auch: `npx wrangler@4.145.0 deploy` (baut selbst mit `next build`).
+- Zurückrollen: im Cloudflare-Dashboard unter Workers → `marcogrotemeyer-de` → Deployments eine frühere Version wählen.
+- Weiterleitungen stehen in `public/_redirects`, Sicherheits- und Cache-Header in `public/_headers`. `worker/index.js` beantwortet Range-Anfragen für Videos (Safari).
+- Es gibt keine Server-Funktionen und keine Zugangsdaten im Projekt.
 
 ## Maßgebliche Dateien
 
