@@ -11,6 +11,7 @@ export default function Contact({ label, title, text }: { label: string; title: 
         <div className="acts">
           <a className="btn light" href={CAL_URL} target="_blank" rel="noopener noreferrer">Kostenloses Gespräch vereinbaren <span className="arr" aria-hidden="true">↗</span></a>
           <a className="mail" href={`mailto:${MAIL}`}>{MAIL}</a>
+          <a className="mail" href={`mailto:${MAIL}?subject=${encodeURIComponent("Bitte um Rückruf")}&body=${encodeURIComponent("Hallo Herr Grotemeyer,\n\nbitte rufen Sie mich zurück.\n\nBetrieb: \nTelefon: \nAm besten erreichbar: \n")}`}>Lieber telefonieren? Schicken Sie mir Ihre Nummer, ich rufe Sie zurück.</a>
         </div>
         <p className="label note">30 Minuten · kostenlos · unverbindlich</p>
       </div>

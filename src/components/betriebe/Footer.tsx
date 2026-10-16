@@ -8,12 +8,12 @@ export default function Footer() {
       <nav aria-label="Fußzeile">
         <Link href="/betriebe/branchen">Alle Betriebe</Link>
         <Link href="/betriebe/ressourcen">Kostenlose Hilfen</Link>
-        <Link href="/">Über Marco</Link>
+        <Link href="/betriebe#ueber-mich">Über Marco</Link>
         <a href={`mailto:${MAIL}`}>Kontakt</a>
         <Link href="/impressum">Impressum</Link>
         <Link href="/datenschutz">Datenschutz</Link>
       </nav>
     </div>
-    <div className="wrap"><p className="foot-legal">© {new Date().getFullYear()} Marco Grotemeyer · Bürohilfe für kleine Unternehmen · Bielefeld</p></div>
+    <div className="wrap"><p className="foot-legal">© {new Date().getFullYear()} Marco Grotemeyer · Bürohilfe für kleine Unternehmen · Bad Oeynhausen</p></div>
   </footer>;
 }

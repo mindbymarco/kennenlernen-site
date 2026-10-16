@@ -7,6 +7,7 @@ import SectorDemo from "./SectorDemo";
 import Directory from "./Directory";
 import Calculator from "./Calculator";
 import Contact from "./Contact";
+import StickyContact from "./StickyContact";
 import { type Sector, type SectorGroup, type UseCase, groupBySlug, groupCases, groupHref, sectorHref } from "@/lib/sectors";
 import type { ModuleId } from "@/lib/offer";
 
@@ -112,5 +113,6 @@ export default function SectorPage({ sector, group }: { sector?: Sector; group?:
     {sector && <section className="sec"><div className="wrap"><div className="head rv"><p className="label">Weitere Betriebe in Ihrem Bereich</p><h2 className="display">{currentGroup.label}</h2></div><Directory group={currentGroup} /></div></section>}
 
     <Contact label={`Ihr nächster Schritt · ${pageLabel}`} title={<>Welche dieser Aufgaben kostet Sie gerade <em>Zeit?</em></>} text="Erzählen Sie mir von Ihrem Betrieb. Wir besprechen eine konkrete Aufgabe und schauen, wie ich Sie persönlich unterstützen kann." />
+    <StickyContact />
   </div>;
 }

@@ -88,3 +88,8 @@ Chronologisch, mit Begründung. Neue Entscheidungen unten anhängen.
 - Neue Komponenten in `src/components/betriebe/`. Entfernt: `BusinessHome`, `AssistantDemo`, `SectorDemo`, `SectorPage`, `SectorDirectory`, `OfferCalculator`, `EverydayPreview`, `BrandGeometry`, `Nav`, `Footer` und die alten Hero/Pain/Process-Komponenten, dazu der `.business-home`-Block in `globals.css` und die Aquarell-/Pixel-Bilder in `public/brand/`. `components/ui/` (shadcn) bleibt installiert, wird aber nicht mehr importiert.
 - Texte, Anker-IDs, URLs, Metadaten, Rechnerlogik (`lib/offer.ts`) und Katalog (`lib/sectors.json`) unverändert. Prüfskripte grün.
 **Begründung:** Eine Marke, drei Bereiche (H5, H18). Zielgruppe 55+ verlangt Größe und Kontrast, deshalb Mono-Labels 13 px und sichtbare Branchenlisten statt Akkordeons.
+
+## D18 — Betriebe: Führung für Geschäftsführer:innen 50+ (17.10.2026)
+**Kontext:** Bewertung der neuen Betriebe-Seite aus Sicht eines 50-jährigen GF (7/10), Marco: alle neun Empfehlungen umsetzen, einfache Bilder statt Erklärtext (H29).
+**Entscheidung:** Neue Abfolge auf `/betriebe` (siehe `Home.tsx`), Sie-Fassungen der Hub-Visualisierungen in `components/betriebe/Viz.tsx`, `StickyContact.tsx` für Mobil, Datenschutz- und Zusagen-Blöcke, „Über Marco“ zeigt auf `#ueber-mich`. Rechner und `lib/offer.ts` sagen „Endpreis“ statt „netto“ (§ 19 UStG). Ort einheitlich Bad Oeynhausen.
+**Quelle:** `~/Projects/marcogrotemeyer-de/Strategie/KONZEPT-BETRIEBE.md` Abschnitt 6.

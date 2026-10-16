@@ -42,7 +42,7 @@ export default function Header() {
         <Link href="/betriebe/ressourcen" aria-current={pathname === "/betriebe/ressourcen" ? "page" : undefined}>Kostenlose Hilfen</Link>
         <a href={anchor("#rechner")}>Preisrahmen</a>
         <a href={anchor("#prozess")}>Zusammenarbeit</a>
-        <Link href="/">Über Marco</Link>
+        <a href={anchor("#ueber-mich")}>Über Marco</a>
       </nav>
       <a className="btn sm" href={anchor("#erstgespraech")}>Kontakt <span className="arr" aria-hidden="true">→</span></a>
       <button type="button" className="menu-btn" aria-expanded={sheet} aria-controls="betriebe-sheet" onClick={() => setSheet(true)}>Menü</button>
@@ -62,7 +62,7 @@ export default function Header() {
         <a href={anchor("#rechner")} onClick={() => setSheet(false)}>Preisrahmen</a>
         <a href={anchor("#prozess")} onClick={() => setSheet(false)}>Zusammenarbeit</a>
         <a href={anchor("#erstgespraech")} onClick={() => setSheet(false)}>Marco kontaktieren</a>
-        <Link href="/" onClick={() => setSheet(false)}>Über Marco</Link>
+        <a href={anchor("#ueber-mich")} onClick={() => setSheet(false)}>Über Marco</a>
       </div>
     </div>}
   </header>;

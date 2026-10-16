@@ -21,7 +21,7 @@ export default function Demo({ id = "hilfe", onChoose }: { id?: string; onChoose
   const Icon = helper.icon;
   return <section id={id} className="sec" aria-labelledby={`${id}-heading`}>
     <div className="wrap">
-      <div className="head rv"><p className="label">Eine Aufgabe. Ein passender Helfer.</p><h2 id={`${id}-heading`} className="display">So arbeitet Ihr digitaler <em>Assistent.</em></h2><p>Er bekommt Informationen, arbeitet nach Ihren Regeln und bereitet ein Ergebnis vor. Sie prüfen, was damit passiert.</p></div>
+      <div className="head rv"><p className="label">Eine Aufgabe. Ein passender Helfer.</p><h2 id={`${id}-heading`} className="display">So arbeitet Ihr digitaler <em>Helfer.</em></h2><p>Er bekommt Informationen, arbeitet nach Ihren Regeln und bereitet ein Ergebnis vor. Sie prüfen, was damit passiert.</p></div>
       <div className="rv" style={{ ["--d" as string]: "120ms" }}>
         <div className="toggle" role="tablist" aria-label="Digitalen Helfer auswählen">
           {helpers.map(h => <button key={h.id} type="button" role="tab" aria-selected={active === h.id} onClick={() => { setActive(h.id); setPhase("idle"); }}><h.icon aria-hidden="true" />{h.short}</button>)}

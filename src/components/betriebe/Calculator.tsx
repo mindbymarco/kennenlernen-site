@@ -16,7 +16,7 @@ export default function Calculator({ industry, selected, onIndustry, onSelected 
   return <section id="rechner" className="sec calc" aria-labelledby="rechner-heading">
     <div className="wrap">
       <div className="head rv"><p className="label">Kostenloser Angebotsrechner</p><h2 id="rechner-heading" className="display">Welche Hilfe passt zu Ihrem <em>Alltag?</em></h2><p>Wählen Sie Ihre Aufgaben. Sie sehen direkt, was wir gemeinsam einrichten könnten und wie ein Preisrahmen aussehen kann.</p></div>
-      <div className="hint rv" role="note"><Info aria-hidden="true" /><div><strong>Ihr persönlicher Preisrahmen</strong>Der Rechner schätzt die Kosten anhand Ihrer Auswahl. Ihr verbindliches Angebot erhalten Sie nach dem Gespräch. Alle Beträge netto; Umsatzsteuer und mögliche Programmkosten kommen gegebenenfalls hinzu.</div></div>
+      <div className="hint rv" role="note"><Info aria-hidden="true" /><div><strong>Ihr persönlicher Preisrahmen</strong>Der Rechner schätzt die Kosten anhand Ihrer Auswahl. Ihr verbindliches Angebot erhalten Sie nach dem Gespräch. Alle Beträge sind Endpreise (Kleinunternehmer nach § 19 UStG). Mögliche Programmkosten kommen hinzu und werden vorher besprochen.</div></div>
       <div className="calc-grid">
         <form className="rv" onSubmit={e => e.preventDefault()}>
           <fieldset>
@@ -67,12 +67,12 @@ export default function Calculator({ industry, selected, onIndustry, onSelected 
               <div role="status" aria-live="polite" aria-atomic="true" className="total">
                 <p>Einmalige Einrichtung</p>
                 <strong>{euro(estimate.low)} – {euro(estimate.high)}</strong>
-                <p>netto · nach gemeinsam abgestimmtem Umfang</p>
+                <p>Endpreis · nach gemeinsam abgestimmtem Umfang</p>
               </div>
               <ul>{estimate.selected.map(module => <li key={module.id} className="check">{module.label}</li>)}</ul>
               <p className="fine">Einrichtung: {connected ? "Mehrere Programme miteinander verbinden" : "Mit Vorlagen und vorhandenen Programmen starten"}</p>
               <div className="row"><span>Persönliche Betreuung danach</span><strong>{estimate.monthly ? `${euro(estimate.monthly)} / Monat` : "Keine laufenden Kosten für Betreuung"}</strong></div>
-              <p className="fine">{estimate.monthly ? `Geschätzte Kosten netto für ${pricing.support[support].hours} ${pricing.support[support].hours === 1 ? "Stunde" : "Stunden"} pro Monat. Für Fragen, gemeinsame Übungen und kleine Anpassungen im vereinbarten Umfang.` : "Sie starten mit der Einrichtung und Einführung. Weitere Hilfe vereinbaren wir bei Bedarf."}</p>
+              <p className="fine">{estimate.monthly ? `Geschätzte Kosten für ${pricing.support[support].hours} ${pricing.support[support].hours === 1 ? "Stunde" : "Stunden"} pro Monat. Für Fragen, gemeinsame Übungen und kleine Anpassungen im vereinbarten Umfang.` : "Sie starten mit der Einrichtung und Einführung. Weitere Hilfe vereinbaren wir bei Bedarf."}</p>
               <p className="fine" style={{ marginTop: 14, paddingTop: 14, borderTop: "1px solid var(--line)" }}>Enthalten: Aufgaben besprechen, einrichten, gemeinsam ausprobieren und eine kurze Anleitung. Zusätzliche Programmkosten besprechen wir vor dem Start.</p>
             </> : <p className="empty" role="status">Wählen Sie mindestens eine Aufgabe. Dann erscheint hier Ihr Preisrahmen.</p>}
             <div className="acts">
