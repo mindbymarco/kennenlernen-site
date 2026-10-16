@@ -8,6 +8,8 @@
 	"name": "marcogrotemeyer-de",
 	"main": "worker/index.js",
 	"compatibility_date": "2026-09-30",
+	// Leer reicht: Workers Builds legt für Pull Requests damit eine Vorschau an (npx wrangler preview).
+	"previews": {},
 	"build": {
 		"command": "npx next build"
 	},

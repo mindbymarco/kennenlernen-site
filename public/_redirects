@@ -1,3 +1,7 @@
+# Alte statische Seiten (vor Next.js), Links von außen sollen weiter funktionieren.
+/datenschutz.html /datenschutz 308
+/impressum.html /impressum 308
+
 # Umbau zum Hub (G3, H23): bisherige Inhalte für Betriebe liegen unter /betriebe. 308 = dauerhaft.
 /branchen /betriebe/branchen 308
 /ressourcen /betriebe/ressourcen 308
