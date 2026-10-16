@@ -94,7 +94,7 @@ export const training: Stufe = { stufe: "Team-Training", was: "Auf Anfrage. Ein 
 // Vertrauen (H25: Variante 6A, ergänzt um 6B)
 export const promises = [
   { t: "Den Preis kennst du, bevor du zahlst.", d: "Festpreise, alle als Endpreise. Laufende Kosten für Claude oder Hosting siehst du vorher." },
-  { t: "Was ich baue, gehört dir.", d: "Mit allen Konten, Zugängen und dem Code. Dazu bekommst du eine Anleitung." },
+  { t: "Was ich baue, gehört dir.", d: "Du erhältst den projektspezifischen Code, die Konfiguration und die Dokumentation in deinen Konten. Du kannst den Ablauf selbst betreiben und von anderen weiterentwickeln lassen. Für enthaltene Standardbausteine und Drittsoftware gelten die im Angebot erläuterten Nutzungs- und Lizenzbedingungen." },
   { t: "Sonst Geld zurück.", d: "Läuft der Ablauf 14 Tage nach der Übergabe nicht wie vereinbart, bessere ich nach oder du bekommst dein Geld zurück." },
 ];
 export const honesty = "Wenn sich ein Agent für deine Aufgabe nicht lohnt, sage ich dir das im Erstgespräch. Ich verdiene lieber an einem Pilot, der läuft, als an einem, der dich enttäuscht.";
